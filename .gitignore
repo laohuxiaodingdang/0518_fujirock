@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+/frontend/node_modules
+/backend/node_modules
+# next.js
+/.next/
+/frontend/.next/
+# misc
+.DS_Store

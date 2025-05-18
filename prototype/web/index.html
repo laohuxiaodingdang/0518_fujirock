@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuji Rock 2025 - Web Prototype</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    
+    /* 顶部导航栏 */
+    .top-nav {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    /* 波纹效果容器 */
+    .wave-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.75rem;
+    }
+    
+    /* 艺术家卡片 */
+    .artist-card {
+      position: relative;
+      overflow: visible;
+      transition: all 0.3s ease;
+      background: white;
+    }
+    
+    .artist-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+    
+    .artist-card::before, 
+    .artist-card::after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 0.75rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .artist-card::before {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(200, 200, 255, 0.2));
+      filter: blur(4px);
+      z-index: -1;
+    }
+    
+    .artist-card::after {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      z-index: -2;
+    }
+    
+    .artist-card:hover::before, 
+    .artist-card:hover::after {
+      opacity: 1;
+    }
+    
+    /* 侧边栏 */
+    .sidebar {
+      background: white;
+      border-right: 1px solid #eee;
+    }
+    
+    .category-item {
+      transition: all 0.2s ease;
+      border-radius: 8px;
+    }
+    
+    .category-item:hover {
+      background: #f1f5f9;
+    }
+    
+    .category-item.active {
+      background: #f1f5f9;
+      color: #4f46e5;
+      font-weight: 500;
+    }
+    
+    /* 搜索栏 */
+    .search-container {
+      transition: all 0.3s ease;
+    }
+    
+    .search-container:focus-within {
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+    }
+    
+    /* 主角艺术家区域 */
+    .featured-artist {
+      background: linear-gradient(135deg, #c084fc, #818cf8);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="top-nav sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Fujirock_logo.png" alt="Fuji Rock Logo" class="h-10 w-10 rounded-full mr-3">
+      <h1 class="text-xl font-bold tracking-wide hidden md:block">Fuji Rock 2025</h1>
+    </div>
+    
+    <div class="search-container flex items-center bg-gray-100 rounded-full px-4 py-2 w-full max-w-md mx-4">
+      <i class="fa-solid fa-magnifying-glass text-gray-500 mr-2"></i>
+      <input type="text" placeholder="Search artists, genres, or stages..." class="bg-transparent outline-none flex-1 text-gray-800 placeholder-gray-400">
+    </div>
+    
+    <div class="flex items-center gap-4">
+      <button class="text-gray-700 hover:text-gray-900">
+        <i class="fa-solid fa-user text-xl"></i>
+      </button>
+      <button class="text-gray-700 hover:text-gray-900">
+        <i class="fa-solid fa-star text-xl"></i>
+      </button>
+    </div>
+  </header>
+  
+  <div class="flex">
+    <!-- 侧边栏 -->
+    <aside class="sidebar hidden md:block w-64 h-screen sticky top-20 p-6 space-y-6">
+      <div>
+        <h2 class="font-semibold text-gray-500 uppercase text-xs tracking-wider mb-3">Browse</h2>
+        <nav class="space-y-1">
+          <a href="#" class="category-item active flex items-center py-2 px-3">
+            <i class="fa-solid fa-house mr-3"></i>
+            <span>Home</span>
+          </a>
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <i class="fa-solid fa-calendar mr-3"></i>
+            <span>Schedule</span>
+          </a>
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <i class="fa-solid fa-map-location-dot mr-3"></i>
+            <span>Stages</span>
+          </a>
+        </nav>
+      </div>
+      
+      <div>
+        <h2 class="font-semibold text-gray-500 uppercase text-xs tracking-wider mb-3">Genres</h2>
+        <nav class="space-y-1">
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <span>Rock</span>
+          </a>
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <span>Electronic</span>
+          </a>
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <span>Pop</span>
+          </a>
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <span>Jazz</span>
+          </a>
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <span>Indie</span>
+          </a>
+        </nav>
+      </div>
+      
+      <div>
+        <h2 class="font-semibold text-gray-500 uppercase text-xs tracking-wider mb-3">Your Music</h2>
+        <nav class="space-y-1">
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <i class="fa-brands fa-spotify mr-3 text-green-500"></i>
+            <span>Connect Spotify</span>
+          </a>
+          <a href="#" class="category-item flex items-center py-2 px-3">
+            <i class="fa-solid fa-star mr-3 text-yellow-500"></i>
+            <span>Favorites</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+    
+    <!-- 主内容区域 -->
+    <main class="flex-1 p-6 md:p-8">
+      <!-- 欢迎信息 -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Welcome back, music lover!</h1>
+        <p class="text-gray-600">Discover artists performing at Fuji Rock 2025</p>
+      </div>
+      
+      <!-- 主角艺术家 -->
+      <div class="featured-artist rounded-2xl p-6 mb-10 flex flex-col md:flex-row items-center gap-6">
+        <div class="wave-container w-full h-full absolute top-0 left-0 rounded-2xl" id="wave-feature"></div>
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white shadow-xl relative z-10">
+        <div class="relative z-10 text-center md:text-left">
+          <h2 class="text-2xl font-bold mb-1">Artist A</h2>
+          <p class="text-white text-opacity-80 mb-4">Headlining the Green Stage - July 26, 2025</p>
+          <div class="flex items-center justify-center md:justify-start gap-3">
+            <button class="bg-white text-purple-700 px-4 py-2 rounded-full flex items-center gap-2 font-medium hover:bg-opacity-90">
+              <i class="fa-brands fa-spotify"></i>
+              <span>Listen on Spotify</span>
+            </button>
+            <button class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-3 py-2 rounded-full">
+              <i class="fa-solid fa-star"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 艺术家推荐 -->
+      <div class="mb-10">
+        <h2 class="text-xl font-semibold text-gray-800 mb-6">Artists You Might Like</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 艺术家卡片 1 -->
+          <div class="artist-card rounded-xl p-5 flex flex-col items-center">
+            <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-1"></div>
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-gray-100 relative z-10">
+            <h3 class="font-medium text-gray-900 text-lg relative z-10">Artist A</h3>
+            <span class="text-sm text-gray-500 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Rock</span>
+            <button class="mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm relative z-10">View Profile</button>
+          </div>
+          
+          <!-- 艺术家卡片 2 -->
+          <div class="artist-card rounded-xl p-5 flex flex-col items-center">
+            <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-2"></div>
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=256&q=80" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-gray-100 relative z-10">
+            <h3 class="font-medium text-gray-900 text-lg relative z-10">Artist B</h3>
+            <span class="text-sm text-gray-500 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Electronic</span>
+            <button class="mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm relative z-10">View Profile</button>
+          </div>
+          
+          <!-- 艺术家卡片 3 -->
+          <div class="artist-card rounded-xl p-5 flex flex-col items-center">
+            <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-3"></div>
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=256&q=80" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-gray-100 relative z-10">
+            <h3 class="font-medium text-gray-900 text-lg relative z-10">Artist C</h3>
+            <span class="text-sm text-gray-500 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Pop</span>
+            <button class="mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm relative z-10">View Profile</button>
+          </div>
+          
+          <!-- 艺术家卡片 4 -->
+          <div class="artist-card rounded-xl p-5 flex flex-col items-center">
+            <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-4"></div>
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=256&q=80" class="w-24 h-24 rounded-full object-cover mb-4 border-2 border-gray-100 relative z-10">
+            <h3 class="font-medium text-gray-900 text-lg relative z-10">Artist D</h3>
+            <span class="text-sm text-gray-500 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Jazz</span>
+            <button class="mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm relative z-10">View Profile</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 演出日程 -->
+      <div class="mb-10">
+        <h2 class="text-xl font-semibold text-gray-800 mb-6">Upcoming Performances</h2>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <div class="flex flex-col divide-y">
+            <div class="py-4 flex items-center gap-4">
+              <div class="text-center min-w-[60px]">
+                <span class="text-gray-500 text-sm">JUL</span>
+                <div class="text-2xl font-bold">26</div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-medium">Artist A</h3>
+                <p class="text-gray-500 text-sm">Green Stage, 8:00 PM</p>
+              </div>
+              <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+                Add to Calendar
+              </button>
+            </div>
+            
+            <div class="py-4 flex items-center gap-4">
+              <div class="text-center min-w-[60px]">
+                <span class="text-gray-500 text-sm">JUL</span>
+                <div class="text-2xl font-bold">27</div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-medium">Artist B</h3>
+                <p class="text-gray-500 text-sm">White Stage, 7:30 PM</p>
+              </div>
+              <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+                Add to Calendar
+              </button>
+            </div>
+            
+            <div class="py-4 flex items-center gap-4">
+              <div class="text-center min-w-[60px]">
+                <span class="text-gray-500 text-sm">JUL</span>
+                <div class="text-2xl font-bold">28</div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-medium">Artist C</h3>
+                <p class="text-gray-500 text-sm">Red Marquee, 9:00 PM</p>
+              </div>
+              <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
+                Add to Calendar
+              </button>
+            </div>
+          </div>
+          
+          <div class="mt-6 text-center">
+            <button class="text-indigo-600 font-medium hover:text-indigo-700">
+              View Full Schedule
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <!-- 引入泡泡效果脚本 -->
+  <script src="../js/bubbles.js"></script>
+  <script>
+    // 页面加载完成后初始化泡泡效果
+    document.addEventListener('DOMContentLoaded', function() {
+      // 为主角艺术家添加泡泡效果
+      if (document.getElementById('wave-feature')) {
+        new Bubbles(document.getElementById('wave-feature'), {
+          bubbleCount: 50,
+          bubbleColors: ['rgba(255, 255, 255, 0.4)', 'rgba(240, 240, 255, 0.3)', 'rgba(200, 200, 250, 0.3)'],
+          minSize: 3,
+          maxSize: 10,
+          speed: 0.3,
+          maxCursorInfluence: 100
+        });
+      }
+      
+      // 为艺术家卡片添加泡泡效果
+      const bubblesElements = ['wave-1', 'wave-2', 'wave-3', 'wave-4'];
+      bubblesElements.forEach(id => {
+        if (document.getElementById(id)) {
+          new Bubbles(document.getElementById(id), {
+            bubbleCount: 25,
+            bubbleColors: ['rgba(240, 240, 255, 0.25)', 'rgba(230, 230, 250, 0.2)', 'rgba(200, 200, 250, 0.15)'],
+            minSize: 2, 
+            maxSize: 6,
+            speed: 0.2,
+            maxCursorInfluence: 60
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html> 

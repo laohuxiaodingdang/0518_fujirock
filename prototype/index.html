@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=430, initial-scale=1.0">
+  <title>Fuji Rock 2025 App Prototype</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: #18181b;
+    }
+    .device-frame {
+      width: 430px;
+      height: 932px;
+      border-radius: 48px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      border: 2px solid #222;
+      margin: 2rem;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+    }
+    .status-bar {
+      height: 44px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      color: #fff;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+    .tab-bar {
+      height: 60px;
+      background: rgba(24,24,27,0.95);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: #fff;
+      border-top: 1px solid #222;
+    }
+    .tab-bar i {
+      font-size: 1.5rem;
+    }
+    .tab-bar .active {
+      color: #00fff7;
+      text-shadow: 0 0 8px #00fff7;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: calc(100% - 104px);
+      background: #18181b;
+    }
+  </style>
+</head>
+<body class="flex flex-wrap justify-center items-start min-h-screen">
+  <!-- Home Screen -->
+  <div class="device-frame">
+    <div class="status-bar">
+      <span>9:41</span>
+      <span>
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi ml-1"></i>
+        <i class="fa-solid fa-battery-full ml-1"></i>
+      </span>
+    </div>
+    <iframe src="home.html" title="Home"></iframe>
+    <div class="tab-bar">
+      <span class="active"><i class="fa-solid fa-house"></i></span>
+      <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      <span><i class="fa-solid fa-star"></i></span>
+      <span><i class="fa-solid fa-user"></i></span>
+    </div>
+  </div>
+  <!-- Artist Detail Screen -->
+  <div class="device-frame">
+    <div class="status-bar">
+      <span>9:41</span>
+      <span>
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi ml-1"></i>
+        <i class="fa-solid fa-battery-full ml-1"></i>
+      </span>
+    </div>
+    <iframe src="artist.html" title="Artist Detail"></iframe>
+    <div class="tab-bar">
+      <span><i class="fa-solid fa-house"></i></span>
+      <span class="active"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <span><i class="fa-solid fa-star"></i></span>
+      <span><i class="fa-solid fa-user"></i></span>
+    </div>
+  </div>
+  <!-- Favorites Screen -->
+  <div class="device-frame">
+    <div class="status-bar">
+      <span>9:41</span>
+      <span>
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi ml-1"></i>
+        <i class="fa-solid fa-battery-full ml-1"></i>
+      </span>
+    </div>
+    <iframe src="favorites.html" title="Favorites"></iframe>
+    <div class="tab-bar">
+      <span><i class="fa-solid fa-house"></i></span>
+      <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      <span class="active"><i class="fa-solid fa-star"></i></span>
+      <span><i class="fa-solid fa-user"></i></span>
+    </div>
+  </div>
+  <!-- Profile Screen -->
+  <div class="device-frame">
+    <div class="status-bar">
+      <span>9:41</span>
+      <span>
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi ml-1"></i>
+        <i class="fa-solid fa-battery-full ml-1"></i>
+      </span>
+    </div>
+    <iframe src="profile.html" title="Profile"></iframe>
+    <div class="tab-bar">
+      <span><i class="fa-solid fa-house"></i></span>
+      <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      <span><i class="fa-solid fa-star"></i></span>
+      <span class="active"><i class="fa-solid fa-user"></i></span>
+    </div>
+  </div>
+</body>
+</html> 

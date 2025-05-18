@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 16, 16, 26;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+@layer components {
+  .cyber-card {
+    @apply bg-deep-space/80 backdrop-blur-lg border border-neon-blue/30 
+    rounded-lg shadow-lg overflow-hidden transition-all duration-300
+    hover:shadow-neon-blue/20 hover:border-neon-blue/50;
+  }
+  
+  .cyber-button {
+    @apply px-4 py-2 rounded-md bg-gradient-to-r from-neon-blue to-neon-purple
+    text-white font-bold transition-all duration-300 hover:shadow-lg
+    hover:shadow-neon-purple/40 focus:outline-none focus:ring-2 
+    focus:ring-neon-pink/50 active:scale-95;
+  }
+
+  .glass-panel {
+    @apply bg-deep-space/60 backdrop-blur-xl border border-white/10
+    rounded-xl shadow-lg;
+  }
+
+  .neon-text {
+    @apply text-neon-blue animate-glow-pulse;
+  }
+  
+  /* Artist card with wave effect */
+  .artist-card {
+    position: relative;
+    overflow: visible;
+    transition: all 0.3s ease;
+  }
+  
+  .artist-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+  
+  .artist-card::before, 
+  .artist-card::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .artist-card::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(200, 200, 255, 0.2));
+    filter: blur(4px);
+    z-index: -1;
+  }
+  
+  .artist-card::after {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: -2;
+  }
+  
+  .artist-card:hover::before, 
+  .artist-card:hover::after {
+    opacity: 1;
+  }
+  
+  /* Wave container for bubble animations */
+  .wave-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+  }
+} 

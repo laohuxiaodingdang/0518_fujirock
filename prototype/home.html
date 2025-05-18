@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=430, initial-scale=1.0">
+  <title>Home - Fuji Rock 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* 艺术家卡片波纹效果 - 更极简高级的风格 */
+    .artist-card {
+      position: relative;
+      overflow: visible;
+      transition: transform 0.3s ease;
+    }
+    
+    .artist-card:hover {
+      transform: translateY(-3px);
+    }
+    
+    .artist-card::before, 
+    .artist-card::after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 18px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .artist-card::before {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(200, 200, 255, 0.2));
+      filter: blur(4px);
+      z-index: -1;
+    }
+    
+    .artist-card::after {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      z-index: -2;
+    }
+    
+    .artist-card:hover::before, 
+    .artist-card:hover::after {
+      opacity: 1;
+    }
+    
+    /* 用于波纹效果的容器样式 */
+    .wave-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.75rem;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white to-gray-100 min-h-screen font-sans">
+  <div class="px-6 pt-8 pb-4">
+    <!-- App Logo & Greeting -->
+    <div class="flex items-center mb-6">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Fujirock_logo.png" alt="Fuji Rock Logo" class="h-10 w-10 rounded-full shadow-lg mr-3">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900 tracking-wide">Fuji Rock 2025</h1>
+        <p class="text-sm text-gray-500">Welcome back, music lover!</p>
+      </div>
+    </div>
+    <!-- Search Bar -->
+    <div class="mb-6">
+      <div class="flex items-center bg-gray-200 rounded-full px-4 py-2 shadow-inner">
+        <i class="fa-solid fa-magnifying-glass text-gray-500 mr-2"></i>
+        <input type="text" placeholder="Search artist..." class="bg-transparent outline-none flex-1 text-gray-800 placeholder-gray-400">
+      </div>
+    </div>
+    <!-- Today's Artist Picks -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold text-gray-800 mb-3 tracking-wide">Today's Artist Picks</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <!-- Artist Card 1 -->
+        <div class="bg-white rounded-2xl shadow-md p-3 flex flex-col items-center artist-card">
+          <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-1"></div>
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-gray-200 relative z-10">
+          <span class="font-medium text-gray-900 relative z-10">Artist A</span>
+          <span class="text-xs text-gray-400 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Spotify</span>
+        </div>
+        <!-- Artist Card 2 -->
+        <div class="bg-white rounded-2xl shadow-md p-3 flex flex-col items-center artist-card">
+          <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-2"></div>
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=256&q=80" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-gray-200 relative z-10">
+          <span class="font-medium text-gray-900 relative z-10">Artist B</span>
+          <span class="text-xs text-gray-400 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Spotify</span>
+        </div>
+        <!-- Artist Card 3 -->
+        <div class="bg-white rounded-2xl shadow-md p-3 flex flex-col items-center artist-card">
+          <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-3"></div>
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=256&q=80" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-gray-200 relative z-10">
+          <span class="font-medium text-gray-900 relative z-10">Artist C</span>
+          <span class="text-xs text-gray-400 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Spotify</span>
+        </div>
+        <!-- Artist Card 4 -->
+        <div class="bg-white rounded-2xl shadow-md p-3 flex flex-col items-center artist-card">
+          <div class="wave-container w-full h-full absolute top-0 left-0" id="wave-4"></div>
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=256&q=80" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-gray-200 relative z-10">
+          <span class="font-medium text-gray-900 relative z-10">Artist D</span>
+          <span class="text-xs text-gray-400 flex items-center mt-1 relative z-10"><i class="fa-brands fa-spotify text-green-500 mr-1"></i>Spotify</span>
+        </div>
+      </div>
+    </div>
+    <!-- Categories -->
+    <div class="mb-4">
+      <h2 class="text-lg font-semibold text-gray-800 mb-2 tracking-wide">Categories</h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full bg-gray-200 text-gray-700 text-xs font-medium">Rock</span>
+        <span class="px-3 py-1 rounded-full bg-gray-200 text-gray-700 text-xs font-medium">Electronic</span>
+        <span class="px-3 py-1 rounded-full bg-gray-200 text-gray-700 text-xs font-medium">Pop</span>
+        <span class="px-3 py-1 rounded-full bg-gray-200 text-gray-700 text-xs font-medium">Jazz</span>
+        <span class="px-3 py-1 rounded-full bg-gray-200 text-gray-700 text-xs font-medium">Indie</span>
+      </div>
+    </div>
+  </div>
+  <div class="h-8 w-full bg-gradient-to-t from-gray-100 to-transparent absolute bottom-0 left-0 z-10 pointer-events-none"></div>
+
+  <!-- 引入泡泡效果脚本 -->
+  <script src="js/bubbles.js"></script>
+  <script>
+    // 页面加载完成后初始化泡泡效果
+    document.addEventListener('DOMContentLoaded', function() {
+      // 为每个艺术家卡片添加泡泡效果，更极简的颜色
+      new Bubbles(document.getElementById('wave-1'), {
+        bubbleCount: 20,
+        bubbleColors: ['rgba(240, 240, 255, 0.25)', 'rgba(230, 230, 250, 0.2)', 'rgba(220, 220, 245, 0.15)'],
+        minSize: 2,
+        maxSize: 5,
+        speed: 0.15,
+        maxCursorInfluence: 50
+      });
+      
+      new Bubbles(document.getElementById('wave-2'), {
+        bubbleCount: 20,
+        bubbleColors: ['rgba(240, 240, 255, 0.25)', 'rgba(230, 230, 250, 0.2)', 'rgba(220, 220, 245, 0.15)'],
+        minSize: 2,
+        maxSize: 5,
+        speed: 0.15,
+        maxCursorInfluence: 50
+      });
+      
+      new Bubbles(document.getElementById('wave-3'), {
+        bubbleCount: 20,
+        bubbleColors: ['rgba(240, 240, 255, 0.25)', 'rgba(230, 230, 250, 0.2)', 'rgba(220, 220, 245, 0.15)'],
+        minSize: 2,
+        maxSize: 5,
+        speed: 0.15,
+        maxCursorInfluence: 50
+      });
+      
+      new Bubbles(document.getElementById('wave-4'), {
+        bubbleCount: 20,
+        bubbleColors: ['rgba(240, 240, 255, 0.25)', 'rgba(230, 230, 250, 0.2)', 'rgba(220, 220, 245, 0.15)'],
+        minSize: 2,
+        maxSize: 5,
+        speed: 0.15,
+        maxCursorInfluence: 50
+      });
+    });
+  </script>
+</body>
+</html> 
