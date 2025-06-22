@@ -1,0 +1,221 @@
+{
+  "artist_name": "Mac Miller",
+  "collected_at": "2025-06-08T15:22:55.929610",
+  "data": {
+    "wikipedia": {
+      "title": "麥克·米勒",
+      "extract": "馬尔科姆·詹姆斯·麥考密克，知名于其艺名麥克·米勒，美国饒舌歌手，詞曲作家和唱片製作人。麥克·米勒出生于宾夕法尼亞州的匹茲堡，他的職業生涯起始于2007年，时年15岁的他发行了混音帶《但我把妹并不順利》，之后在匹兹堡当地嘻哈界崭露头角。2010年，他与總部位于匹茲堡的独立唱片公司Rostrum唱片簽訂了唱片合约，并发行兩張混音帶《来的超級好貨》与《最好的一天》，这两张作品让他取得職業生涯的重大突破。。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Mac_Miller_%287%29_%E2%80%93_splash%21_Festival_20_%282017%29_%28cropped%29.jpg/330px-Mac_Miller_%287%29_%E2%80%93_splash%21_Festival_20_%282017%29_%28cropped%29.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "4LLpKhyESsyAXpc4laK94U",
+      "name": "Mac Miller",
+      "popularity": 84,
+      "followers": 11852712,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebed3b89aa602145fde71a163a",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174ed3b89aa602145fde71a163a",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178ed3b89aa602145fde71a163a",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "7FAFkQQZFeNwOFzTrSDFIh",
+          "name": "The Spins",
+          "duration_ms": 195873,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7FAFkQQZFeNwOFzTrSDFIh"
+          },
+          "album": {
+            "id": "6TFm9KGW7Lbxrl2Zsg4X9R",
+            "name": "K.I.D.S. (Deluxe)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273463d73e65c7b95a17898388b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02463d73e65c7b95a17898388b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851463d73e65c7b95a17898388b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2z9iuAxKv4TTeCrPAxxKg9",
+          "name": "Love Lost",
+          "duration_ms": 162875,
+          "popularity": 82,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2z9iuAxKv4TTeCrPAxxKg9"
+          },
+          "album": {
+            "id": "5LNX3esjvdBJ6hN4XDvCJn",
+            "name": "I Love Life, Thank You",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273c8a77225ad852699c908ac4b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02c8a77225ad852699c908ac4b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851c8a77225ad852699c908ac4b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1OubIZ0ARYCUq5kceYUQiO",
+          "name": "Congratulations (feat. Bilal)",
+          "duration_ms": 256426,
+          "popularity": 80,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1OubIZ0ARYCUq5kceYUQiO"
+          },
+          "album": {
+            "id": "6f6tko6NWoH00cyFOl4VYQ",
+            "name": "The Divine Feminine",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732e92f776279eaf45d14a33fd",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022e92f776279eaf45d14a33fd",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512e92f776279eaf45d14a33fd",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6GnhWMhgJb7uyiiPEiEkDA",
+          "name": "Weekend (feat. Miguel)",
+          "duration_ms": 208080,
+          "popularity": 79,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6GnhWMhgJb7uyiiPEiEkDA"
+          },
+          "album": {
+            "id": "2Tyx5dLhHYkx6zeAdVaTzN",
+            "name": "GO:OD AM",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ee0f38410382a255e4fb15f4",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ee0f38410382a255e4fb15f4",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ee0f38410382a255e4fb15f4",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5bJ1DrEM4hNCafcDd1oxHx",
+          "name": "Self Care",
+          "duration_ms": 345133,
+          "popularity": 78,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5bJ1DrEM4hNCafcDd1oxHx"
+          },
+          "album": {
+            "id": "5wtE5aLX5r7jOosmPhJhhk",
+            "name": "Swimming",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273175c577a61aa13d4fb4b6534",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02175c577a61aa13d4fb4b6534",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851175c577a61aa13d4fb4b6534",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "麦克·米勒——这个被青春期荷尔蒙和爵士钢琴浸泡出来的嘻哈诗人，用《但我把妹并不顺利》这种中二病晚期混音带标题，完美演绎了15岁处男rapper的终极意淫。所幸后来《来的超级好货》真的成了货真价实的好货，让全美发现原来白人说唱不只有姆爷式暴怒，还能有这种用大麻烟雾编织的佛系养生flow。\n\n这位匹兹堡公子哥堪称嘻哈界的沙发土豆，自带慵懒爵士采样和宿醉未醒的咬字，硬是把街头匪帮风改造成卧室睡衣派对。他的flow松弛得像被二十个姑娘甩过后的心态，歌词从\"疯狂嗑药开趴\"逐渐升级为\"存在主义抑郁诊疗手册\"，堪称说唱界的青春期延迟综合症患者。就连老天爷都忍不住在他26岁嗑过量时感叹：这位永远的少年，终于把自己活成了不会变老的彼得潘标本。",
+      "style_metrics": {
+        "humor_level": 8,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:23:35.233920",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 918,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

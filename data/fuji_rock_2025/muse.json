@@ -1,0 +1,224 @@
+{
+  "artist_name": "Muse",
+  "collected_at": "2025-06-08T15:33:20.872480",
+  "data": {
+    "wikipedia": {
+      "title": "缪斯",
+      "extract": "繆思 是希臘神話主司艺术与科學的九位古老文艺女神的總稱。她們代表了通過傳統的音乐和舞蹈、即時代流傳下来的詩歌所表達出来的神話傳說。她們原本是守護赫利孔山泉水的水仙，屬于寧芙的范疇。后来人們將奧林匹斯神系的阿波羅設立为她們的首領。繆思女神常常出现在众神或英雄们的聚会，轻歌曼舞，一展风采，为聚会带来不少的愉悦与欢乐。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Jan_van_Balen_%28attr%29_Apollo_und_die_Musen.jpg/330px-Jan_van_Balen_%28attr%29_Apollo_und_die_Musen.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "12Chz98pHFMPJEknJQMWvI",
+      "name": "Muse",
+      "popularity": 78,
+      "followers": 8293699,
+      "genres": [
+        "alternative rock",
+        "rock"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb0accbbe13e1aa147dd27671c",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051740accbbe13e1aa147dd27671c",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1780accbbe13e1aa147dd27671c",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "3lPr8ghNDBLc2uZovNyLs9",
+          "name": "Supermassive Black Hole",
+          "duration_ms": 212439,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3lPr8ghNDBLc2uZovNyLs9"
+          },
+          "album": {
+            "id": "0lw68yx3MhKflWFqCsGkIs",
+            "name": "Black Holes and Revelations",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27328933b808bfb4cbbd0385400",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485128933b808bfb4cbbd0385400",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4VqPOruhp5EdPBeR92t6lQ",
+          "name": "Uprising",
+          "duration_ms": 304840,
+          "popularity": 80,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4VqPOruhp5EdPBeR92t6lQ"
+          },
+          "album": {
+            "id": "0eFHYz8NmK75zSplL5qlfM",
+            "name": "The Resistance",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b6d4566db0d12894a1a3b7a2",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b6d4566db0d12894a1a3b7a2",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b6d4566db0d12894a1a3b7a2",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0knbMPVHpFbsx38pLoYSRs",
+          "name": "Hysteria",
+          "duration_ms": 227023,
+          "popularity": 79,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0knbMPVHpFbsx38pLoYSRs"
+          },
+          "album": {
+            "id": "2Eq6RyxCm7qEAF2YLOxa4s",
+            "name": "Absolution",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2733303a842ee1bc0b23204333d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e023303a842ee1bc0b23204333d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048513303a842ee1bc0b23204333d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "3skn2lauGk7Dx6bVIt5DVj",
+          "name": "Starlight",
+          "duration_ms": 240213,
+          "popularity": 79,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3skn2lauGk7Dx6bVIt5DVj"
+          },
+          "album": {
+            "id": "0lw68yx3MhKflWFqCsGkIs",
+            "name": "Black Holes and Revelations",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27328933b808bfb4cbbd0385400",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0228933b808bfb4cbbd0385400",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485128933b808bfb4cbbd0385400",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0EdMqiKs9LKXhspeQhl4RZ",
+          "name": "Time is Running Out",
+          "duration_ms": 236535,
+          "popularity": 77,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0EdMqiKs9LKXhspeQhl4RZ"
+          },
+          "album": {
+            "id": "2Eq6RyxCm7qEAF2YLOxa4s",
+            "name": "Absolution",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2733303a842ee1bc0b23204333d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e023303a842ee1bc0b23204333d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048513303a842ee1bc0b23204333d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【希腊神界初代女团考古报告】这九位山泉水厂出道的仙女姐姐堪称奥林匹斯最早的艺术公务员，明明拥有史诗级创作buff却沉迷歌舞晚会表演——诗坛天后卡利俄佩每次作完《奥德赛》就带着妹妹们去宙斯家客厅打歌，把竖琴弹得像年会背景音乐，舞步比神庙浮雕还程式化。虽然顶着\"文艺女神\"title，作品集却像赫利孔山的泉水一样千年不变：要么给英雄写命题赞歌，要么在酒神派对上强行植入阿波罗的抒情金曲。建议宙斯考虑引入末位淘汰制，毕竟某些缪斯的工作报告里除了\"参与过特洛伊战争BGM制作\"外，可能连首原创单曲都拿不出手。（好消息：九人团终于不用担心站位问题，坏消息：她们集体被刻在陶罐上当专辑封面了）#神二代也逃不过KPI焦虑# #论初代歌姬如何沦为背景板# #阿波罗的捆绑营销有多成功#",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:33:52.352457",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 790,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

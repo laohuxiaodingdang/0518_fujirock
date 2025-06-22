@@ -1,0 +1,225 @@
+{
+  "artist_name": "Red Hot Chili Peppers",
+  "collected_at": "2025-06-08T15:32:38.821489",
+  "data": {
+    "wikipedia": {
+      "title": "嗆辣紅椒",
+      "extract": "嗆辣紅椒合唱团 是1982年成立于加州洛杉磯的美国另类摇滚乐团，現由主唱安東尼·基德斯 、吉他手约翰·伏許安 、贝斯手「跳蚤」麥可·巴札里 及鼓手查德·史密斯 组成。乐团音乐风格多變，主要由傳統放克融合另类摇滚、庞克摇滚、迷幻摇滚等元素。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Hot_Chili_Peppers_logo.svg/langzh-320px-Red_Hot_Chili_Peppers_logo.svg.png",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "0L8ExT028jH3ddEcZwqJJ5",
+      "name": "Red Hot Chili Peppers",
+      "popularity": 85,
+      "followers": 22606117,
+      "genres": [
+        "funk rock",
+        "alternative rock",
+        "rock"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0L8ExT028jH3ddEcZwqJJ5"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc33cc15260b767ddec982ce8",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174c33cc15260b767ddec982ce8",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178c33cc15260b767ddec982ce8",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "3ZOEytgrvLwQaqXreDs2Jx",
+          "name": "Can't Stop",
+          "duration_ms": 269000,
+          "popularity": 89,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3ZOEytgrvLwQaqXreDs2Jx"
+          },
+          "album": {
+            "id": "6deiaArbeoqp1xPEGdEKp1",
+            "name": "By the Way (Deluxe Edition)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273de1af2785a83cc660155a0c4",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02de1af2785a83cc660155a0c4",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851de1af2785a83cc660155a0c4",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "48UPSzbZjgc449aqz8bxox",
+          "name": "Californication",
+          "duration_ms": 329733,
+          "popularity": 88,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/48UPSzbZjgc449aqz8bxox"
+          },
+          "album": {
+            "id": "2Y9IRtehByVkegoD7TcLfi",
+            "name": "Californication (Deluxe Edition)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27394d08ab63e57b0cae74e8595",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0294d08ab63e57b0cae74e8595",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485194d08ab63e57b0cae74e8595",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1G391cbiT3v3Cywg8T7DM1",
+          "name": "Scar Tissue",
+          "duration_ms": 215906,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1G391cbiT3v3Cywg8T7DM1"
+          },
+          "album": {
+            "id": "2Y9IRtehByVkegoD7TcLfi",
+            "name": "Californication (Deluxe Edition)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27394d08ab63e57b0cae74e8595",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0294d08ab63e57b0cae74e8595",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485194d08ab63e57b0cae74e8595",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "3d9DChrdc6BOeFsbrZ3Is0",
+          "name": "Under the Bridge",
+          "duration_ms": 264306,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3d9DChrdc6BOeFsbrZ3Is0"
+          },
+          "album": {
+            "id": "30Perjew8HyGkdSmqguYyg",
+            "name": "Blood Sugar Sex Magik (Deluxe Edition)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273153d79816d853f2694b2cc70",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02153d79816d853f2694b2cc70",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851153d79816d853f2694b2cc70",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "64BbK9SFKH2jk86U3dGj2P",
+          "name": "Otherside",
+          "duration_ms": 255373,
+          "popularity": 85,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/64BbK9SFKH2jk86U3dGj2P"
+          },
+          "album": {
+            "id": "2Y9IRtehByVkegoD7TcLfi",
+            "name": "Californication (Deluxe Edition)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27394d08ab63e57b0cae74e8595",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0294d08ab63e57b0cae74e8595",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485194d08ab63e57b0cae74e8595",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "呛辣红椒合唱团——这支堪称摇滚界“佛跳墙”的加州老炮乐团，用四十年时间证明了放克和中年危机可以完美共生。主唱安东尼·基德斯以一头鲜红假发和热带鸟类般的肢体语言，成功将后朋克嘶吼与迷幻呓语搅拌成独门秘制辣椒酱，而贝斯手“跳蚤”用永动机般的弹跳力证明：人类确实可以靠肾上腺素抵抗地心引力。他们的音乐就像加州的阳光鸡尾酒——混合了朋克生啤、迷幻苦艾酒和放克果粒橙，喝多了难免上头，但全球1亿张销量证明这配方确实让人欲罢不能。鼓手查德·史密斯边打鼓边展示的肱二头肌，可能是摇滚史上最硬核的打击乐器广告。这支乐团就像音乐界的变色龙，在《Californication》里是带刺的仙人掌，在《Under the Bridge》又变成酸涩的柠檬糖，唯一不变的是永远比专辑封面更花哨的服装品味——建议他们的造型师直接申请热带雨林保护专利。（PS：荣获6座",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:33:18.870045",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 882,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

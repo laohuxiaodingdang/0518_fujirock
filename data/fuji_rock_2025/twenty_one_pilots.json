@@ -1,0 +1,221 @@
+{
+  "artist_name": "Twenty One Pilots",
+  "collected_at": "2025-06-08T15:31:27.764467",
+  "data": {
+    "wikipedia": {
+      "title": "二十一名飞行员",
+      "extract": "二十一名飛員乐团 是一个美国音乐组合，于2009年在美国俄亥俄州哥伦布组建。乐队最初由泰勒·约瑟夫、尼克·托马斯与克里斯·萨利赫组成，后两位成员在2011年时退出。目前乐队由主唱泰勒·约瑟夫和鼓手喬許·鄧组成。乐队最知名的歌曲是《輾轉難眠》、《旅程》和《異类》。乐队获得五个格莱美奖提名，并凭借歌曲《輾轉難眠》获得最佳流行组合/团体表演。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Twenty_One_Pilots_-_Southside_Festival_2022_-_IMG_6029_-_1_%28cropped%29.jpg/330px-Twenty_One_Pilots_-_Southside_Festival_2022_-_IMG_6029_-_1_%28cropped%29.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "3YQKmKGau1PzlVlkL1iodx",
+      "name": "Twenty One Pilots",
+      "popularity": 85,
+      "followers": 25445684,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb61a7ea26d33ded218cd1e59d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517461a7ea26d33ded218cd1e59d",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17861a7ea26d33ded218cd1e59d",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "3CRDbSIZ4r5MsZ0YwxuEkn",
+          "name": "Stressed Out",
+          "duration_ms": 202333,
+          "popularity": 89,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn"
+          },
+          "album": {
+            "id": "3cQO7jp5S9qLBoIVtbkSM1",
+            "name": "Blurryface",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732df0d98a423025032d0db1f7",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022df0d98a423025032d0db1f7",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512df0d98a423025032d0db1f7",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2Z8WuEywRWYTKe1NybPQEW",
+          "name": "Ride",
+          "duration_ms": 214506,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2Z8WuEywRWYTKe1NybPQEW"
+          },
+          "album": {
+            "id": "3cQO7jp5S9qLBoIVtbkSM1",
+            "name": "Blurryface",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732df0d98a423025032d0db1f7",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022df0d98a423025032d0db1f7",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512df0d98a423025032d0db1f7",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "57yL3161hUMuw06zzzUCHi",
+          "name": "Doubt",
+          "duration_ms": 191493,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/57yL3161hUMuw06zzzUCHi"
+          },
+          "album": {
+            "id": "3cQO7jp5S9qLBoIVtbkSM1",
+            "name": "Blurryface",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732df0d98a423025032d0db1f7",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022df0d98a423025032d0db1f7",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512df0d98a423025032d0db1f7",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6i0V12jOa3mr6uu4WYhUBr",
+          "name": "Heathens",
+          "duration_ms": 195920,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6i0V12jOa3mr6uu4WYhUBr"
+          },
+          "album": {
+            "id": "3J8W9AOjQhnBLCX33m3atT",
+            "name": "Heathens",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732ca3ba8f334ca5a5f0312efb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022ca3ba8f334ca5a5f0312efb",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512ca3ba8f334ca5a5f0312efb",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1QJbDTZAO8rpGOMG4UahFM",
+          "name": "The Line (from the series Arcane League of Legends)",
+          "duration_ms": 192000,
+          "popularity": 79,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1QJbDTZAO8rpGOMG4UahFM"
+          },
+          "album": {
+            "id": "2x6LWti2bjYS6AllSomoV7",
+            "name": "Arcane League of Legends: Season 2 (Soundtrack from the Animated Series)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734aaf2413384c1efcc38353c6",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024aaf2413384c1efcc38353c6",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514aaf2413384c1efcc38353c6",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【二十一世纪最操心的飞行员】\n这支哥伦布起飞的双人组合用九年时间证明了：在流行音乐里玩抑郁症主题比咖啡店放黑胶更标配。主唱泰勒·约瑟夫堪称当代emo教父，白天在格莱美领奖台挥洒热泪，晚上在歌词本写满\"我好丧但你们要坚强\"——建议把他们的现场改名为《当代青年心理自救电台直播秀》。\n\n从三人组缩水成二人转的配置倒是很合理，毕竟他们的音乐本就是泰勒一人分饰八角的独角戏：时而说唱传教士，时而钢琴忧郁男，间或客串电子合成器狂躁症患者。那些被格莱美宠幸的爆款《Stressed Out》堪称精神分裂标本，前奏丧得能腌酸菜，副歌又励志得能当健身房BGM。建议他们的MV统一加注字幕：\"本片由卫衣兜帽、花纹长裤和过量红蓝色灯光联合赞助\"。\n\n最绝的是他们总能把中二病包装成哲学命题，把青少年卧谈会话题升华成格莱美奖杯。建议下次专辑直接命名为《我穿着彩色卫衣但",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:32:02.414897",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 878,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

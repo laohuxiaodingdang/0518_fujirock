@@ -1,0 +1,223 @@
+{
+  "artist_name": "Beck",
+  "collected_at": "2025-06-08T15:34:33.446373",
+  "data": {
+    "wikipedia": {
+      "title": "Beck",
+      "extract": "Beck可以指：BECK (漫画)，日本漫画家HAROLD作石漫画作品。\n贝克 (歌手)，美国音乐家、创作歌手Beck。其他名稱以「」開頭的所有条目",
+      "thumbnail": null,
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "3vbKDsSS70ZX9D2OcvbZmS",
+      "name": "Beck",
+      "popularity": 68,
+      "followers": 1677095,
+      "genres": [
+        "anti-folk"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3vbKDsSS70ZX9D2OcvbZmS"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb917df61d55ce3ab98d43351a",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174917df61d55ce3ab98d43351a",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178917df61d55ce3ab98d43351a",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "5NTZM8YYeKM2YsGSffVIge",
+          "name": "Loser",
+          "duration_ms": 235000,
+          "popularity": 70,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5NTZM8YYeKM2YsGSffVIge"
+          },
+          "album": {
+            "id": "1M1dhwZE65bqGfbUdMzvlj",
+            "name": "Mellow Gold",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27354196f32f292346d0ad9b528",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0254196f32f292346d0ad9b528",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485154196f32f292346d0ad9b528",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0HW0aSeNZ5nfLK2GdWNMDc",
+          "name": "E-Pro",
+          "duration_ms": 202360,
+          "popularity": 51,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0HW0aSeNZ5nfLK2GdWNMDc"
+          },
+          "album": {
+            "id": "1R0BP6MeMLigDNaoztxUAZ",
+            "name": "Guero",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27342b1d9121baa3c313a0564e5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0242b1d9121baa3c313a0564e5",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485142b1d9121baa3c313a0564e5",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1GreGTs4rIfjDILBERxKcB",
+          "name": "Where It's At - Album Version W/ Intro",
+          "duration_ms": 329800,
+          "popularity": 49,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1GreGTs4rIfjDILBERxKcB"
+          },
+          "album": {
+            "id": "3PpTsdpZmaLUh6RvViu9G7",
+            "name": "Odelay",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273301bf333c6a1f573a2af5864",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02301bf333c6a1f573a2af5864",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851301bf333c6a1f573a2af5864",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4oYfMQ6NDGHq0GcbICqsDw",
+          "name": "Everybody's Gotta Learn Sometime",
+          "duration_ms": 354066,
+          "popularity": 61,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4oYfMQ6NDGHq0GcbICqsDw"
+          },
+          "album": {
+            "id": "0KcwfeonyS5W48wnjXNbeo",
+            "name": "Everybody's Gotta Learn Sometime",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732a4703f5dd454b52304663ff",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022a4703f5dd454b52304663ff",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512a4703f5dd454b52304663ff",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "7h69nvFshbhUpesEXBPH0w",
+          "name": "Devils Haircut",
+          "duration_ms": 192933,
+          "popularity": 53,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7h69nvFshbhUpesEXBPH0w"
+          },
+          "album": {
+            "id": "3PpTsdpZmaLUh6RvViu9G7",
+            "name": "Odelay",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273301bf333c6a1f573a2af5864",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02301bf333c6a1f573a2af5864",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851301bf333c6a1f573a2af5864",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "让我们把日本漫画扔进东京湾（抱歉了漫画家桑），来重点吐槽那位美国音乐变色龙Beck。这位先生堪称乐坛人形混音器——从低保真垃圾摇滚到迷幻乡村布鲁斯，他就像个穿着法兰绒衬衫的魔法阿嬷，总能从破旧采样机里熬出诡谲的音乐浓汤。格莱美欠他一个\"最佳风格分裂症患者奖\"，毕竟谁能想到《Loser》里唱着\"soy un perdedor\"的颓废青年，二十年后会端着合成器给碧昂丝当音乐裁缝？\n\n他的创作哲学大概是\"管他什么风格，先扔进搅拌机再说\"，导致每张专辑都像开音乐盲盒。乐评人集体患上颈椎病——前奏还在点头晃脑，副歌突然让人脖子抽筋。不过必须承认，这个低保真钉子户2015年终于靠《Morning Phase》领到了格莱美退休金，只是那些期待他再造《Loser》式病毒神曲的人可能要失望了，毕竟现在人家忙着用十二弦吉他给加州阳光写赞美诗呢。\n\n最绝的是他的歌词创作，堪称后现代",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:35:12.766298",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 783,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

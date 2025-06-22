@@ -1,0 +1,221 @@
+{
+  "artist_name": "Post Malone",
+  "collected_at": "2025-06-08T15:30:09.223549",
+  "data": {
+    "wikipedia": {
+      "title": "波兹·马龙",
+      "extract": "奧斯汀·理查德·波斯特，以其艺名巨星·馬龍（英語：）闻名，是一名美国歌手、演員、饒舌歌手、詞曲作家和音乐製作人。其作品融合了不同的流行种类，包括嘻哈、節奏藍調、流行、陷阱音乐和摇滚的音乐风格，内省的词曲创作，简洁的声线令马龙广受欢迎。马龙出生在纽约州的，在德克萨斯州的格雷普韦恩长大。他于2015年发布其首张单曲〈White Iverson〉出道，这首歌在《告示牌》百强单曲榜中排名第14，并获得了与聯眾唱片签订的唱片合约。他的艺名源自于饒舌產生器。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Post_Malone_Stavernfestivalen_2018_%28202940%29.jpg/330px-Post_Malone_Stavernfestivalen_2018_%28202940%29.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "246dkjvS1zLTtiykXe5h60",
+      "name": "Post Malone",
+      "popularity": 90,
+      "followers": 47100478,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe17c0aa1714a03d62b5ce4e0",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174e17c0aa1714a03d62b5ce4e0",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178e17c0aa1714a03d62b5ce4e0",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "5IZXB5IKAD2qlvTPJYDCFB",
+          "name": "I Had Some Help (Feat. Morgan Wallen)",
+          "duration_ms": 178205,
+          "popularity": 88,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5IZXB5IKAD2qlvTPJYDCFB"
+          },
+          "album": {
+            "id": "4BbsHmXEghoPPevQjPnHXx",
+            "name": "F-1 Trillion",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27388208159b1b3c69eefdeb2e0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0288208159b1b3c69eefdeb2e0",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485188208159b1b3c69eefdeb2e0",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1BDLD4c07q0bmq2VCRsXoE",
+          "name": "I Ain't Comin' Back (feat. Post Malone)",
+          "duration_ms": 175271,
+          "popularity": 83,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1BDLD4c07q0bmq2VCRsXoE"
+          },
+          "album": {
+            "id": "5IZ8sY5FjtL9hloXpv0XbD",
+            "name": "I’m The Problem",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27335ea219ce47813b5e2dc3745",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0235ea219ce47813b5e2dc3745",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485135ea219ce47813b5e2dc3745",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0RiRZpuVRbi7oqRdSMwhQY",
+          "name": "Sunflower - Spider-Man: Into the Spider-Verse",
+          "duration_ms": 157560,
+          "popularity": 85,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0RiRZpuVRbi7oqRdSMwhQY"
+          },
+          "album": {
+            "id": "4g1ZRSobMefqF6nelkgibi",
+            "name": "Hollywood's Bleeding",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739478c87599550dd73bfa7e02",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029478c87599550dd73bfa7e02",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519478c87599550dd73bfa7e02",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "21jGcNKet2qwijlDFuPiPb",
+          "name": "Circles",
+          "duration_ms": 215280,
+          "popularity": 88,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/21jGcNKet2qwijlDFuPiPb"
+          },
+          "album": {
+            "id": "4g1ZRSobMefqF6nelkgibi",
+            "name": "Hollywood's Bleeding",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739478c87599550dd73bfa7e02",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029478c87599550dd73bfa7e02",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519478c87599550dd73bfa7e02",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2OzhQlSqBEmt7hmkYxfT6m",
+          "name": "Fortnight (feat. Post Malone)",
+          "duration_ms": 228965,
+          "popularity": 85,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2OzhQlSqBEmt7hmkYxfT6m"
+          },
+          "album": {
+            "id": "1Mo4aZ8pdj6L1jx8zSwJnt",
+            "name": "THE TORTURED POETS DEPARTMENT",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735076e4160d018e378f488c33",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025076e4160d018e378f488c33",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515076e4160d018e378f488c33",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【巨星·马龙：当代音乐圈最成功的文化缝合怪】这位顶着AI自动生成艺名的德州大汉，用东北乱炖式音乐配方成功治好了乐评人的低血压——当你的专辑像开盲盒一样随机掉落乡村吉他、陷阱808、emo摇滚和修到妈不认的电音旋律，连格莱美都要困惑该颁给你最佳说唱专辑还是年度马桶音乐大赏。从《White Iverson》意外走红开始，这位\"工伤级别啤酒肚拥有者\"就深谙音乐炼金术：把内省歌词裹上糖霜式旋律，给痛苦面具镶上钻石牙套，再用比德州烤肉酱更黏稠的auto-tune浇灌出21世纪青少年集体焦虑的共鸣。尽管乐迷永远猜不透他下次是带着班卓琴跳水还是举着电锯打碟，但不可否认这位\"音乐裁缝\"确实缝出了当代流行乐的财富密码：毕竟当你的spotify数据能买下整个纳什维尔，谁还在乎音乐纯粹性这种老古董概念呢？（P.S.联众唱片签约时肯定没想到，他们签下的其实是会唱歌的票房炸弹人型",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:30:43.312319",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 866,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

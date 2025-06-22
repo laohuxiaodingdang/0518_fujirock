@@ -1,0 +1,225 @@
+{
+  "artist_name": "Official髭男dism",
+  "collected_at": "2025-06-08T15:28:03.504698",
+  "data": {
+    "wikipedia": {
+      "title": "Official髭男dism",
+      "extract": "Official髭男dism（英語：）是在日本島根縣結成的流行摇滚乐团，于2012年组成。所屬經紀公司为Lastrum Music Entertainment，所屬唱片公司为波麗佳音内的IRORI Records。官方歌迷俱乐部稱为「BROTHERS」「Stand By You」。",
+      "thumbnail": null,
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "5Vo1hnCRmCM6M4thZCInCj",
+      "name": "OFFICIAL HIGE DANDISM",
+      "popularity": 72,
+      "followers": 7177959,
+      "genres": [
+        "j-pop",
+        "anime",
+        "j-rock"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5Vo1hnCRmCM6M4thZCInCj"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebf9f7513528a90d1dde6d3aaa",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174f9f7513528a90d1dde6d3aaa",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178f9f7513528a90d1dde6d3aaa",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "58dxGXavrcagRqA58fNB0Z",
+          "name": "Pretender",
+          "duration_ms": 326842,
+          "popularity": 67,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/58dxGXavrcagRqA58fNB0Z"
+          },
+          "album": {
+            "id": "2vwgYzudvFwyFe1Ho9gdUQ",
+            "name": "Traveler",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27376f402d83c2a85e5deca60e7",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0276f402d83c2a85e5deca60e7",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485176f402d83c2a85e5deca60e7",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "3tRgmNTaFYgtbt7XCy6Les",
+          "name": "Same Blue",
+          "duration_ms": 237836,
+          "popularity": 69,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3tRgmNTaFYgtbt7XCy6Les"
+          },
+          "album": {
+            "id": "7Mq690kTHBMnLHdi8WWlUF",
+            "name": "Same Blue",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737fc0a89cd15b03e603fb4016",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027fc0a89cd15b03e603fb4016",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517fc0a89cd15b03e603fb4016",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6wDntdm888mDo458RaYjGl",
+          "name": "Cry Baby",
+          "duration_ms": 241680,
+          "popularity": 61,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6wDntdm888mDo458RaYjGl"
+          },
+          "album": {
+            "id": "0dOSO54LwPzxTUlnkEYxK1",
+            "name": "Editorial",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2731ce13e03759fd585b8115476",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e021ce13e03759fd585b8115476",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048511ce13e03759fd585b8115476",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5ZkHkXPHrIM8K5twCe78i9",
+          "name": "Subtitle",
+          "duration_ms": 304555,
+          "popularity": 64,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5ZkHkXPHrIM8K5twCe78i9"
+          },
+          "album": {
+            "id": "66azqlrT0IYzfh3621YClv",
+            "name": "Rejoice",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27376daf130b080f6ac6b2c4ad2",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0276daf130b080f6ac6b2c4ad2",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485176daf130b080f6ac6b2c4ad2",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4JAAPHvBxmRsSXeu9gVdxc",
+          "name": "ミックスナッツ",
+          "duration_ms": 211348,
+          "popularity": 61,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4JAAPHvBxmRsSXeu9gVdxc"
+          },
+          "album": {
+            "id": "66azqlrT0IYzfh3621YClv",
+            "name": "Rejoice",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27376daf130b080f6ac6b2c4ad2",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0276daf130b080f6ac6b2c4ad2",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485176daf130b080f6ac6b2c4ad2",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【Official髭男dism：日本都市青年的精神按摩椅】\n\n这支来自岛根县的四人组用音符酿造着21世纪最无害的流行摇滚，就像在自动贩卖机里贩卖的罐装氧气——毫无攻击性却总能精准击中当代社畜的生存痛点。主唱藤原聪那把仿佛被美式咖啡泡过的沙哑声线，堪称霓虹便利店深夜关东煮般的存在：廉价但温暖，油腻却让人上瘾。\n\n他们的创作密码早就被大数据破译：用钢琴+电吉他的经典配方熬制三分钟心灵鸡汤，歌词永远在恋爱烦恼与青春励志之间来回横跳，彷佛三十岁还在强行续费少年漫画会员的藤原聪永远活在高二那年梅雨季。不过必须承认，这群\"胡子男\"确实掌握着日本流行乐的财富密码——当你在日剧第七集片尾、饮料广告第N次循环、便利店天花板音响里听到他们的旋律时，身体已经比大脑先按下\"单曲循环\"键。\n\n作为日本TBS系电视剧主题曲承包专业户（毕竟他们的曲子自带90%剧情完成度），他们用键盘编织的都市流行乐就像精心调配的",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:28:41.812373",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 825,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

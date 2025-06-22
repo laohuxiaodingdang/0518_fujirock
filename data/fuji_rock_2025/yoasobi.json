@@ -1,0 +1,224 @@
+{
+  "artist_name": "Yoasobi",
+  "collected_at": "2025-06-08T15:27:20.590820",
+  "data": {
+    "wikipedia": {
+      "title": "YOASOBI",
+      "extract": "YOASOBI（注音假名：）是2019年結成的日本雙人音乐组合，由使用VOCALOID作曲的作曲家Ayase与本業为创作歌手的幾田莉拉在此以ikura之名组成。其特色为將在日本索尼音乐娛乐所經營的小說及插畫網站「monogatary.com」中的原作「小說音乐化」。团名的原意为「在夜晚玩耍」（），由于兩位团員本来都有各自的音乐工作，因此兩人把原本各自的工作定義为「早上的活動」，反之這個音乐组合則是「晚上的活動」，因此命名。其作品《偶像》（）在发布一週后获得了2千萬點閱，截至2024年8月28日共获得了8億點閱。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/zh/thumb/2/26/YOASOBI_banner.jpg/330px-YOASOBI_banner.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "64tJ2EAv1R6UaZqc4iOCyj",
+      "name": "YOASOBI",
+      "popularity": 76,
+      "followers": 9180728,
+      "genres": [
+        "j-pop",
+        "anime"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/64tJ2EAv1R6UaZqc4iOCyj"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb507349709ae19263301a62f7",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174507349709ae19263301a62f7",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178507349709ae19263301a62f7",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "1hAloWiinXLPQUJxrJReb1",
+          "name": "アイドル",
+          "duration_ms": 211733,
+          "popularity": 73,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1"
+          },
+          "album": {
+            "id": "68w73FF3dYC6C3RWdcV0Yl",
+            "name": "THE BOOK 3",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f3527c2e1ffc2e99bb6a072e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f3527c2e1ffc2e99bb6a072e",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f3527c2e1ffc2e99bb6a072e",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6MCjmGYlw6mQVWRFVgBRvB",
+          "name": "夜に駆ける",
+          "duration_ms": 258838,
+          "popularity": 74,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6MCjmGYlw6mQVWRFVgBRvB"
+          },
+          "album": {
+            "id": "1xhO0GSoezdPJcSuNe1ySv",
+            "name": "THE BOOK",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273684d81c9356531f2a456b1c1",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02684d81c9356531f2a456b1c1",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851684d81c9356531f2a456b1c1",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6uhIF5J5Txaie0is2nXdxU",
+          "name": "怪物",
+          "duration_ms": 205480,
+          "popularity": 63,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6uhIF5J5Txaie0is2nXdxU"
+          },
+          "album": {
+            "id": "2Ltmu8tslylv8YlBkyrcgY",
+            "name": "THE BOOK 2",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029c3625a413a9a79facea38c2",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519c3625a413a9a79facea38c2",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0YTM7bCx451c6LQbkddy4Q",
+          "name": "勇者",
+          "duration_ms": 194266,
+          "popularity": 71,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0YTM7bCx451c6LQbkddy4Q"
+          },
+          "album": {
+            "id": "68w73FF3dYC6C3RWdcV0Yl",
+            "name": "THE BOOK 3",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f3527c2e1ffc2e99bb6a072e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f3527c2e1ffc2e99bb6a072e",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f3527c2e1ffc2e99bb6a072e",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1zd35Y44Blc1CwwVbW3Qnk",
+          "name": "群青",
+          "duration_ms": 248026,
+          "popularity": 72,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1zd35Y44Blc1CwwVbW3Qnk"
+          },
+          "album": {
+            "id": "1xhO0GSoezdPJcSuNe1ySv",
+            "name": "THE BOOK",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273684d81c9356531f2a456b1c1",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02684d81c9356531f2a456b1c1",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851684d81c9356531f2a456b1c1",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【当代霓虹文化速溶咖啡代言人】这两位把社畜作息写进团名的夜猫子，用VOCALOID裁缝与治愈系唱腔的奇妙组合，成功把日本文学网站变成音乐流水线车间。Ayase负责把网络小说咔咔剪成四分钟速食流行曲，ikura则用她毫无攻击性的嗓音为这些工业糖精裹上棉花糖外衣——完美适配短视频时代人类日渐萎缩的注意力时长。虽说《偶像》8亿播放量让人怀疑日本人是不是集体中了点读机式传播病毒，但必须承认他们精准拿捏了东亚苦逼青年的精神G点：在996间隙用五分钟沉浸式体验\"活着真好\"的错觉。建议搭配便利店饭团食用，风味更佳。（PS.量产型创作还能保持这种质量，建议国内某些裁缝大师报名夜校补习）",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:28:01.502810",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 788,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

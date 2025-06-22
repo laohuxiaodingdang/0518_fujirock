@@ -1,0 +1,224 @@
+{
+  "artist_name": "Arctic Monkeys",
+  "collected_at": "2025-06-08T15:21:25.377969",
+  "data": {
+    "wikipedia": {
+      "title": "北極潑猴",
+      "extract": "北極潑猴（英語：）是组来自英国雪菲尔的另类摇滚乐团。乐团成立于2002年，团員有主唱兼吉他手 Alex Turner、吉他手Jamie Cook、贝斯手Nick O'Malley与鼓手Matt Helders。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Arctic_Monkeys_Playing_at_MSG.jpg/330px-Arctic_Monkeys_Playing_at_MSG.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "7Ln80lUS6He07XvHI8qqHH",
+      "name": "Arctic Monkeys",
+      "popularity": 88,
+      "followers": 30504294,
+      "genres": [
+        "indie",
+        "garage rock"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051747da39dea0a72f581535fb11f",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1787da39dea0a72f581535fb11f",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "5XeFesFbtLpXzIVDNQP22n",
+          "name": "I Wanna Be Yours",
+          "duration_ms": 183956,
+          "popularity": 94,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n"
+          },
+          "album": {
+            "id": "78bpIziExqiI9qztvNFlQu",
+            "name": "AM",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024ae1c4c5c45aabe565499163",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514ae1c4c5c45aabe565499163",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0BxE4FqsDD1Ot4YuBXwAPp",
+          "name": "505",
+          "duration_ms": 253586,
+          "popularity": 89,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0BxE4FqsDD1Ot4YuBXwAPp"
+          },
+          "album": {
+            "id": "1XkGORuUX2QGOEIL4EbJKm",
+            "name": "Favourite Worst Nightmare",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b1f8da74f225fa1225cdface",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b1f8da74f225fa1225cdface",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b1f8da74f225fa1225cdface",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5TTGoX70AFrTvuEtqHK37S",
+          "name": "No. 1 Party Anthem",
+          "duration_ms": 243131,
+          "popularity": 90,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5TTGoX70AFrTvuEtqHK37S"
+          },
+          "album": {
+            "id": "78bpIziExqiI9qztvNFlQu",
+            "name": "AM",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024ae1c4c5c45aabe565499163",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514ae1c4c5c45aabe565499163",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5FVd6KXrgO9B3JPmC8OPst",
+          "name": "Do I Wanna Know?",
+          "duration_ms": 272394,
+          "popularity": 90,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5FVd6KXrgO9B3JPmC8OPst"
+          },
+          "album": {
+            "id": "78bpIziExqiI9qztvNFlQu",
+            "name": "AM",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024ae1c4c5c45aabe565499163",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514ae1c4c5c45aabe565499163",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "086myS9r57YsLbJpU0TgK9",
+          "name": "Why'd You Only Call Me When You're High?",
+          "duration_ms": 161123,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/086myS9r57YsLbJpU0TgK9"
+          },
+          "album": {
+            "id": "78bpIziExqiI9qztvNFlQu",
+            "name": "AM",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734ae1c4c5c45aabe565499163",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024ae1c4c5c45aabe565499163",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514ae1c4c5c45aabe565499163",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "英伦摇滚圈头号装腔犯——北极泼猴乐队！这四个雪菲尔青年用二十年时间证明了：只要发型够油、眼神够迷离、吉他riff够复古，连唱含混不清的歌词都能被捧成诗人。主唱Alex Turner活像个刚参加完文学沙龙的车库摇滚手，硬是把车库摇滚演绎成21世纪最昂贵的古着秀。从早期莽撞的青春躁动到后期精心设计的怀旧滤镜，他们的音乐进化史堪称英国摇滚乐的《了不起的盖茨比》——越华丽越空虚。建议搭配墨镜和黑咖啡服用，以免被他们刻意营造的荷尔蒙雾气闪瞎双眼。（注：乐队中文译名至今未被官方承认，可能是觉得\"泼猴\"二字会破功他们苦心经营的高级感）",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:22:12.085756",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 724,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

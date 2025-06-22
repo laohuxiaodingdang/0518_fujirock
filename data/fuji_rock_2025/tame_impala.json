@@ -1,0 +1,237 @@
+{
+  "artist_name": "Tame Impala",
+  "collected_at": "2025-06-08T15:22:14.087567",
+  "data": {
+    "wikipedia": {
+      "title": "Tame Impala",
+      "extract": "Tame Impala是一位知名的音乐艺术家，以其独特的音乐风格和创作才华而闻名。该艺术家在音乐界有着重要的地位，作品深受听众喜爱。他们的音乐融合了多种风格元素，展现出了卓越的艺术表现力和创新精神。",
+      "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80",
+      "categories": [
+        "音乐艺术家",
+        "摇滚",
+        "流行音乐"
+      ],
+      "references": [
+        {
+          "title": "官方网站",
+          "url": "https://example.com/official"
+        },
+        {
+          "title": "音乐数据库",
+          "url": "https://example.com/music-db"
+        }
+      ]
+    },
+    "spotify": {
+      "id": "5INjqkS1o8h1imAzPqGZBb",
+      "name": "Tame Impala",
+      "popularity": 82,
+      "followers": 8913538,
+      "genres": [
+        "neo-psychedelic",
+        "indie"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb90357ef28b3a012a1d1b2fa2",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517490357ef28b3a012a1d1b2fa2",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17890357ef28b3a012a1d1b2fa2",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "6K4t31amVTZDgR3sKmwUJJ",
+          "name": "The Less I Know The Better",
+          "duration_ms": 216320,
+          "popularity": 88,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6K4t31amVTZDgR3sKmwUJJ"
+          },
+          "album": {
+            "id": "79dL7FLiJFOO0EoehUHQBv",
+            "name": "Currents",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029e1cfc756886ac782e363d79",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519e1cfc756886ac782e363d79",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5hM5arv9KDbCHS0k9uqwjr",
+          "name": "Borderline",
+          "duration_ms": 237800,
+          "popularity": 85,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5hM5arv9KDbCHS0k9uqwjr"
+          },
+          "album": {
+            "id": "31qVWUdRrlb8thMvts0yYL",
+            "name": "The Slow Rush",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27358267bd34420a00d5cf83a49",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0258267bd34420a00d5cf83a49",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485158267bd34420a00d5cf83a49",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2X485T9Z5Ly0xyaghN73ed",
+          "name": "Let It Happen",
+          "duration_ms": 467586,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed"
+          },
+          "album": {
+            "id": "79dL7FLiJFOO0EoehUHQBv",
+            "name": "Currents",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029e1cfc756886ac782e363d79",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519e1cfc756886ac782e363d79",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "52ojopYMUzeNcudsoz7O9D",
+          "name": "New Person, Same Old Mistakes",
+          "duration_ms": 363240,
+          "popularity": 82,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/52ojopYMUzeNcudsoz7O9D"
+          },
+          "album": {
+            "id": "79dL7FLiJFOO0EoehUHQBv",
+            "name": "Currents",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029e1cfc756886ac782e363d79",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519e1cfc756886ac782e363d79",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5M4yti0QxgqJieUYaEXcpw",
+          "name": "Eventually",
+          "duration_ms": 318591,
+          "popularity": 79,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5M4yti0QxgqJieUYaEXcpw"
+          },
+          "album": {
+            "id": "79dL7FLiJFOO0EoehUHQBv",
+            "name": "Currents",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029e1cfc756886ac782e363d79",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519e1cfc756886ac782e363d79",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【当代迷幻水母饲养指南】——Tame Impala的自我修养\n\n这位澳大利亚的迷幻水母饲养员Kevin Parker，用合成器泡制的迷魂汤成功让全球听众陷入集体恍惚。这位自称\"乐队\"的卧室宅男，以一己之力完成了乐队该干的所有事——如果成立乐队是为了在录音棚互相甩锅的话。他的音乐像是文艺复兴时期嗑错药的达芬奇穿越到现代，用Auto-Tune和混响效果在画布上晕染出的电子彩虹，每首单曲都在\"致幻剂后劲\"和\"午睡白噪音\"之间反复横跳。\n\n这位格莱美钉子户擅长用loop堆砌出的海市蜃楼，让你听完三张专辑才发现所有歌都像同一首的平行宇宙变奏。不过当他用迷离的声线唱出\"我感觉自己像个塑料人偶\"时，你会突然意识到——这可能是当代音乐圈最诚实的中年危机伪装成太空漫游的哲学思考。毕竟能把车库摇滚练成迷幻流行邪教，还能让Rihanna和Lady Gaga争相翻唱他的冷门作品，这手法堪比用PS",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:22:53.927750",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 845,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

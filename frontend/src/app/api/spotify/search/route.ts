@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 
+// 强制动态渲染，防止构建时静态生成
+export const dynamic = 'force-dynamic';
+
 // 简单的模拟数据响应
 export async function GET(request: Request) {
   try {

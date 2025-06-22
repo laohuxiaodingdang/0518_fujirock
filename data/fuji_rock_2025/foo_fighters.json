@@ -1,0 +1,239 @@
+{
+  "artist_name": "Foo Fighters",
+  "collected_at": "2025-06-08T15:32:04.419008",
+  "data": {
+    "wikipedia": {
+      "title": "Foo Fighters",
+      "extract": "Foo Fighters是一位知名的音乐艺术家，以其独特的音乐风格和创作才华而闻名。该艺术家在音乐界有着重要的地位，作品深受听众喜爱。他们的音乐融合了多种风格元素，展现出了卓越的艺术表现力和创新精神。",
+      "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80",
+      "categories": [
+        "音乐艺术家",
+        "摇滚",
+        "流行音乐"
+      ],
+      "references": [
+        {
+          "title": "官方网站",
+          "url": "https://example.com/official"
+        },
+        {
+          "title": "音乐数据库",
+          "url": "https://example.com/music-db"
+        }
+      ]
+    },
+    "spotify": {
+      "id": "7jy3rLJdDQY21OgRLCZ9sD",
+      "name": "Foo Fighters",
+      "popularity": 78,
+      "followers": 12647717,
+      "genres": [
+        "rock",
+        "post-grunge",
+        "alternative rock",
+        "grunge"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7jy3rLJdDQY21OgRLCZ9sD"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc884df599abc793c116cdf15",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174c884df599abc793c116cdf15",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178c884df599abc793c116cdf15",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "5UWwZ5lm5PKu6eKsHAGxOk",
+          "name": "Everlong",
+          "duration_ms": 250546,
+          "popularity": 86,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5UWwZ5lm5PKu6eKsHAGxOk"
+          },
+          "album": {
+            "id": "30ly6F6Xl0TKmyBCU50Khv",
+            "name": "The Colour And The Shape",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2730389027010b78a5e7dce426b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e020389027010b78a5e7dce426b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048510389027010b78a5e7dce426b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "7x8dCjCr0x6x2lXKujYD34",
+          "name": "The Pretender",
+          "duration_ms": 269373,
+          "popularity": 81,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7x8dCjCr0x6x2lXKujYD34"
+          },
+          "album": {
+            "id": "3ilXDEG0xiajK8AbqboeJz",
+            "name": "Echoes, Silence, Patience & Grace",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27383e260c313dc1ff1f17909cf",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0283e260c313dc1ff1f17909cf",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485183e260c313dc1ff1f17909cf",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5OQsiBsky2k2kDKy2bX2eT",
+          "name": "Learn to Fly",
+          "duration_ms": 235293,
+          "popularity": 79,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5OQsiBsky2k2kDKy2bX2eT"
+          },
+          "album": {
+            "id": "28q2N44ocJECgf8sbHEDfY",
+            "name": "There Is Nothing Left To Lose",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2731759635c92b6314d3d3c9fe9",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e021759635c92b6314d3d3c9fe9",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048511759635c92b6314d3d3c9fe9",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4dVbhS6OiYvFikshyaQaCN",
+          "name": "My Hero",
+          "duration_ms": 260026,
+          "popularity": 78,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4dVbhS6OiYvFikshyaQaCN"
+          },
+          "album": {
+            "id": "30ly6F6Xl0TKmyBCU50Khv",
+            "name": "The Colour And The Shape",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2730389027010b78a5e7dce426b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e020389027010b78a5e7dce426b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048510389027010b78a5e7dce426b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5FZxsHWIvUsmSK1IAvm2pp",
+          "name": "Best of You",
+          "duration_ms": 255626,
+          "popularity": 78,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5FZxsHWIvUsmSK1IAvm2pp"
+          },
+          "album": {
+            "id": "2eprpJCYbCbPZRKVGIEJxZ",
+            "name": "In Your Honor",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c44679425e2695001b35d72",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026c44679425e2695001b35d72",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516c44679425e2695001b35d72",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【Foo Fighters：摇滚乐坛的麦当劳巨无霸套餐】当Dave Grohl放下Nirvana的鼓棒改行当主唱时，估计连科特·柯本都没想到这位鼓手会把自己活成摇滚圈的圣诞老人——永远红光满面，永远精力过剩，永远端出一盘安全牌摇滚全家桶。他们的音乐就像超市里的混合坚果包，保证你能尝到grunge、punk、metal等各种风味，但绝不让你被任何一种味道呛到。从《Everlong》到《Best of You》，每首歌都像健身房里的杠铃片——沉重、有效、且毫无悬念。二十多年来他们坚持用超大分量的吉他音墙和万人合唱桥段精准投喂体育场观众，成功把自己修炼成格莱美颁奖礼的定点供应商。谁说中年危机只能买跑车？Dave用行动证明组建一支永不退休的摇滚男团才是正道，毕竟谁能拒绝一个会弹吉他、会打鼓、还会在台上满地打滚的人形摇滚充电宝呢？",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:32:36.818620",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 754,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

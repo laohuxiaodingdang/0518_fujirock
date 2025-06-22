@@ -1,0 +1,221 @@
+{
+  "artist_name": "Imagine Dragons",
+  "collected_at": "2025-06-08T15:30:45.314558",
+  "data": {
+    "wikipedia": {
+      "title": "謎幻樂團",
+      "extract": "謎幻乐团（英語：）是一個成立于美国内華達州拉斯維加斯的独立摇滚乐团。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Imagine_Dragons%2C_Roundhouse%2C_London_%2835390234536%29.jpg/330px-Imagine_Dragons%2C_Roundhouse%2C_London_%2835390234536%29.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "53XhwfbYqKCa1cC15pYq2q",
+      "name": "Imagine Dragons",
+      "popularity": 88,
+      "followers": 57421110,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebab47d8dae2b24f5afe7f9d38",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174ab47d8dae2b24f5afe7f9d38",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178ab47d8dae2b24f5afe7f9d38",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "0pqnGHJpmpxLKifKRmU6WP",
+          "name": "Believer",
+          "duration_ms": 204346,
+          "popularity": 90,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP"
+          },
+          "album": {
+            "id": "33pt9HBdGlAbRGBHQgsZsU",
+            "name": "Evolve",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735675e83f707f1d7271e5cf8a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025675e83f707f1d7271e5cf8a",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515675e83f707f1d7271e5cf8a",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5qaEfEh1AtSdrdrByCP7qR",
+          "name": "Demons",
+          "duration_ms": 177506,
+          "popularity": 86,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5qaEfEh1AtSdrdrByCP7qR"
+          },
+          "album": {
+            "id": "6nxDQi0FeEwccEPJeNySoS",
+            "name": "Night Visions",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273407bd04707c463bbb3410737",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02407bd04707c463bbb3410737",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851407bd04707c463bbb3410737",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1zB4vmk8tFRmM9UULNzbLB",
+          "name": "Thunder",
+          "duration_ms": 187146,
+          "popularity": 88,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1zB4vmk8tFRmM9UULNzbLB"
+          },
+          "album": {
+            "id": "33pt9HBdGlAbRGBHQgsZsU",
+            "name": "Evolve",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735675e83f707f1d7271e5cf8a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025675e83f707f1d7271e5cf8a",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515675e83f707f1d7271e5cf8a",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "54ipXppHLA8U4yqpOFTUhr",
+          "name": "Bones",
+          "duration_ms": 165264,
+          "popularity": 83,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/54ipXppHLA8U4yqpOFTUhr"
+          },
+          "album": {
+            "id": "6yiXkzHvC0OTmhfDQOEWtS",
+            "name": "Mercury - Acts 1 & 2",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02fc915b69600dce2991a61f13",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "3CIyK1V4JEJkg02E4EJnDl",
+          "name": "Enemy (with JID) - from the series Arcane League of Legends",
+          "duration_ms": 173381,
+          "popularity": 82,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3CIyK1V4JEJkg02E4EJnDl"
+          },
+          "album": {
+            "id": "6yiXkzHvC0OTmhfDQOEWtS",
+            "name": "Mercury - Acts 1 & 2",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fc915b69600dce2991a61f13",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02fc915b69600dce2991a61f13",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851fc915b69600dce2991a61f13",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【謎幻乐团Imagine Dragons：健身房BGM的终极王者】这支拉斯维加斯特产乐队堪称音乐界的能量饮料——喝多了齁嗓子，但总能强行提神。他们的摇滚配方像赌场老虎机：重复的副歌、炸裂的鼓点和主唱Dan Reynolds情感丰沛到仿佛刚做完声带拉伸手术的嘶吼，精准命中现代人的肾上腺素G点。从《Radioactive》到《Believer》，每首歌都像在对你耳朵举哑铃，完美适配跑步机场景和汽车广告。格莱美颁奖礼大概把他们归类为\"摇滚元素装饰的流行乐手办\"，毕竟能把独立摇滚唱成NBA中场秀指定战歌也算种超能力。不过要小心，他们的歌词深度堪比拉斯维加斯人工湖——表面波光粼粼，仔细看全是LED灯倒影。当代商业摇滚行为艺术大师，鉴定完毕。",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:31:25.761277",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 699,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

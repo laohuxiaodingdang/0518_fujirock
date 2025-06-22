@@ -7,3 +7,6 @@
 /frontend/.next/
 # misc
 .DS_Store
+# Environment variables
+.env
+Miniconda3-latest-MacOSX-arm64.sh

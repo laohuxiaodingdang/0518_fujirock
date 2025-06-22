@@ -1,0 +1,210 @@
+{
+  "artist_name": "Lana Del Rey",
+  "collected_at": "2025-06-08T15:24:54.444016",
+  "data": {
+    "wikipedia": {
+      "title": "拉娜·德雷",
+      "extract": "",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lana_Del_Rey_%40_Grammy_Museum_10_13_2019_%2849311522181%29_%28cropped%29.jpg/330px-Lana_Del_Rey_%40_Grammy_Museum_10_13_2019_%2849311522181%29_%28cropped%29.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "00FQb4jTyendYWaN8pK0wa",
+      "name": "Lana Del Rey",
+      "popularity": 92,
+      "followers": 48106742,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb99cacf8acd5378206767261",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174b99cacf8acd5378206767261",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178b99cacf8acd5378206767261",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "1Ist6PR2BZR3n2z2Y5R6S1",
+          "name": "Summertime Sadness",
+          "duration_ms": 264773,
+          "popularity": 78,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1Ist6PR2BZR3n2z2Y5R6S1"
+          },
+          "album": {
+            "id": "0Dt3FbpMQwjoT5KNAw0IXR",
+            "name": "Born To Die – Paradise Edition (Special Version)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f894be72a77b1488292672c7",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f894be72a77b1488292672c7",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f894be72a77b1488292672c7",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2nMeu6UenVvwUktBCpLMK9",
+          "name": "Young And Beautiful",
+          "duration_ms": 236053,
+          "popularity": 89,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2nMeu6UenVvwUktBCpLMK9"
+          },
+          "album": {
+            "id": "1D92WOHWUI2AGQCCdplcXL",
+            "name": "Young And Beautiful",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273d7fb3e4c63020039d1cff6b2",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02d7fb3e4c63020039d1cff6b2",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851d7fb3e4c63020039d1cff6b2",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2mdEsXPu8ZmkHRRtAdC09e",
+          "name": "Cinnamon Girl",
+          "duration_ms": 300683,
+          "popularity": 89,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2mdEsXPu8ZmkHRRtAdC09e"
+          },
+          "album": {
+            "id": "5XpEKORZ4y6OrCZSKsi46A",
+            "name": "Norman Fucking Rockwell!",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273879e9318cb9f4e05ee552ac9",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02879e9318cb9f4e05ee552ac9",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851879e9318cb9f4e05ee552ac9",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6GGtHZgBycCgGBUhZo81xe",
+          "name": "Say Yes To Heaven",
+          "duration_ms": 209156,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6GGtHZgBycCgGBUhZo81xe"
+          },
+          "album": {
+            "id": "6jVg0POvGYH1Pt6lISl3ok",
+            "name": "Say Yes To Heaven",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273aa27708d07f49c82ff0d0dae",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02aa27708d07f49c82ff0d0dae",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851aa27708d07f49c82ff0d0dae",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6WKFO9WM8WatQexlcUgRRE",
+          "name": "Brooklyn Baby",
+          "duration_ms": 351640,
+          "popularity": 48,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6WKFO9WM8WatQexlcUgRRE"
+          },
+          "album": {
+            "id": "2e3doCyb0qn2JeKLsh2Xbo",
+            "name": "Ultraviolence",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736b55c2ee78c5a47393ff8e7a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026b55c2ee78c5a47393ff8e7a",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516b55c2ee78c5a47393ff8e7a",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "success": true,
+  "errors": [
+    "AI error: 1 validation error for AIRequest\nwiki_content\n  String should have at least 10 characters [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.4/v/string_too_short"
+  ],
+  "data_completeness": {
+    "collected": 2,
+    "total": 3,
+    "percentage": 66.66666666666666,
+    "sources": [
+      "wikipedia",
+      "spotify"
+    ]
+  }
+}

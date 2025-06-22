@@ -1,0 +1,221 @@
+{
+  "artist_name": "Tyler, The Creator",
+  "collected_at": "2025-06-08T15:23:37.236009",
+  "data": {
+    "wikipedia": {
+      "title": "造物主泰勒",
+      "extract": "泰勒·格雷戈里·奥康马，是一名美国说唱歌手、唱片制作人兼时装设计师，艺名为泰勒,作曲家。奥康马出生于加利福尼亚州拉德拉高地。2000年代末，他作为另类嘻哈团体Odd Future的领军人在互联网上崭露头角。他以说唱歌手、制作人、导演和演员的身份参与这一团体当中，并为其成员制作了多张录音室专辑。他还在《Odd Future》团体创作的喜剧节目《Loiter Squad》当中担任主演。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tyler%2C_The_Creator_%288048745695%29_%28cropped%29.jpg/330px-Tyler%2C_The_Creator_%288048745695%29_%28cropped%29.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "4V8LLVI7PbaPR0K2TGSxFF",
+      "name": "Tyler, The Creator",
+      "popularity": 90,
+      "followers": 22375914,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebdfa2b0c7544a772042a12e52",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174dfa2b0c7544a772042a12e52",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178dfa2b0c7544a772042a12e52",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "7KA4W4McWYRpgf0fWsJZWB",
+          "name": "See You Again (feat. Kali Uchis)",
+          "duration_ms": 180386,
+          "popularity": 93,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7KA4W4McWYRpgf0fWsJZWB"
+          },
+          "album": {
+            "id": "2nkto6YNI4rUYTLqEwWJ3o",
+            "name": "Flower Boy",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028940ac99f49e44f59e6f7fb3",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518940ac99f49e44f59e6f7fb3",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6jbYpRPTEFl1HFKHk1IC0m",
+          "name": "Like Him (feat. Lola Young)",
+          "duration_ms": 278014,
+          "popularity": 91,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6jbYpRPTEFl1HFKHk1IC0m"
+          },
+          "album": {
+            "id": "0U28P0QVB1QRxpqp5IHOlH",
+            "name": "CHROMAKOPIA",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273124e9249fada4ff3c3a0739c",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02124e9249fada4ff3c3a0739c",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851124e9249fada4ff3c3a0739c",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "3tFed7YsjGnIfxeLEQwx3R",
+          "name": "Sticky (feat. GloRilla, Sexyy Red & Lil Wayne)",
+          "duration_ms": 255915,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3tFed7YsjGnIfxeLEQwx3R"
+          },
+          "album": {
+            "id": "0U28P0QVB1QRxpqp5IHOlH",
+            "name": "CHROMAKOPIA",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273124e9249fada4ff3c3a0739c",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02124e9249fada4ff3c3a0739c",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851124e9249fada4ff3c3a0739c",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5TxRUOsGeWeRl3xOML59Ai",
+          "name": "ARE WE STILL FRIENDS?",
+          "duration_ms": 265480,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5TxRUOsGeWeRl3xOML59Ai"
+          },
+          "album": {
+            "id": "5zi7WsKlIiUXv09tbGLKsE",
+            "name": "IGOR",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737005885df706891a3c182a57",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027005885df706891a3c182a57",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517005885df706891a3c182a57",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5WzfCu5fhgm7jv896EN1Md",
+          "name": "She",
+          "duration_ms": 253386,
+          "popularity": 80,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5WzfCu5fhgm7jv896EN1Md"
+          },
+          "album": {
+            "id": "3CxknRPQLbOJRwQrNekNyU",
+            "name": "Goblin",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735ea9799a88c0760ec03ac6b8",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025ea9799a88c0760ec03ac6b8",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515ea9799a88c0760ec03ac6b8",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "泰勒·格雷戈里·奥康马，aka人形暴走霓虹灯，艺名比本人名字少六个单词却多出十倍杀伤力。这位Odd Future掌门人堪称说唱圈的弗兰肯斯坦，把自己拆成制作人、导演、潮牌主理人等零件重新缝合，还能在《Loiter Squad》里用冷笑话把观众钉在尴尬墙上摩擦。早年用粗粝beat和少儿不宜的歌词给Z世代开了堂亚文化速成班，后来突然转型成穿粉红毛衣的爵士暖男，让老粉怀疑他是不是把叛逆基因都捐给GOLF卫衣生产线了。建议给他的音乐人格办个多重身份展：从洛杉矶街头暴徒到巴黎时装周常客，这位仁兄用实际行动证明，只要跑得够快，青春期叛逆就能变成格莱美镀金材料——不过下次转型前能先给乐迷发个防眩晕手册吗？",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:24:16.603919",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 857,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

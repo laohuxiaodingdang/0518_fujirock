@@ -1,0 +1,224 @@
+{
+  "artist_name": "Radiohead",
+  "collected_at": "2025-06-08T15:19:21.139941",
+  "data": {
+    "wikipedia": {
+      "title": "电台司令",
+      "extract": "电台司令 是一支来自英国牛津郡阿宾顿的另类摇滚乐团，组建于1985年。乐团由汤姆·约克（主唱、吉他、钢琴），强尼·格林伍德（主奏吉他、键盘、其他乐器），艾德·欧布莱恩（吉他、合声），科林·格林伍德（贝斯），与菲利普·塞尔韋（鼓、打击乐器）组成。",
+      "thumbnail": null,
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "4Z8W4fKeB5YxbusRsdQVPb",
+      "name": "Radiohead",
+      "popularity": 87,
+      "followers": 12382956,
+      "genres": [
+        "art rock",
+        "alternative rock"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eba03696716c9ee605006047fd",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174a03696716c9ee605006047fd",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178a03696716c9ee605006047fd",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "70LcF31zb1H0PyJoS1Sx1r",
+          "name": "Creep",
+          "duration_ms": 238640,
+          "popularity": 92,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/70LcF31zb1H0PyJoS1Sx1r"
+          },
+          "album": {
+            "id": "3gBVdu4a1MMJVMy6vwPEb8",
+            "name": "Pablo Honey",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ec548c00d3ac2f10be73366d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ec548c00d3ac2f10be73366d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ec548c00d3ac2f10be73366d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2fuYa3Lx06QQJAm0MjztKr",
+          "name": "Let Down",
+          "duration_ms": 299560,
+          "popularity": 87,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2fuYa3Lx06QQJAm0MjztKr"
+          },
+          "album": {
+            "id": "6dVIqQ8qmQ5GBnJ9shOYGE",
+            "name": "OK Computer",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273c8b444df094279e70d0ed856",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851c8b444df094279e70d0ed856",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "10nyNJ6zNy2YVYLrcwLccB",
+          "name": "No Surprises",
+          "duration_ms": 229120,
+          "popularity": 88,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/10nyNJ6zNy2YVYLrcwLccB"
+          },
+          "album": {
+            "id": "6dVIqQ8qmQ5GBnJ9shOYGE",
+            "name": "OK Computer",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273c8b444df094279e70d0ed856",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851c8b444df094279e70d0ed856",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "63OQupATfueTdZMWTxW03A",
+          "name": "Karma Police",
+          "duration_ms": 264066,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/63OQupATfueTdZMWTxW03A"
+          },
+          "album": {
+            "id": "6dVIqQ8qmQ5GBnJ9shOYGE",
+            "name": "OK Computer",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273c8b444df094279e70d0ed856",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851c8b444df094279e70d0ed856",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5Qv2Nby1xTr9pQyjkrc94J",
+          "name": "All I Need",
+          "duration_ms": 228746,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5Qv2Nby1xTr9pQyjkrc94J"
+          },
+          "album": {
+            "id": "5vkqYmiPBYLaalcmjujWxK",
+            "name": "In Rainbows",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273de3c04b5fc750b68899b20a9",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02de3c04b5fc750b68899b20a9",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851de3c04b5fc750b68899b20a9",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "（推了推黑框眼镜）这个由牛津学霸组成的\"致郁系天团\"，用30年时间证明了摇滚乐手也能活成一本行走的音乐理论教科书。主唱汤姆·约克总像是刚被噩梦惊醒的吸血鬼，用鬼魅假声唱着人工智能时代的焦虑，吉他手强尼把弦乐器玩成实验室仪器，贝斯线和鼓点比数学公式还精准。从《OK Computer》预言科技反噬，到《Kid A》把自己改造成电子仿生人，他们每张专辑都是让乐迷集体挂耳鼻喉科的精神迷宫——建议搭配音乐词典食用，毕竟不是每个乐队都敢把专辑做成声音解谜游戏的。虽然他们的现场能让抑郁症患者找到组织，但谁也无法否认这群强迫症患者包揽了半个摇滚名人堂的资格，格莱美大概就是他们用忧郁症奖学金换来的战利品。（顺便说，他们的维基百科词条字数可能比某些小国宪法还长）",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:19:53.640059",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 707,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

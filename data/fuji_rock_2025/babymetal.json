@@ -1,0 +1,224 @@
+{
+  "artist_name": "BABYMETAL",
+  "collected_at": "2025-06-08T15:25:46.052041",
+  "data": {
+    "wikipedia": {
+      "title": "BABYMETAL",
+      "extract": "BABYMETAL是一個在2010年結成的日本少女偶像暨重金屬乐团。由Amuse公司的製作室長之一、同時是重金屬音乐爱好者的小林啟（KOBAMETAL）擔任製作人。他以主唱中元鈴香（SU-METAL）为中心，水野由結（YUIMETAL）和菊地最爱（MOAMETAL）为雙翼輔佐，创立了BABYMETAL。三名成員全部来自女子偶像团体櫻花學院，兩者同屬Amuse旗下。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Babymetal_waving_flags_-_Z%C3%A9nith_Paris.jpg/330px-Babymetal_waving_flags_-_Z%C3%A9nith_Paris.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "630wzNP2OL7fl4Xl0GnMWq",
+      "name": "BABYMETAL",
+      "popularity": 71,
+      "followers": 2526433,
+      "genres": [
+        "j-rock",
+        "metal"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/630wzNP2OL7fl4Xl0GnMWq"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb8bf2dcb4312416001228a30d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051748bf2dcb4312416001228a30d",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1788bf2dcb4312416001228a30d",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "14WYmNQWvR2TTWoRp8t9Ml",
+          "name": "RATATATA",
+          "duration_ms": 216428,
+          "popularity": 75,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/14WYmNQWvR2TTWoRp8t9Ml"
+          },
+          "album": {
+            "id": "4DccXktGbSRsgUoBvH8EN7",
+            "name": "RATATATA",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2733900e6899672f9dfdc028611",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e023900e6899672f9dfdc028611",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048513900e6899672f9dfdc028611",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6ILVeNgfsOG41ioscRql5P",
+          "name": "from me to u (feat. Poppy)",
+          "duration_ms": 204526,
+          "popularity": 72,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6ILVeNgfsOG41ioscRql5P"
+          },
+          "album": {
+            "id": "2oxRRkR4Rj2aPCB63NsjZn",
+            "name": "from me to u (feat. Poppy)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ea8bf6010a9433696872465e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ea8bf6010a9433696872465e",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ea8bf6010a9433696872465e",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "17tFA9uTIBJzlGySKys04X",
+          "name": "Song 3",
+          "duration_ms": 214193,
+          "popularity": 61,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/17tFA9uTIBJzlGySKys04X"
+          },
+          "album": {
+            "id": "3YL4R9J5QzAOOOl5MrmHqx",
+            "name": "Song 3",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27370f89a4f611baf079c9e0f1d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0270f89a4f611baf079c9e0f1d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485170f89a4f611baf079c9e0f1d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6phW442kV1QOslVbdOQ3aT",
+          "name": "ギミチョコ！！",
+          "duration_ms": 229134,
+          "popularity": 43,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6phW442kV1QOslVbdOQ3aT"
+          },
+          "album": {
+            "id": "66lAJX7yGHHS8VovflLXkE",
+            "name": "BABYMETAL",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a8ac2f73f494d6464343b74b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a8ac2f73f494d6464343b74b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a8ac2f73f494d6464343b74b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4GxLzvFPFjAcFBwhBCUdAE",
+          "name": "ヘドバンギャー！！",
+          "duration_ms": 242880,
+          "popularity": 37,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4GxLzvFPFjAcFBwhBCUdAE"
+          },
+          "album": {
+            "id": "66lAJX7yGHHS8VovflLXkE",
+            "name": "BABYMETAL",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a8ac2f73f494d6464343b74b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a8ac2f73f494d6464343b74b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a8ac2f73f494d6464343b74b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【BABYMETAL：当重金属撞进糖果店引发的核爆事故】\n\n这团堪称音乐界的哥斯拉混搭草莓蛋糕——三位樱花学院毕业的甜妹硬核空降重金属战场，活像把Hello Kitty扔进死亡金属演唱会现场。制作人小林启这招堪称中年金属宅的终极手办实验：\"既然金属乐迷最爱抱怨流行乐太软，那就让JK少女用电音甜嗓唱死核riff！\"\n\n她们的音乐就像在AKB48剧场引爆了核反应堆，萌系舞步踩着吉他泛音跳广播体操，能把金属老炮吓得假发飞起的同时身体诚实点头。SU-METAL用奶凶奶凶的萝莉音喊着\"杀杀杀\"，仿佛重金属幼儿园班长在教大家数数：\"one two three four！黑魔法启动！\"YUI和MOA这对双翼天使怕不是刚从《美少女战士》片场偷了电吉他赶来救场。\n\n这支魔性混种部队硬是把金属乐改造成全球巡演的大型主题公园，死忠粉从二次元宅男到纹身大汉集体狂欢，连枪花乐队都沦为她们的暖场嘉宾。",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:26:33.092863",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 875,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

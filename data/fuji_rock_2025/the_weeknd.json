@@ -1,0 +1,221 @@
+{
+  "artist_name": "The Weeknd",
+  "collected_at": "2025-06-08T15:29:32.556924",
+  "data": {
+    "wikipedia": {
+      "title": "威肯",
+      "extract": "亞柏·馬科南·特斯法耶，艺名威肯（英語：），華語圈綽號盆栽哥、音乐魔人，是一名加拿大歌手、詞曲作家、音乐製作人及舞者。2010年末，特斯法耶上傳了一些歌曲至YouTube并署名「威肯」(The Weeknd)。他在2011年发布三支内有九首歌的混音帶：《House of Balloons》、《Thursday》、《Echoes of Silence》，這些混音帶广受好評。翌年，他发布了合辑《Trilogy》，其由混合不同元素的三十首翻唱曲目以及三個額外的歌曲组成。此专辑是由聯眾唱片及XO共同推出。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/The_Weeknd_Portrait_by_Brian_Ziff.jpg/330px-The_Weeknd_Portrait_by_Brian_Ziff.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+      "name": "The Weeknd",
+      "popularity": 96,
+      "followers": 106201310,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb9e528993a2820267b97f6aae",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051749e528993a2820267b97f6aae",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1789e528993a2820267b97f6aae",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "0FIDCNYYjNvPVimz5icugS",
+          "name": "Timeless (feat Playboi Carti)",
+          "duration_ms": 256000,
+          "popularity": 95,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0FIDCNYYjNvPVimz5icugS"
+          },
+          "album": {
+            "id": "3OxfaVgvTxUTy7276t7SPU",
+            "name": "Hurry Up Tomorrow",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273982320da137d0de34410df61",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02982320da137d0de34410df61",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851982320da137d0de34410df61",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "7CyPwkp0oE8Ro9Dd5CUDjW",
+          "name": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+          "duration_ms": 244684,
+          "popularity": 94,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7CyPwkp0oE8Ro9Dd5CUDjW"
+          },
+          "album": {
+            "id": "7tzVd1fwkxsorytCBjEJkU",
+            "name": "The Idol Episode 4 (Music from the HBO Original Series)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b0dd6a5cd1dec96c4119c262",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b0dd6a5cd1dec96c4119c262",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "7MXVkk9YMctZqd1Srtv4MB",
+          "name": "Starboy",
+          "duration_ms": 230453,
+          "popularity": 91,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7MXVkk9YMctZqd1Srtv4MB"
+          },
+          "album": {
+            "id": "2ODvWsOgouMbaA5xf0RkJe",
+            "name": "Starboy",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024718e2b124f79258be7bc452",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514718e2b124f79258be7bc452",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0VjIjW4GlUZAMYd2vXMi3b",
+          "name": "Blinding Lights",
+          "duration_ms": 200040,
+          "popularity": 91,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b"
+          },
+          "album": {
+            "id": "4yP0hdKOZPNshxUOjY0cZj",
+            "name": "After Hours",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518863bc11d2aa12b54f5aeb36",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2LBqCSwhJGcFQeTHMVGwy3",
+          "name": "Die For You",
+          "duration_ms": 260253,
+          "popularity": 88,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2LBqCSwhJGcFQeTHMVGwy3"
+          },
+          "album": {
+            "id": "4AdZV63ycxFLF6Hcol0QnB",
+            "name": "Starboy",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a048415db06a5b6fa7ec4e1a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a048415db06a5b6fa7ec4e1a",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a048415db06a5b6fa7ec4e1a",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "盆栽哥威肯——这位顶着热带植物园发型的加拿大暗黑R&B教父，用自己油光水滑的高音证明：凌晨三点的霓虹灯管不仅能当麦克风，还能当忏悔室。从2011年在地下室调制致郁电音的嗑药艺术家，到《Blinding Lights》横扫公告牌的迪斯科活化石，这哥们儿用十年时间完成了从浴室自嗨到超级碗中场秀的史诗级蜕变。那些关于嗑药滥交的歌词被他唱得像高级定制西装上的酒渍，渣得坦荡，颓得精致。建议新粉从《Trilogy》入坑，毕竟当盆栽修剪成圣诞树后，你再难在格莱美颁奖礼上找到这种裹着丝绒的腐烂苹果味。对了，他现在不叫盆栽哥了——自从剃头明志，应该改叫\"反光灯泡\"。",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:30:07.221187",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 830,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

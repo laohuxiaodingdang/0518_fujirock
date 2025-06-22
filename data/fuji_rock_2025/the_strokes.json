@@ -1,0 +1,225 @@
+{
+  "artist_name": "The Strokes",
+  "collected_at": "2025-06-08T15:20:37.216538",
+  "data": {
+    "wikipedia": {
+      "title": "鼓擊樂團",
+      "extract": "鼓击乐团（英語：），美国另类摇滚乐团，创立于1998年的纽约。乐团目前的陣容为主唱以及主要作曲家Julian Casablancas，吉他手Nick Valensi与 Albert Hammond Jr，鼓手Fabrizio Moretti，五人同時也是创始成員，成員至创始至今從未變動過。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/The_Strokes_by_Roger_Woolman.jpg/330px-The_Strokes_by_Roger_Woolman.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "0epOFNiUfyON9EYx7Tpr6V",
+      "name": "The Strokes",
+      "popularity": 78,
+      "followers": 6297814,
+      "genres": [
+        "garage rock",
+        "indie rock",
+        "alternative rock"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc3b137793230f4043feb0089",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174c3b137793230f4043feb0089",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178c3b137793230f4043feb0089",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "5ruzrDWcT0vuJIOMW7gMnW",
+          "name": "The Adults Are Talking",
+          "duration_ms": 309053,
+          "popularity": 83,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5ruzrDWcT0vuJIOMW7gMnW"
+          },
+          "album": {
+            "id": "2xkZV2Hl1Omi8rk2D7t5lN",
+            "name": "The New Abnormal",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273bfa99afb5ef0d26d5064b23b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02bfa99afb5ef0d26d5064b23b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851bfa99afb5ef0d26d5064b23b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "57Xjny5yNzAcsxnusKmAfA",
+          "name": "Reptilia",
+          "duration_ms": 219826,
+          "popularity": 80,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/57Xjny5yNzAcsxnusKmAfA"
+          },
+          "album": {
+            "id": "3HFbH1loOUbqCyPsLuHLLh",
+            "name": "Room On Fire",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2730f35726025e0f025da4c688f",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e020f35726025e0f025da4c688f",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048510f35726025e0f025da4c688f",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "7kzKAuUzOITUauHAhoMoxA",
+          "name": "Last Nite",
+          "duration_ms": 193506,
+          "popularity": 75,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7kzKAuUzOITUauHAhoMoxA"
+          },
+          "album": {
+            "id": "2yNaksHgeMQM9Quse463b5",
+            "name": "Is This It",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a388a3f20d1bf2123249cc79",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a388a3f20d1bf2123249cc79",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a388a3f20d1bf2123249cc79",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "56NkIxSZZiMpFP5ZNSxtnT",
+          "name": "Someday",
+          "duration_ms": 183573,
+          "popularity": 75,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/56NkIxSZZiMpFP5ZNSxtnT"
+          },
+          "album": {
+            "id": "2yNaksHgeMQM9Quse463b5",
+            "name": "Is This It",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a388a3f20d1bf2123249cc79",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a388a3f20d1bf2123249cc79",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a388a3f20d1bf2123249cc79",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2t0wwvR15fc3K1ey8OiOaN",
+          "name": "Selfless",
+          "duration_ms": 222093,
+          "popularity": 78,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2t0wwvR15fc3K1ey8OiOaN"
+          },
+          "album": {
+            "id": "2xkZV2Hl1Omi8rk2D7t5lN",
+            "name": "The New Abnormal",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273bfa99afb5ef0d26d5064b23b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02bfa99afb5ef0d26d5064b23b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851bfa99afb5ef0d26d5064b23b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "鼓击军团（The Strokes）堪称摇滚界的冻龄教科书——这个从1998年就被封印在纽约地下室的五人组，用二十年如一日的西装油头造型证明：只要躺得够平，连音乐风格都能防腐。当年他们踩着21世纪的钟声端出《Is This It》，成功让全球乐迷以为车库摇滚复兴在望，结果后来大家发现他们只是把六十年代的车库钥匙偷来配了一把赝品。主唱朱利安·卡萨布兰卡斯永远像宿醉未醒的爵士酒吧老板，两位吉他手沉迷于用两把吉他把同一段旋律拆成左右声道播放，鼓手则坚持用单细胞生物都能理解的节奏击打军鼓——这种全员智商平衡的默契，让他们成功避免了其他摇滚乐队换队员比换内裤还勤的尴尬场面。最近他们开始玩合成器，大概是想证明老古董插电也能假装高科技盆栽。",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:21:23.375181",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 854,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

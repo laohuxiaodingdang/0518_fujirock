@@ -1,0 +1,225 @@
+{
+  "artist_name": "ONE OK ROCK",
+  "collected_at": "2025-06-08T15:25:07.479670",
+  "data": {
+    "wikipedia": {
+      "title": "ONE OK ROCK",
+      "extract": "ONE OK ROCK（日语：），是一個日本摇滚乐团，成立于2005年。由Taka、Toru、Ryota、Tomoya、Alex五人组成的摇滚乐团（Alex于2009離团后为四人乐团）。团名多以全大寫表示。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/ONE_OK_ROCK_performing_in_London_in_2014.png/330px-ONE_OK_ROCK_performing_in_London_in_2014.png",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "7k73EtZwoPs516ZxE72KsO",
+      "name": "ONE OK ROCK",
+      "popularity": 74,
+      "followers": 5757885,
+      "genres": [
+        "j-rock",
+        "j-pop",
+        "visual kei"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7k73EtZwoPs516ZxE72KsO"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb65f3ecf43652596ef75f3293",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000517465f3ecf43652596ef75f3293",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f17865f3ecf43652596ef75f3293",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "7a7EIFzJLd7lcDRgThMQgm",
+          "name": "Wherever you are",
+          "duration_ms": 295600,
+          "popularity": 68,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7a7EIFzJLd7lcDRgThMQgm"
+          },
+          "album": {
+            "id": "5Txrg948JAAstSTzI0Rssa",
+            "name": "Nicheシンドローム",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273cd4f8cb3784fad56825991b3",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02cd4f8cb3784fad56825991b3",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851cd4f8cb3784fad56825991b3",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "3gap4AuGFSfeR0oOSPTNsk",
+          "name": "Tropical Therapy",
+          "duration_ms": 208666,
+          "popularity": 63,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3gap4AuGFSfeR0oOSPTNsk"
+          },
+          "album": {
+            "id": "3MAE3S3GzzErgUKqLq2UKr",
+            "name": "DETOX (International Version)",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27329344b73cec6c2825c374392",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0229344b73cec6c2825c374392",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485129344b73cec6c2825c374392",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "6D6Pybzey0shI8U9ttRAPx",
+          "name": "欲望に満ちた青年団",
+          "duration_ms": 202200,
+          "popularity": 67,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6D6Pybzey0shI8U9ttRAPx"
+          },
+          "album": {
+            "id": "46tj8YcIiWYdrkS8QcDNrP",
+            "name": "ゼイタクビョウ",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736878b859e47d63cebbf1094e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026878b859e47d63cebbf1094e",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516878b859e47d63cebbf1094e",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "17EiIn0d2tftCjJrGOrbFj",
+          "name": "Stand Out Fit In",
+          "duration_ms": 214546,
+          "popularity": 63,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/17EiIn0d2tftCjJrGOrbFj"
+          },
+          "album": {
+            "id": "6JjOyVA7Ph4Ufowxgz1ezk",
+            "name": "Eye of the Storm",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273cbc358e2b350a7389a7c2927",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02cbc358e2b350a7389a7c2927",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851cbc358e2b350a7389a7c2927",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "2J5AO7fnS4ZvrnfUrobajn",
+          "name": "Delusion:All",
+          "duration_ms": 184909,
+          "popularity": 57,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2J5AO7fnS4ZvrnfUrobajn"
+          },
+          "album": {
+            "id": "7tUfjtfQLYCIRoStmdboBB",
+            "name": "DETOX",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27399cca205f50ba140a41a6471",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0299cca205f50ba140a41a6471",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485199cca205f50ba140a41a6471",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【ONE OK ROCK：日式摇滚的暴走搅拌机】这支把键盘Caps Lock键焊死的乐队，硬是用全大写团名践行着“摇滚就要嚣张”的职场守则。当Alex在2009年战略性撤退后，剩下四位用音墙轰出了东瀛摇滚界最光滑的混血儿——像把J-pop灌进美式咖啡机，再撒上一点北欧后摇糖霜。主唱Taka自带英语发音矫正器，成功让日本年轻人以为\"Wherever you are\"是标准伦敦音教程。他们的歌单堪称情绪过山车：前脚还在地铁站emo哭墙，后脚就在体育馆屋顶玩信仰之跃。有人说他们的摇滚配方精准得像AI计算的爆款歌单，但架不住每场live都让观众膝盖集体粉碎性骨折。建议搭配使用场景：当你想假装很亚文化又不舍得离开Billboard榜单时。（注：最新专辑已成功打入欧美市场，建议改团名为ALL CAPS NO RAGRETS） —— 总评：日本摇滚界的高级料理包，微波三分钟，热血沸腾一整晚。",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:25:44.050167",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 691,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

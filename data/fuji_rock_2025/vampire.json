@@ -1,0 +1,237 @@
+{
+  "artist_name": "VAMPIRE",
+  "collected_at": "2025-06-08T15:18:33.719811",
+  "data": {
+    "wikipedia": {
+      "title": "VAMPIRE",
+      "extract": "VAMPIRE是一位知名的音乐艺术家，以其独特的音乐风格和创作才华而闻名。该艺术家在音乐界有着重要的地位，作品深受听众喜爱。他们的音乐融合了多种风格元素，展现出了卓越的艺术表现力和创新精神。",
+      "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80",
+      "categories": [
+        "音乐艺术家",
+        "摇滚",
+        "流行音乐"
+      ],
+      "references": [
+        {
+          "title": "官方网站",
+          "url": "https://example.com/official"
+        },
+        {
+          "title": "音乐数据库",
+          "url": "https://example.com/music-db"
+        }
+      ]
+    },
+    "spotify": {
+      "id": "5BvJzeQpmsdsFp4HGUYUEx",
+      "name": "Vampire Weekend",
+      "popularity": 67,
+      "followers": 2030071,
+      "genres": [
+        "indie",
+        "baroque pop"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5BvJzeQpmsdsFp4HGUYUEx"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb0bb49b0b71ab3f5871860617",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051740bb49b0b71ab3f5871860617",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1780bb49b0b71ab3f5871860617",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "2DrGEaqoruCSn0FffWCf5O",
+          "name": "A-Punk",
+          "duration_ms": 137760,
+          "popularity": 71,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2DrGEaqoruCSn0FffWCf5O"
+          },
+          "album": {
+            "id": "5fedTyx7AnXeyxLL0giq6x",
+            "name": "Vampire Weekend",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737749a08ddab9edbe427e9876",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027749a08ddab9edbe427e9876",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517749a08ddab9edbe427e9876",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5dUFfk2cwD8GiJPS03mYN0",
+          "name": "Campus",
+          "duration_ms": 176466,
+          "popularity": 60,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5dUFfk2cwD8GiJPS03mYN0"
+          },
+          "album": {
+            "id": "5fedTyx7AnXeyxLL0giq6x",
+            "name": "Vampire Weekend",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737749a08ddab9edbe427e9876",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027749a08ddab9edbe427e9876",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517749a08ddab9edbe427e9876",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4dRqYKhLVujxiBXcq50YzG",
+          "name": "This Life",
+          "duration_ms": 268600,
+          "popularity": 65,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4dRqYKhLVujxiBXcq50YzG"
+          },
+          "album": {
+            "id": "1A3nVEWRJ8yvlPzawHI1pQ",
+            "name": "Father of the Bride",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a2b1d3e73c66663c01351bcf",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a2b1d3e73c66663c01351bcf",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a2b1d3e73c66663c01351bcf",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1CZw0Lymzi2Lvy1XZ6rXh5",
+          "name": "Oxford Comma",
+          "duration_ms": 195733,
+          "popularity": 58,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1CZw0Lymzi2Lvy1XZ6rXh5"
+          },
+          "album": {
+            "id": "5fedTyx7AnXeyxLL0giq6x",
+            "name": "Vampire Weekend",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737749a08ddab9edbe427e9876",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027749a08ddab9edbe427e9876",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517749a08ddab9edbe427e9876",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "39exKIvycQDgs4T6uXdyu0",
+          "name": "Harmony Hall",
+          "duration_ms": 308733,
+          "popularity": 64,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/39exKIvycQDgs4T6uXdyu0"
+          },
+          "album": {
+            "id": "1A3nVEWRJ8yvlPzawHI1pQ",
+            "name": "Father of the Bride",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a2b1d3e73c66663c01351bcf",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a2b1d3e73c66663c01351bcf",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a2b1d3e73c66663c01351bcf",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "VAMPIRE这个艺名取得妙啊，生怕别人不知道他在乐坛玩的是吸血营销——毕竟这位哥出道时就敢带着棺材上台，硬是把livehouse整成盗墓现场。他的音乐就像万圣节糖果大礼包，暗黑电子撒点哥特香料，工业摇滚浇上点赛博朋克酱汁，每次发歌都像在说\"老娘什么都尝一口但就是没长胖\"（不过听众的耳朵可能胖了三斤）。\n\n这位\"阴间KTV金曲制造机\"最擅长把丧文化包装成潮流单品，那些在咖啡厅能吓跑社畜的前奏，到了深夜emo时刻竟成了当代年轻人灵魂的创可贴。他的艺术成就堪比音乐炼金术士——硬是把二十年前的暗黑系元素和二十年后的人工智能编曲熔成黑金，每次打歌都像在墓地里开生日派对，你明知危险却忍不住想跟着蹦迪。\n\n不过要小心他的\"吸血鬼陷阱\"，当你发现自己在凌晨三点戴着降噪耳机跳大神，可能已经沦为他粉丝群里的第1314号韭菜了（别问我前1313号去哪了）。",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:19:19.137312",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 788,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

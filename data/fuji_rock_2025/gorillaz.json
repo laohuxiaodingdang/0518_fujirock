@@ -1,0 +1,221 @@
+{
+  "artist_name": "Gorillaz",
+  "collected_at": "2025-06-08T15:33:54.354903",
+  "data": {
+    "wikipedia": {
+      "title": "街頭霸王 (虛擬樂團)",
+      "extract": "街頭霸王（英語：）是一支虛擬乐团，由四個虛擬動畫角色组成，分別是：阿（）、小麵（）、洛胖（）、魔頭（）。",
+      "thumbnail": null,
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "3AA28KZvwAUcZuOKwyblJQ",
+      "name": "Gorillaz",
+      "popularity": 83,
+      "followers": 13454486,
+      "genres": [],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb8699856fde13105fa01279ad",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051748699856fde13105fa01279ad",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1788699856fde13105fa01279ad",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "0d28khcov6AiegSCpG5TuT",
+          "name": "Feel Good Inc.",
+          "duration_ms": 222640,
+          "popularity": 91,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0d28khcov6AiegSCpG5TuT"
+          },
+          "album": {
+            "id": "0bUTHlWbkSQysoM3VsWldT",
+            "name": "Demon Days",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27319d85a472f328a6ed9b704cf",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0219d85a472f328a6ed9b704cf",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485119d85a472f328a6ed9b704cf",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "0q6LuUqGLUiCPP1cbdwFs3",
+          "name": "On Melancholy Hill",
+          "duration_ms": 233866,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0q6LuUqGLUiCPP1cbdwFs3"
+          },
+          "album": {
+            "id": "2dIGnmEIy1WZIcZCFSj6i8",
+            "name": "Plastic Beach",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273661d019f34569f79eae9e985",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02661d019f34569f79eae9e985",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851661d019f34569f79eae9e985",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1RKUoGiLEbcXN4GY4spQDx",
+          "name": "Clint Eastwood",
+          "duration_ms": 340920,
+          "popularity": 80,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1RKUoGiLEbcXN4GY4spQDx"
+          },
+          "album": {
+            "id": "4tUxQkrduOE8sfgwJ5BI2F",
+            "name": "Gorillaz",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f6c46838e4425ea96e2562fe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f6c46838e4425ea96e2562fe",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f6c46838e4425ea96e2562fe",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4Hff1IjRbLGeLgFgxvHflk",
+          "name": "DARE (feat. Shaun Ryder & Roses Gabor)",
+          "duration_ms": 244999,
+          "popularity": 83,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4Hff1IjRbLGeLgFgxvHflk"
+          },
+          "album": {
+            "id": "0bUTHlWbkSQysoM3VsWldT",
+            "name": "Demon Days",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27319d85a472f328a6ed9b704cf",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0219d85a472f328a6ed9b704cf",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485119d85a472f328a6ed9b704cf",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "1foMv2HQwfQ2vntFf9HFeG",
+          "name": "Rhinestone Eyes",
+          "duration_ms": 200173,
+          "popularity": 79,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1foMv2HQwfQ2vntFf9HFeG"
+          },
+          "album": {
+            "id": "2dIGnmEIy1WZIcZCFSj6i8",
+            "name": "Plastic Beach",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273661d019f34569f79eae9e985",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02661d019f34569f79eae9e985",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851661d019f34569f79eae9e985",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【街头霸王：二次元音乐流水线上的完美商品】这四个像素小人堪称21世纪最精明的音乐商业标本——当真人乐队还在为巡演掉头发时，这组永远25岁的虚拟角色已经用合成器统治了全球耳机。主唱2D顶着黑眼圈活像熬夜编程的IT男，贝斯手魔头大概是史上最朋克的绿色哥布林，他们用电子摇滚、嘻哈和世界音乐调制的鸡尾酒，喝起来像在游乐场坐了三圈过山车那么上头。\n\n这支由Blur主唱和漫画家联手打造的\"QQ秀鼻祖乐队\"，本质上就是音乐界的乐高套装——拆开看每块都是别人家的零件（英伦摇滚骨架+日本动漫皮囊+美国街头精神），拼起来却意外地让格莱美评委都忍不住按下投票键。虽然法国人吐槽他们唱日语像用谷歌翻译写情书，但不妨碍全球青少年为这支\"永不塌房\"的男团疯狂，毕竟虚拟偶像最大的优势就是不会睡粉也不会发福。\n\n他们的MV根本是视觉系导演的炫技现场，每帧都贵过独立音乐人全年预算。当《Cl",
+      "style_metrics": {
+        "humor_level": 8,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:34:31.443967",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 810,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

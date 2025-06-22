@@ -1,0 +1,223 @@
+{
+  "artist_name": "Dua Lipa",
+  "collected_at": "2025-06-08T15:28:43.815120",
+  "data": {
+    "wikipedia": {
+      "title": "杜娃·黎波",
+      "extract": "杜娃·黎波，是一名英国及阿尔巴尼亚的创作歌手。她的音乐生涯起步于14岁，当时她在YouTube上翻唱粉红佳人和妮莉·费塔朵等艺人的歌曲。2015年，她与华纳音乐签约，不久后发行个人第一首单曲。2016年12月，黎波委托《混音器杂志》制作的个人纪录片《看见蓝》（）发行。2017年1月，她赢得EBBA大众选择奖。2017年6月2日，同名首张专辑发行。2018年2月，黎波在第38屆全英音乐獎获得兩項大獎分別是最佳英国女歌手 、突破性艺人。2019年2月第39屆全英音乐獎，黎波与凱文·哈里斯合作的夏日熱門單曲《One Kiss》榮获最佳英国單曲。2019年2月，第61屆葛莱美獎榮获最佳新人和最佳舞曲錄製兩項大獎。2021年3月，第63屆葛莱美獎榮获最佳流行演唱专辑。她的單曲〈興致高昂〉(Levitating) 在2021年告示牌年終排行榜，得到百大熱門單曲(Hot 100)冠軍。",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/DuaLipaO2020522_%28101_of_110%29_%2852052470251%29_%28cropped%29.jpg/330px-DuaLipaO2020522_%28101_of_110%29_%2852052470251%29_%28cropped%29.jpg",
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "6M2wZ9GZgrQXHCFfjv46we",
+      "name": "Dua Lipa",
+      "popularity": 89,
+      "followers": 46149105,
+      "genres": [
+        "pop"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb0c68f6c95232e716f0abee8d",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab676161000051740c68f6c95232e716f0abee8d",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f1780c68f6c95232e716f0abee8d",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "6JIC3hbC28JZKZ8AlAqX8h",
+          "name": "Cold Heart - PNAU Remix",
+          "duration_ms": 202735,
+          "popularity": 82,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6JIC3hbC28JZKZ8AlAqX8h"
+          },
+          "album": {
+            "id": "2Gd77sRs3Y8z8V08Hj6EzC",
+            "name": "The Lockdown Sessions",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273eb842acacb3238b2bf3b8471",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02eb842acacb3238b2bf3b8471",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851eb842acacb3238b2bf3b8471",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "3PfIrDoz19wz7qK7tYeu62",
+          "name": "Don't Start Now",
+          "duration_ms": 183290,
+          "popularity": 85,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3PfIrDoz19wz7qK7tYeu62"
+          },
+          "album": {
+            "id": "7fJJK56U9fHixgO0HQkhtI",
+            "name": "Future Nostalgia",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734bc66095f8a70bc4e6593f4f",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024bc66095f8a70bc4e6593f4f",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514bc66095f8a70bc4e6593f4f",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5b5cPscqVEMChvDqscVw26",
+          "name": "Training Season",
+          "duration_ms": 209487,
+          "popularity": 84,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5b5cPscqVEMChvDqscVw26"
+          },
+          "album": {
+            "id": "1Mo92916G2mmG7ajpmSVrc",
+            "name": "Radical Optimism",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273778c1e4660aa23f6728b32a1",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02778c1e4660aa23f6728b32a1",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851778c1e4660aa23f6728b32a1",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5nujrmhLynf4yMoMtj8AQF",
+          "name": "Levitating (feat. DaBaby)",
+          "duration_ms": 203064,
+          "popularity": 85,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5nujrmhLynf4yMoMtj8AQF"
+          },
+          "album": {
+            "id": "5lKlFlReHOLShQKyRv6AL9",
+            "name": "Future Nostalgia",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732172b607853fa89cefa2beb4",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022172b607853fa89cefa2beb4",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512172b607853fa89cefa2beb4",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "76dIZzTdrNO15mGBrU3MHi",
+          "name": "One Kiss (with Dua Lipa)",
+          "duration_ms": 214846,
+          "popularity": 78,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/76dIZzTdrNO15mGBrU3MHi"
+          },
+          "album": {
+            "id": "1CfqWSAyfmYzHU9ktHxUqd",
+            "name": "96 Months",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738daa8ac6367fc997c1873b9b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028daa8ac6367fc997c1873b9b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518daa8ac6367fc997c1873b9b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【人间混音器杜娃·黎波：格莱美认证的舞池救世主】这位14岁就混迹YouTube翻唱界的英阿混血儿，用十年时间证明了——只要把电子合成器腌入味的声线、抓耳到能当超市促销区BGM的副歌、以及来自全欧陆的混音师团队放进搅拌机，你就能得到一台精准制造格莱美奖杯的流水线机器。从2017年首专《Dua Lipa》到2021年《Future Nostalgia》，这位音乐界的乐高大师用霓虹色流行零件搭建出的迪斯科乌托邦，让全球舞池集体患上选择性耳聋：谁在乎她歌词里重复八百遍的\"levitating\"到底有没有物理依据？毕竟当混音版比原版还多的时候，连奖杯陈列架可能都比她的音乐更早进入中年危机。但不得不服，这位把90年代复古合成器玩出包浆的迪斯科女祭司，确实用《One Kiss》证明了在超市生鲜区播四分钟也能让人抖腿的魔法——建议零售业立即授予她\"年度最佳商品流通",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:29:30.554615",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 1193,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

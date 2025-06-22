@@ -1,0 +1,225 @@
+{
+  "artist_name": "King Gnu",
+  "collected_at": "2025-06-08T15:26:35.095513",
+  "data": {
+    "wikipedia": {
+      "title": "King Gnu",
+      "extract": "King Gnu 是一个日本4人摇滚乐队，于2017年以常田大希为核心结成。现为日本索尼音乐旗下艺人。在2019年King Gnu憑《白日》一曲一炮而紅，其后多首作品如《三文小説》、《一途》等曲亦在Billboard Japan Hot 100流行榜上获得佳績，現時为日本新世代乐队代表之一。",
+      "thumbnail": null,
+      "categories": [],
+      "references": []
+    },
+    "spotify": {
+      "id": "6wxfx1yhyqjCPYwwxJktR2",
+      "name": "King Gnu",
+      "popularity": 72,
+      "followers": 3918899,
+      "genres": [
+        "j-pop",
+        "anime",
+        "j-rock"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6wxfx1yhyqjCPYwwxJktR2"
+      },
+      "images": [
+        {
+          "url": "https://i.scdn.co/image/ab6761610000e5eb420186de6166368e93187b5f",
+          "height": 640,
+          "width": 640
+        },
+        {
+          "url": "https://i.scdn.co/image/ab67616100005174420186de6166368e93187b5f",
+          "height": 320,
+          "width": 320
+        },
+        {
+          "url": "https://i.scdn.co/image/ab6761610000f178420186de6166368e93187b5f",
+          "height": 160,
+          "width": 160
+        }
+      ],
+      "top_tracks": [
+        {
+          "id": "7rPEpMvt6O2Np1i7TFk3Hc",
+          "name": "TWILIGHT!!!",
+          "duration_ms": 217160,
+          "popularity": 78,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7rPEpMvt6O2Np1i7TFk3Hc"
+          },
+          "album": {
+            "id": "3KbovyECUFkQQFfUVvwkD6",
+            "name": "TWILIGHT!!!",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273d8d966981599ab9dc3aa8f19",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02d8d966981599ab9dc3aa8f19",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851d8d966981599ab9dc3aa8f19",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "5oQpH1uuZte4axR411rIlN",
+          "name": "SPECIALZ",
+          "duration_ms": 233853,
+          "popularity": 69,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5oQpH1uuZte4axR411rIlN"
+          },
+          "album": {
+            "id": "2elSXVKJ2zpNaJkDC5T8fr",
+            "name": "THE GREATEST UNKNOWN",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27388f868f81564eaa604ec08ef",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0288f868f81564eaa604ec08ef",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485188f868f81564eaa604ec08ef",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "172fMG26G2OoEzzg0wn26r",
+          "name": "白日",
+          "duration_ms": 276373,
+          "popularity": 70,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/172fMG26G2OoEzzg0wn26r"
+          },
+          "album": {
+            "id": "1IYJeRjWNruxAKls5cBtqm",
+            "name": "CEREMONY",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a2272c8966971b7b04066241",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a2272c8966971b7b04066241",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a2272c8966971b7b04066241",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "4btYb7Tfjw5bQazC6bQXpl",
+          "name": "ねっこ",
+          "duration_ms": 239728,
+          "popularity": 70,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4btYb7Tfjw5bQazC6bQXpl"
+          },
+          "album": {
+            "id": "4NA5TeCtuhkYhIZ75JGACR",
+            "name": "ねっこ",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ca82f5a90e8ef02be687639d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ca82f5a90e8ef02be687639d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ca82f5a90e8ef02be687639d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        },
+        {
+          "id": "7ncPjJBktLEOpstY5JOUMK",
+          "name": "一途",
+          "duration_ms": 190606,
+          "popularity": 70,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7ncPjJBktLEOpstY5JOUMK"
+          },
+          "album": {
+            "id": "5sCVCfINkiQ40ozBngqGaY",
+            "name": "一途",
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273681dedf478b2dde1a5b5ae4e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02681dedf478b2dde1a5b5ae4e",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851681dedf478b2dde1a5b5ae4e",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "ai_description": {
+      "sassy_description": "【King Gnu：索尼音乐捡到的彩票，当代日摇最叛逆的乖学生】这支自称\"摇滚\"的乐队怕不是把音乐辞典吃进胃里又吐出来重组了——你能在他们的作品里同时听到R&B的余温、数学摇滚的锐角和JPOP糖衣包装的止痛药。主创常田大希大概是把\"一人乐队\"贯彻到极致，队友们仿佛行走的人形节拍器，毕竟这位前Tokyo Incidents成员在作曲时连和弦走向都要玩量子纠缠。当年用《白日》一曲承包全日本便利店BGM后，现在每发新单都像在搞\"平成令和音乐混血儿\"实验：副歌突然转调仿佛坐过山车咬到舌头，主唱井口理的声带大概装了变声器插件，从昭和歌姬到平成废柴无缝切换。虽然被称作\"次世代乐队之光\"，但建议常田老师偶尔也分点活给队友，免得哪天被误认为King Gnu其实是他的个人艺名。",
+      "style_metrics": {
+        "humor_level": 7,
+        "sarcasm_level": 7,
+        "fact_accuracy": 0.9
+      },
+      "generated_at": "2025-06-08T15:27:18.587874",
+      "model_used": "deepseek-r1-250120",
+      "tokens_used": 881,
+      "generation_time_ms": 2000
+    }
+  },
+  "success": true,
+  "errors": [],
+  "data_completeness": {
+    "collected": 3,
+    "total": 3,
+    "percentage": 100.0,
+    "sources": [
+      "wikipedia",
+      "spotify",
+      "ai_description"
+    ]
+  }
+}

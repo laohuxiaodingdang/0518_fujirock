@@ -1,0 +1,300 @@
+2025-06-08 14:27:47,602 - INFO - 🎸 Fuji Rock 2025 基础 API 测试开始
+2025-06-08 14:27:47,603 - INFO - ============================================================
+2025-06-08 14:27:47,603 - INFO - 🔍 测试 Wikipedia 服务...
+2025-06-08 14:27:47,881 - INFO -   测试艺术家: Radiohead
+2025-06-08 14:27:47,881 - INFO - Attempting to fetch real Wikipedia data for Radiohead
+2025-06-08 14:27:47,881 - INFO - Using REAL Wikipedia API for Radiohead in zh
+2025-06-08 14:27:55,888 - ERROR - Wikipedia API timeout for Radiohead
+2025-06-08 14:27:55,888 - WARNING - Failed to fetch real Wikipedia data for Radiohead: 
+2025-06-08 14:27:55,888 - INFO - Falling back to mock data for Radiohead
+2025-06-08 14:27:55,888 - INFO - Using MOCK Wikipedia API for Radiohead
+2025-06-08 14:27:55,890 - INFO -     ✅ 成功获取 Radiohead 的 Wikipedia 数据
+2025-06-08 14:27:55,890 - INFO -     📝 标题: Radiohead
+2025-06-08 14:27:55,890 - INFO -     📄 摘要: 电台司令是一支来自英国牛津郡阿宾顿的男类摇滚乐团，组建于1985年。乐团由汤姆·约克（主唱、吉他、钢琴），强尼·格林伍德（主委吉他、键盘、其他乐器），艾德·欧布莱恩（吉他、合声），科林·格林伍德（贝斯...
+2025-06-08 14:27:55,890 - INFO -     🖼️ 图片: https://i.scdn.co/image/ab6761610000e5eba03696716c9ee605006047fd
+2025-06-08 14:27:56,891 - INFO -   测试艺术家: VAMPIRE
+2025-06-08 14:27:56,892 - INFO - Attempting to fetch real Wikipedia data for VAMPIRE
+2025-06-08 14:27:56,892 - INFO - Using REAL Wikipedia API for VAMPIRE in zh
+2025-06-08 14:28:04,899 - ERROR - Wikipedia API timeout for VAMPIRE
+2025-06-08 14:28:04,899 - WARNING - Failed to fetch real Wikipedia data for VAMPIRE: 
+2025-06-08 14:28:04,899 - INFO - Falling back to mock data for VAMPIRE
+2025-06-08 14:28:04,899 - INFO - Using MOCK Wikipedia API for VAMPIRE
+2025-06-08 14:28:04,900 - INFO -     ✅ 成功获取 VAMPIRE 的 Wikipedia 数据
+2025-06-08 14:28:04,900 - INFO -     📝 标题: VAMPIRE
+2025-06-08 14:28:04,900 - INFO -     📄 摘要: VAMPIRE是一位知名的音乐艺术家，以其独特的音乐风格和创作才华而闻名。该艺术家在音乐界有着重要的地位，作品深受听众喜爱。他们的音乐融合了多种风格元素，展现出了卓越的艺术表现力和创新精神。...
+2025-06-08 14:28:04,900 - INFO -     🖼️ 图片: https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80
+2025-06-08 14:28:05,901 - INFO -   测试艺术家: Coldplay
+2025-06-08 14:28:05,901 - INFO - Attempting to fetch real Wikipedia data for Coldplay
+2025-06-08 14:28:05,901 - INFO - Using REAL Wikipedia API for Coldplay in zh
+2025-06-08 14:28:13,909 - ERROR - Wikipedia API timeout for Coldplay
+2025-06-08 14:28:13,909 - WARNING - Failed to fetch real Wikipedia data for Coldplay: 
+2025-06-08 14:28:13,909 - INFO - Falling back to mock data for Coldplay
+2025-06-08 14:28:13,909 - INFO - Using MOCK Wikipedia API for Coldplay
+2025-06-08 14:28:13,910 - INFO -     ✅ 成功获取 Coldplay 的 Wikipedia 数据
+2025-06-08 14:28:13,910 - INFO -     📝 标题: Coldplay
+2025-06-08 14:28:13,910 - INFO -     📄 摘要: 酷玩乐队是一支英国摇滚乐队，成立于1996年，来自伦敦。乐队由克里斯·马丁（主唱、钢琴）、强尼·巴克兰（吉他）、盖伊·贝里曼（贝斯）和威尔·钱皮恩（鼓手）组成。他们以旋律优美的另类摇滚和流行摇滚而闻名...
+2025-06-08 14:28:13,910 - INFO -     🖼️ 图片: https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=256&q=80
+2025-06-08 14:28:14,910 - INFO - ✅ Wikipedia 服务测试完成
+2025-06-08 14:28:14,910 - INFO - 
+2025-06-08 14:28:14,910 - INFO - 🎵 测试 Spotify 服务...
+2025-06-08 14:28:14,910 - INFO -   测试艺术家: Radiohead
+2025-06-08 14:28:14,910 - ERROR - ❌ Spotify 服务测试失败: 'SpotifyService' object has no attribute 'get_artist_by_name'
+2025-06-08 14:28:14,910 - INFO - 
+2025-06-08 14:28:14,910 - INFO - 🤖 测试 AI 服务...
+2025-06-08 14:28:14,910 - INFO -   测试 AI 描述生成...
+2025-06-08 14:28:14,912 - INFO - Using REAL DeepSeek AI API with model: deepseek-r1-250120, intensity: 7
+2025-06-08 14:28:40,433 - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-06-08 14:28:40,434 - ERROR - Error generating sassy description for Radiohead: 'AIData' object has no attribute 'generation_time_ms'
+2025-06-08 14:28:40,434 - WARNING -     ⚠️ AI 描述生成失败: 'AIData' object has no attribute 'generation_time_ms'
+2025-06-08 14:28:40,434 - INFO - ✅ AI 服务测试完成
+2025-06-08 14:28:40,435 - INFO - 
+2025-06-08 14:28:40,435 - INFO - 🔄 测试完整集成工作流...
+2025-06-08 14:28:40,435 - INFO -   测试艺术家: VAMPIRE
+2025-06-08 14:28:40,435 - INFO -     1️⃣ 获取 Wikipedia 数据...
+2025-06-08 14:28:40,435 - INFO - Attempting to fetch real Wikipedia data for VAMPIRE
+2025-06-08 14:28:40,435 - INFO - Using REAL Wikipedia API for VAMPIRE in zh
+2025-06-08 14:28:48,441 - ERROR - Wikipedia API timeout for VAMPIRE
+2025-06-08 14:28:48,441 - WARNING - Failed to fetch real Wikipedia data for VAMPIRE: 
+2025-06-08 14:28:48,441 - INFO - Falling back to mock data for VAMPIRE
+2025-06-08 14:28:48,441 - INFO - Using MOCK Wikipedia API for VAMPIRE
+2025-06-08 14:28:48,442 - INFO -        ✅ Wikipedia 数据获取成功
+2025-06-08 14:28:49,443 - INFO -     2️⃣ 获取 Spotify 数据...
+2025-06-08 14:28:49,444 - ERROR - ❌ 集成工作流测试失败: 'SpotifyService' object has no attribute 'get_artist_by_name'
+2025-06-08 14:28:49,444 - INFO - 
+2025-06-08 14:28:49,444 - INFO - ============================================================
+2025-06-08 14:28:49,444 - INFO - 🎵 测试结果摘要:
+2025-06-08 14:28:49,444 - INFO - ============================================================
+2025-06-08 14:28:49,444 - INFO -   Wikipedia    : ✅ 通过
+2025-06-08 14:28:49,444 - INFO -   Spotify      : ❌ 失败
+2025-06-08 14:28:49,444 - INFO -   Ai           : ✅ 通过
+2025-06-08 14:28:49,444 - INFO -   Integration  : ❌ 失败
+2025-06-08 14:28:49,444 - INFO - 
+📊 总体结果: 2/4 测试通过
+2025-06-08 14:28:49,444 - INFO - 📈 成功率: 50.0%
+2025-06-08 14:28:49,444 - INFO - 
+⚠️ 有 2 个测试失败，请检查相关服务配置。
+2025-06-08 14:28:49,444 - INFO - 
+🔍 详细日志已保存到 test_basic_apis.log
+2025-06-08 14:30:52,288 - INFO - 🎸 Fuji Rock 2025 基础 API 测试开始
+2025-06-08 14:30:52,288 - INFO - ============================================================
+2025-06-08 14:30:52,288 - INFO - 🔍 测试 Wikipedia 服务...
+2025-06-08 14:30:52,570 - INFO -   测试艺术家: Radiohead
+2025-06-08 14:30:52,570 - INFO - Attempting to fetch real Wikipedia data for Radiohead
+2025-06-08 14:30:52,570 - INFO - Using REAL Wikipedia API for Radiohead in zh
+2025-06-08 14:31:00,577 - ERROR - Wikipedia API timeout for Radiohead
+2025-06-08 14:31:00,577 - WARNING - Failed to fetch real Wikipedia data for Radiohead: 
+2025-06-08 14:31:00,577 - INFO - Falling back to mock data for Radiohead
+2025-06-08 14:31:00,577 - INFO - Using MOCK Wikipedia API for Radiohead
+2025-06-08 14:31:00,578 - INFO -     ✅ 成功获取 Radiohead 的 Wikipedia 数据
+2025-06-08 14:31:00,578 - INFO -     📝 标题: Radiohead
+2025-06-08 14:31:00,578 - INFO -     📄 摘要: 电台司令是一支来自英国牛津郡阿宾顿的男类摇滚乐团，组建于1985年。乐团由汤姆·约克（主唱、吉他、钢琴），强尼·格林伍德（主委吉他、键盘、其他乐器），艾德·欧布莱恩（吉他、合声），科林·格林伍德（贝斯...
+2025-06-08 14:31:00,578 - INFO -     🖼️ 图片: https://i.scdn.co/image/ab6761610000e5eba03696716c9ee605006047fd
+2025-06-08 14:31:01,580 - INFO -   测试艺术家: VAMPIRE
+2025-06-08 14:31:01,580 - INFO - Attempting to fetch real Wikipedia data for VAMPIRE
+2025-06-08 14:31:01,580 - INFO - Using REAL Wikipedia API for VAMPIRE in zh
+2025-06-08 14:31:09,587 - ERROR - Wikipedia API timeout for VAMPIRE
+2025-06-08 14:31:09,587 - WARNING - Failed to fetch real Wikipedia data for VAMPIRE: 
+2025-06-08 14:31:09,587 - INFO - Falling back to mock data for VAMPIRE
+2025-06-08 14:31:09,587 - INFO - Using MOCK Wikipedia API for VAMPIRE
+2025-06-08 14:31:09,589 - INFO -     ✅ 成功获取 VAMPIRE 的 Wikipedia 数据
+2025-06-08 14:31:09,589 - INFO -     📝 标题: VAMPIRE
+2025-06-08 14:31:09,589 - INFO -     📄 摘要: VAMPIRE是一位知名的音乐艺术家，以其独特的音乐风格和创作才华而闻名。该艺术家在音乐界有着重要的地位，作品深受听众喜爱。他们的音乐融合了多种风格元素，展现出了卓越的艺术表现力和创新精神。...
+2025-06-08 14:31:09,589 - INFO -     🖼️ 图片: https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80
+2025-06-08 14:31:10,590 - INFO -   测试艺术家: Coldplay
+2025-06-08 14:31:10,590 - INFO - Attempting to fetch real Wikipedia data for Coldplay
+2025-06-08 14:31:10,590 - INFO - Using REAL Wikipedia API for Coldplay in zh
+2025-06-08 14:31:18,597 - ERROR - Wikipedia API timeout for Coldplay
+2025-06-08 14:31:18,597 - WARNING - Failed to fetch real Wikipedia data for Coldplay: 
+2025-06-08 14:31:18,597 - INFO - Falling back to mock data for Coldplay
+2025-06-08 14:31:18,597 - INFO - Using MOCK Wikipedia API for Coldplay
+2025-06-08 14:31:18,598 - INFO -     ✅ 成功获取 Coldplay 的 Wikipedia 数据
+2025-06-08 14:31:18,598 - INFO -     📝 标题: Coldplay
+2025-06-08 14:31:18,598 - INFO -     📄 摘要: 酷玩乐队是一支英国摇滚乐队，成立于1996年，来自伦敦。乐队由克里斯·马丁（主唱、钢琴）、强尼·巴克兰（吉他）、盖伊·贝里曼（贝斯）和威尔·钱皮恩（鼓手）组成。他们以旋律优美的另类摇滚和流行摇滚而闻名...
+2025-06-08 14:31:18,598 - INFO -     🖼️ 图片: https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=256&q=80
+2025-06-08 14:31:19,599 - INFO - ✅ Wikipedia 服务测试完成
+2025-06-08 14:31:19,599 - INFO - 
+2025-06-08 14:31:19,599 - INFO - 🎵 测试 Spotify 服务...
+2025-06-08 14:31:19,599 - INFO -   测试艺术家: Radiohead
+2025-06-08 14:31:20,449 - INFO - HTTP Request: POST https://accounts.spotify.com/api/token "HTTP/1.1 200 OK"
+2025-06-08 14:31:21,455 - INFO - HTTP Request: GET https://api.spotify.com/v1/search?q=Radiohead&type=artist&limit=1&market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:31:21,456 - INFO - Using REAL Spotify API for artist 4Z8W4fKeB5YxbusRsdQVPb
+2025-06-08 14:31:22,163 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb "HTTP/1.1 200 OK"
+2025-06-08 14:31:22,165 - INFO -     ✅ 成功获取 Radiohead 的 Spotify 数据
+2025-06-08 14:31:22,165 - INFO -     🎤 艺术家: Radiohead
+2025-06-08 14:31:22,165 - ERROR - ❌ Spotify 服务测试失败: unsupported format string passed to SpotifyFollowers.__format__
+2025-06-08 14:31:22,165 - INFO - 
+2025-06-08 14:31:22,166 - INFO - 🤖 测试 AI 服务...
+2025-06-08 14:31:22,166 - INFO -   测试 AI 描述生成...
+2025-06-08 14:31:22,167 - INFO - Using REAL DeepSeek AI API with model: deepseek-r1-250120, intensity: 7
+2025-06-08 14:31:47,491 - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-06-08 14:31:47,493 - INFO -     ✅ 成功生成 AI 描述
+2025-06-08 14:31:47,493 - INFO -     📝 描述长度: 390 字符
+2025-06-08 14:31:47,493 - INFO -     🎭 幽默程度: 7/10
+2025-06-08 14:31:47,493 - INFO -     😏 讽刺程度: 7/10
+2025-06-08 14:31:47,493 - INFO -     📊 模型: deepseek-r1-250120
+2025-06-08 14:31:47,493 - INFO -     🔤 Token 使用: 745
+2025-06-08 14:31:47,493 - INFO -     📄 生成内容预览: "这支自称'摇滚乐队'的英国天团，二十年前就悄悄把说明书藏进CD盒里——毕竟他们的音乐需要博士论文级别的解读。从《OK Computer》开始就孜孜不倦地生产英伦特产：迷幻电音包裹着资本主义社会焦虑，歌词里充斥着赛博朋克时代的existential crisis（存在主义危机），主唱Thom Yor...
+2025-06-08 14:31:47,493 - INFO - ✅ AI 服务测试完成
+2025-06-08 14:31:47,493 - INFO - 
+2025-06-08 14:31:47,493 - INFO - 🔄 测试完整集成工作流...
+2025-06-08 14:31:47,493 - INFO -   测试艺术家: VAMPIRE
+2025-06-08 14:31:47,493 - INFO -     1️⃣ 获取 Wikipedia 数据...
+2025-06-08 14:31:47,494 - INFO - Attempting to fetch real Wikipedia data for VAMPIRE
+2025-06-08 14:31:47,494 - INFO - Using REAL Wikipedia API for VAMPIRE in zh
+2025-06-08 14:31:55,501 - ERROR - Wikipedia API timeout for VAMPIRE
+2025-06-08 14:31:55,501 - WARNING - Failed to fetch real Wikipedia data for VAMPIRE: 
+2025-06-08 14:31:55,501 - INFO - Falling back to mock data for VAMPIRE
+2025-06-08 14:31:55,501 - INFO - Using MOCK Wikipedia API for VAMPIRE
+2025-06-08 14:31:55,501 - INFO -        ✅ Wikipedia 数据获取成功
+2025-06-08 14:31:56,503 - INFO -     2️⃣ 获取 Spotify 数据...
+2025-06-08 14:31:58,241 - INFO - HTTP Request: GET https://api.spotify.com/v1/search?q=VAMPIRE&type=artist&limit=1&market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:31:58,242 - INFO - Using REAL Spotify API for artist 5BvJzeQpmsdsFp4HGUYUEx
+2025-06-08 14:31:59,292 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/5BvJzeQpmsdsFp4HGUYUEx "HTTP/1.1 200 OK"
+2025-06-08 14:31:59,292 - INFO -        ✅ Spotify 数据获取成功
+2025-06-08 14:32:00,293 - INFO -     3️⃣ 生成 AI 描述...
+2025-06-08 14:32:00,293 - INFO - Using REAL DeepSeek AI API with model: deepseek-r1-250120, intensity: 8
+2025-06-08 14:32:25,405 - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-06-08 14:32:25,406 - INFO -        ✅ AI 描述生成成功
+2025-06-08 14:32:25,406 - INFO - ✅ 集成工作流测试完成
+2025-06-08 14:32:25,406 - INFO - 
+2025-06-08 14:32:25,406 - INFO - ============================================================
+2025-06-08 14:32:25,406 - INFO - 🎵 测试结果摘要:
+2025-06-08 14:32:25,406 - INFO - ============================================================
+2025-06-08 14:32:25,406 - INFO -   Wikipedia    : ✅ 通过
+2025-06-08 14:32:25,406 - INFO -   Spotify      : ❌ 失败
+2025-06-08 14:32:25,406 - INFO -   Ai           : ✅ 通过
+2025-06-08 14:32:25,406 - INFO -   Integration  : ✅ 通过
+2025-06-08 14:32:25,406 - INFO - 
+📊 总体结果: 3/4 测试通过
+2025-06-08 14:32:25,406 - INFO - 📈 成功率: 75.0%
+2025-06-08 14:32:25,406 - INFO - 
+⚠️ 有 1 个测试失败，请检查相关服务配置。
+2025-06-08 14:32:25,406 - INFO - 
+🔍 详细日志已保存到 test_basic_apis.log
+2025-06-08 14:33:48,279 - INFO - 🎸 Fuji Rock 2025 基础 API 测试开始
+2025-06-08 14:33:48,279 - INFO - ============================================================
+2025-06-08 14:33:48,279 - INFO - 🔍 测试 Wikipedia 服务...
+2025-06-08 14:33:48,640 - INFO -   测试艺术家: Radiohead
+2025-06-08 14:33:48,640 - INFO - Attempting to fetch real Wikipedia data for Radiohead
+2025-06-08 14:33:48,640 - INFO - Using REAL Wikipedia API for Radiohead in zh
+2025-06-08 14:33:56,646 - ERROR - Wikipedia API timeout for Radiohead
+2025-06-08 14:33:56,646 - WARNING - Failed to fetch real Wikipedia data for Radiohead: 
+2025-06-08 14:33:56,646 - INFO - Falling back to mock data for Radiohead
+2025-06-08 14:33:56,646 - INFO - Using MOCK Wikipedia API for Radiohead
+2025-06-08 14:33:56,647 - INFO -     ✅ 成功获取 Radiohead 的 Wikipedia 数据
+2025-06-08 14:33:56,647 - INFO -     📝 标题: Radiohead
+2025-06-08 14:33:56,647 - INFO -     📄 摘要: 电台司令是一支来自英国牛津郡阿宾顿的男类摇滚乐团，组建于1985年。乐团由汤姆·约克（主唱、吉他、钢琴），强尼·格林伍德（主委吉他、键盘、其他乐器），艾德·欧布莱恩（吉他、合声），科林·格林伍德（贝斯...
+2025-06-08 14:33:56,647 - INFO -     🖼️ 图片: https://i.scdn.co/image/ab6761610000e5eba03696716c9ee605006047fd
+2025-06-08 14:33:57,649 - INFO -   测试艺术家: VAMPIRE
+2025-06-08 14:33:57,650 - INFO - Attempting to fetch real Wikipedia data for VAMPIRE
+2025-06-08 14:33:57,650 - INFO - Using REAL Wikipedia API for VAMPIRE in zh
+2025-06-08 14:34:05,658 - ERROR - Wikipedia API timeout for VAMPIRE
+2025-06-08 14:34:05,659 - WARNING - Failed to fetch real Wikipedia data for VAMPIRE: 
+2025-06-08 14:34:05,659 - INFO - Falling back to mock data for VAMPIRE
+2025-06-08 14:34:05,659 - INFO - Using MOCK Wikipedia API for VAMPIRE
+2025-06-08 14:34:05,661 - INFO -     ✅ 成功获取 VAMPIRE 的 Wikipedia 数据
+2025-06-08 14:34:05,661 - INFO -     📝 标题: VAMPIRE
+2025-06-08 14:34:05,661 - INFO -     📄 摘要: VAMPIRE是一位知名的音乐艺术家，以其独特的音乐风格和创作才华而闻名。该艺术家在音乐界有着重要的地位，作品深受听众喜爱。他们的音乐融合了多种风格元素，展现出了卓越的艺术表现力和创新精神。...
+2025-06-08 14:34:05,661 - INFO -     🖼️ 图片: https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80
+2025-06-08 14:34:06,663 - INFO -   测试艺术家: Coldplay
+2025-06-08 14:34:06,663 - INFO - Attempting to fetch real Wikipedia data for Coldplay
+2025-06-08 14:34:06,663 - INFO - Using REAL Wikipedia API for Coldplay in zh
+2025-06-08 14:34:14,672 - ERROR - Wikipedia API timeout for Coldplay
+2025-06-08 14:34:14,673 - WARNING - Failed to fetch real Wikipedia data for Coldplay: 
+2025-06-08 14:34:14,673 - INFO - Falling back to mock data for Coldplay
+2025-06-08 14:34:14,673 - INFO - Using MOCK Wikipedia API for Coldplay
+2025-06-08 14:34:14,673 - INFO -     ✅ 成功获取 Coldplay 的 Wikipedia 数据
+2025-06-08 14:34:14,673 - INFO -     📝 标题: Coldplay
+2025-06-08 14:34:14,673 - INFO -     📄 摘要: 酷玩乐队是一支英国摇滚乐队，成立于1996年，来自伦敦。乐队由克里斯·马丁（主唱、钢琴）、强尼·巴克兰（吉他）、盖伊·贝里曼（贝斯）和威尔·钱皮恩（鼓手）组成。他们以旋律优美的另类摇滚和流行摇滚而闻名...
+2025-06-08 14:34:14,673 - INFO -     🖼️ 图片: https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=256&q=80
+2025-06-08 14:34:15,675 - INFO - ✅ Wikipedia 服务测试完成
+2025-06-08 14:34:15,675 - INFO - 
+2025-06-08 14:34:15,675 - INFO - 🎵 测试 Spotify 服务...
+2025-06-08 14:34:15,676 - INFO -   测试艺术家: Radiohead
+2025-06-08 14:34:16,566 - INFO - HTTP Request: POST https://accounts.spotify.com/api/token "HTTP/1.1 200 OK"
+2025-06-08 14:34:17,690 - INFO - HTTP Request: GET https://api.spotify.com/v1/search?q=Radiohead&type=artist&limit=1&market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:34:17,692 - INFO - Using REAL Spotify API for artist 4Z8W4fKeB5YxbusRsdQVPb
+2025-06-08 14:34:19,719 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb "HTTP/1.1 200 OK"
+2025-06-08 14:34:19,720 - INFO -     ✅ 成功获取 Radiohead 的 Spotify 数据
+2025-06-08 14:34:19,720 - INFO -     🎤 艺术家: Radiohead
+2025-06-08 14:34:19,720 - INFO -     👥 粉丝数: 12,382,956
+2025-06-08 14:34:19,720 - INFO -     🎭 风格: art rock, alternative rock
+2025-06-08 14:34:20,721 - INFO - Using REAL Spotify API for tracks of 4Z8W4fKeB5YxbusRsdQVPb
+2025-06-08 14:34:21,960 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb/top-tracks?market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:34:21,962 - INFO -     🎵 热门歌曲数量: 10
+2025-06-08 14:34:21,962 - INFO -     🔥 最热门: Creep
+2025-06-08 14:34:22,963 - INFO -   测试艺术家: VAMPIRE
+2025-06-08 14:34:24,655 - INFO - HTTP Request: GET https://api.spotify.com/v1/search?q=VAMPIRE&type=artist&limit=1&market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:34:24,656 - INFO - Using REAL Spotify API for artist 5BvJzeQpmsdsFp4HGUYUEx
+2025-06-08 14:34:25,843 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/5BvJzeQpmsdsFp4HGUYUEx "HTTP/1.1 200 OK"
+2025-06-08 14:34:25,847 - INFO -     ✅ 成功获取 VAMPIRE 的 Spotify 数据
+2025-06-08 14:34:25,847 - INFO -     🎤 艺术家: Vampire Weekend
+2025-06-08 14:34:25,847 - INFO -     👥 粉丝数: 2,030,071
+2025-06-08 14:34:25,847 - INFO -     🎭 风格: indie, baroque pop
+2025-06-08 14:34:26,848 - INFO - Using REAL Spotify API for tracks of 5BvJzeQpmsdsFp4HGUYUEx
+2025-06-08 14:34:28,158 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/5BvJzeQpmsdsFp4HGUYUEx/top-tracks?market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:34:28,160 - INFO -     🎵 热门歌曲数量: 10
+2025-06-08 14:34:28,160 - INFO -     🔥 最热门: A-Punk
+2025-06-08 14:34:29,161 - INFO -   测试艺术家: Coldplay
+2025-06-08 14:34:30,347 - INFO - HTTP Request: GET https://api.spotify.com/v1/search?q=Coldplay&type=artist&limit=1&market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:34:30,348 - INFO - Using REAL Spotify API for artist 4gzpq5DPGxSnKTe4SA8HAU
+2025-06-08 14:34:32,351 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/4gzpq5DPGxSnKTe4SA8HAU "HTTP/1.1 200 OK"
+2025-06-08 14:34:32,352 - INFO -     ✅ 成功获取 Coldplay 的 Spotify 数据
+2025-06-08 14:34:32,352 - INFO -     🎤 艺术家: Coldplay
+2025-06-08 14:34:32,352 - INFO -     👥 粉丝数: 58,675,599
+2025-06-08 14:34:32,352 - INFO -     🎭 风格: 
+2025-06-08 14:34:33,353 - INFO - Using REAL Spotify API for tracks of 4gzpq5DPGxSnKTe4SA8HAU
+2025-06-08 14:34:34,505 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/4gzpq5DPGxSnKTe4SA8HAU/top-tracks?market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:34:34,514 - INFO -     🎵 热门歌曲数量: 10
+2025-06-08 14:34:34,515 - INFO -     🔥 最热门: Yellow
+2025-06-08 14:34:35,516 - INFO - ✅ Spotify 服务测试完成
+2025-06-08 14:34:35,516 - INFO - 
+2025-06-08 14:34:35,516 - INFO - 🤖 测试 AI 服务...
+2025-06-08 14:34:35,516 - INFO -   测试 AI 描述生成...
+2025-06-08 14:34:35,518 - INFO - Using REAL DeepSeek AI API with model: deepseek-r1-250120, intensity: 7
+2025-06-08 14:35:08,005 - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-06-08 14:35:08,007 - INFO -     ✅ 成功生成 AI 描述
+2025-06-08 14:35:08,007 - INFO -     📝 描述长度: 420 字符
+2025-06-08 14:35:08,007 - INFO -     🎭 幽默程度: 7/10
+2025-06-08 14:35:08,007 - INFO -     😏 讽刺程度: 7/10
+2025-06-08 14:35:08,007 - INFO -     📊 模型: deepseek-r1-250120
+2025-06-08 14:35:08,007 - INFO -     🔤 Token 使用: 823
+2025-06-08 14:35:08,007 - INFO -     📄 生成内容预览: "Radiohead——这支牛津出品的悲伤数学摇滚天团，专治当代青年的精神正常症。他们用吉他分解和弦的功夫，比特朗普分解美国社会的效率还高，愣是把90年代Britpop的狂欢派对改造成了哲学系自习室。主唱Thom Yorke那张永远在唱《人间失格》的脸，配上堪比量子物理的编曲复杂度，成功让《Cree...
+2025-06-08 14:35:08,007 - INFO - ✅ AI 服务测试完成
+2025-06-08 14:35:08,007 - INFO - 
+2025-06-08 14:35:08,007 - INFO - 🔄 测试完整集成工作流...
+2025-06-08 14:35:08,007 - INFO -   测试艺术家: VAMPIRE
+2025-06-08 14:35:08,007 - INFO -     1️⃣ 获取 Wikipedia 数据...
+2025-06-08 14:35:08,007 - INFO - Attempting to fetch real Wikipedia data for VAMPIRE
+2025-06-08 14:35:08,007 - INFO - Using REAL Wikipedia API for VAMPIRE in zh
+2025-06-08 14:35:16,015 - ERROR - Wikipedia API timeout for VAMPIRE
+2025-06-08 14:35:16,016 - WARNING - Failed to fetch real Wikipedia data for VAMPIRE: 
+2025-06-08 14:35:16,016 - INFO - Falling back to mock data for VAMPIRE
+2025-06-08 14:35:16,016 - INFO - Using MOCK Wikipedia API for VAMPIRE
+2025-06-08 14:35:16,018 - INFO -        ✅ Wikipedia 数据获取成功
+2025-06-08 14:35:17,019 - INFO -     2️⃣ 获取 Spotify 数据...
+2025-06-08 14:35:18,237 - INFO - HTTP Request: GET https://api.spotify.com/v1/search?q=VAMPIRE&type=artist&limit=1&market=JP "HTTP/1.1 200 OK"
+2025-06-08 14:35:18,237 - INFO - Using REAL Spotify API for artist 5BvJzeQpmsdsFp4HGUYUEx
+2025-06-08 14:35:19,546 - INFO - HTTP Request: GET https://api.spotify.com/v1/artists/5BvJzeQpmsdsFp4HGUYUEx "HTTP/1.1 200 OK"
+2025-06-08 14:35:19,547 - INFO -        ✅ Spotify 数据获取成功
+2025-06-08 14:35:20,548 - INFO -     3️⃣ 生成 AI 描述...
+2025-06-08 14:35:20,548 - INFO - Using REAL DeepSeek AI API with model: deepseek-r1-250120, intensity: 8
+2025-06-08 14:35:39,574 - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-06-08 14:35:39,575 - INFO -        ✅ AI 描述生成成功
+2025-06-08 14:35:39,575 - INFO - ✅ 集成工作流测试完成
+2025-06-08 14:35:39,575 - INFO - 
+2025-06-08 14:35:39,575 - INFO - ============================================================
+2025-06-08 14:35:39,575 - INFO - 🎵 测试结果摘要:
+2025-06-08 14:35:39,575 - INFO - ============================================================
+2025-06-08 14:35:39,575 - INFO -   Wikipedia    : ✅ 通过
+2025-06-08 14:35:39,575 - INFO -   Spotify      : ✅ 通过
+2025-06-08 14:35:39,575 - INFO -   Ai           : ✅ 通过
+2025-06-08 14:35:39,575 - INFO -   Integration  : ✅ 通过
+2025-06-08 14:35:39,575 - INFO - 
+📊 总体结果: 4/4 测试通过
+2025-06-08 14:35:39,575 - INFO - 📈 成功率: 100.0%
+2025-06-08 14:35:39,575 - INFO - 
+🎉 所有测试通过！API 服务运行正常。
+2025-06-08 14:35:39,575 - INFO - 💡 提示: 现在可以尝试安装数据库依赖并运行完整的数据填充脚本。
+2025-06-08 14:35:39,575 - INFO - 
+🔍 详细日志已保存到 test_basic_apis.log
