@@ -9,7 +9,8 @@ import { getCurrentUserToken } from './supabase'
 
 // API基础URL - 根据环境变量设置
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
-const API_V1_PREFIX = '/api/v1'
+// const API_V1_PREFIX = '/api/v1'
+const API_V1_PREFIX = ''
 
 // 完整的 API URL
 const FULL_API_URL = `${API_BASE_URL}${API_V1_PREFIX}`

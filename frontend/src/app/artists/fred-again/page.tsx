@@ -38,7 +38,7 @@ export default function FredAgainPage() {
     const fetchFredAgain = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/api/database/artists/search?name=Fred again..');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/artists/search?name=Fred again..`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch artist data');

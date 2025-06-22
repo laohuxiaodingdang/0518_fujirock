@@ -1,6 +1,7 @@
 // API 基础配置 - 直接连接后端服务器
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-const API_V1_PREFIX = '/api/v1';
+// const API_V1_PREFIX = '/api/v1';
+const API_V1_PREFIX = '';
 
 // 完整的 API URL
 const FULL_API_URL = `${API_BASE_URL}${API_V1_PREFIX}`;
@@ -149,7 +150,7 @@ export const getArtistSpotify = async (
 
   const encodedArtistName = encodeURIComponent(artistName.trim());
   return apiRequest<SpotifyArtistResponse>(
-    `/spotify/artist-by-name/${encodedArtistName}`
+    `/api/spotify/artist-by-name/${encodedArtistName}`
   );
 };
 
@@ -163,7 +164,7 @@ export const getArtistTopTracks = async (
 
   const encodedArtistName = encodeURIComponent(artistName.trim());
   return apiRequest<SpotifyTopTracksResponse>(
-    `/spotify/artist-by-name/${encodedArtistName}/top-tracks`
+    `/api/spotify/artist-by-name/${encodedArtistName}/top-tracks`
   );
 };
 
@@ -213,7 +214,7 @@ export const generateArtistDescriptionStream = async (
   };
 
   try {
-    const response = await fetch('/api/ai/generate-description-stream', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/ai/generate-description-stream`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

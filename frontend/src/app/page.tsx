@@ -31,7 +31,7 @@ export default function Home() {
     const fetchArtists = async () => {
       try {
         // 1. 首先获取 Fred again.. 的数据
-        const fredResponse = await fetch('/api/database/artists/search?query=Fred again..&limit=1');
+        const fredResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/artists/search?query=Fred again..&limit=1`);
         let fredArtist = null;
         
         if (fredResponse.ok) {
@@ -61,7 +61,7 @@ export default function Home() {
         }
 
         // 2. 获取其他艺术家数据
-        const response = await fetch('/api/database/artists/search?query=&limit=10');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/artists/search?query=&limit=10`);
         
         if (response.ok) {
           const result = await response.json();

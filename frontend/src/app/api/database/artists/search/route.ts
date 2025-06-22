@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
       const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
       console.log(backendUrl);
       const response = await fetch(
-        `${backendUrl}/api/v1/database/artists?query=${encodeURIComponent(name)}&limit=1`,
+        `${backendUrl}/api/database/artists?query=${encodeURIComponent(name)}&limit=1`,
         {
           method: 'GET',
           headers: {
@@ -52,7 +52,7 @@ export async function GET(request: NextRequest) {
     // 原有的查询逻辑 - 使用 v1 前缀
     const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
     const response = await fetch(
-      `${backendUrl}/api/v1/database/artists?query=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
+      `${backendUrl}/api/database/artists?query=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
       {
         method: 'GET',
         headers: {

@@ -49,25 +49,25 @@ app = FastAPI(
     title=settings.APP_NAME,
     description=settings.APP_DESCRIPTION,
     version=settings.APP_VERSION,
-    docs_url="/docs" if not settings.is_production else None,  # 生产环境可选择关闭文档
-    redoc_url="/redoc" if not settings.is_production else None,
+    docs_url="/docs",
+    redoc_url="/redoc",
     lifespan=lifespan
 )
 
-# 添加可信主机中间件（生产环境安全措施）
-if settings.is_production:
-    app.add_middleware(
-        TrustedHostMiddleware, 
-        allowed_hosts=["toxicfjr.xyz", "www.toxicfjr.xyz", "api.toxicfjr.xyz"]
-    )
+# # 添加可信主机中间件（生产环境安全措施）
+# if settings.is_production:
+#     app.add_middleware(
+#         TrustedHostMiddleware, 
+#         allowed_hosts=["toxicfjr.xyz", "www.toxicfjr.xyz", "api.toxicfjr.xyz"]
+#     )
 
 # 添加 CORS 中间件
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
-    allow_credentials=settings.CORS_ALLOW_CREDENTIALS,
-    allow_methods=settings.CORS_ALLOW_METHODS,
-    allow_headers=settings.CORS_ALLOW_HEADERS,
+    allow_origins=["*"],
+    allow_credentials=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # 添加全局异常处理
@@ -90,7 +90,7 @@ async def global_exception_handler(request, exc):
         )
 
 # 注册路由 - 使用统一的 /api/v1 前缀
-API_V1_PREFIX = "/api/v1"
+API_V1_PREFIX = ""
 
 app.include_router(health_router)  # 健康检查不需要版本前缀
 app.include_router(auth_router, prefix=API_V1_PREFIX)
