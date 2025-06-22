@@ -1,4 +1,3 @@
-demo.html
 *.html
 docs/
 scripts/
@@ -7,4 +6,6 @@ data/
 *.png
 __pycache__/
 .git/
-.cursor/ 
+.cursor/
+environment.yml
+environment_simple.yml 

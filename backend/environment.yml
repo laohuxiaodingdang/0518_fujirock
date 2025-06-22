@@ -13,3 +13,4 @@ dependencies:
     - supabase
     - PyJWT
     - cryptography
+    - volcenginesdkarkruntime
