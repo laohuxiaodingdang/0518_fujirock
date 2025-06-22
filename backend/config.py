@@ -32,6 +32,8 @@ class Settings:
     SUPABASE_URL: Optional[str] = os.getenv("SUPABASE_URL")
     SUPABASE_ANON_KEY: Optional[str] = os.getenv("SUPABASE_ANON_KEY")
     SUPABASE_SERVICE_ROLE_KEY: Optional[str] = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+    # JWT Secret 用于验证 Supabase 生成的 JWT Token
+    SUPABASE_JWT_SECRET: Optional[str] = os.getenv("SUPABASE_JWT_SECRET")
     
     # Wikipedia API 配置
     WIKIPEDIA_API_URL: str = os.getenv("WIKIPEDIA_API_URL", "https://zh.wikipedia.org/api/rest_v1")
@@ -81,7 +83,8 @@ class Settings:
             "deepseek": bool(self.ARK_API_KEY),
             "spotify": bool(self.SPOTIFY_CLIENT_ID and self.SPOTIFY_CLIENT_SECRET),
             "wikipedia": True,  # Wikipedia 不需要密钥
-            "supabase": bool(self.SUPABASE_URL and self.SUPABASE_ANON_KEY and self.SUPABASE_SERVICE_ROLE_KEY)
+            "supabase": bool(self.SUPABASE_URL and self.SUPABASE_ANON_KEY and self.SUPABASE_SERVICE_ROLE_KEY),
+            "supabase_jwt": bool(self.SUPABASE_JWT_SECRET)  # 验证JWT Secret是否配置
         }
         return validation_result
     

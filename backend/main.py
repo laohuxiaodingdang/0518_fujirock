@@ -16,6 +16,8 @@ from api.spotify import router as spotify_router
 from api.health import router as health_router
 from api.database import router as database_router
 from api.integration_example import router as integration_router
+from api.auth import router as auth_router
+from api.protected import router as protected_router
 
 logger = logging.getLogger(__name__)
 
@@ -49,11 +51,13 @@ app.add_middleware(
 
 # 注册路由
 app.include_router(health_router)
+app.include_router(auth_router)
 app.include_router(wikipedia_router)
 app.include_router(openai_router)
 app.include_router(spotify_router)
 app.include_router(database_router)
 app.include_router(integration_router)
+app.include_router(protected_router)
 
 # iTunes API 路由
 @app.get("/api/itunes/search-track")
