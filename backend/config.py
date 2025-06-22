@@ -20,7 +20,7 @@ class Settings:
     
     # 服务器配置
     HOST: str = os.getenv("HOST", "0.0.0.0")
-    PORT: int = int(os.getenv("PORT", 8000))
+    PORT: int = 8000  # 直接使用固定端口
     DEBUG: bool = os.getenv("DEBUG", "true").lower() == "true"
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     
