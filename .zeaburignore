@@ -1,0 +1,11 @@
+demo.html
+*.html
+frontend/
+docs/
+scripts/
+data/
+*.log
+*.png
+__pycache__/
+.git/
+.cursor/ 
