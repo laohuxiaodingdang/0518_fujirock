@@ -9,6 +9,10 @@ import { getCurrentUserToken } from './supabase'
 
 // API基础URL - 根据环境变量设置
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_V1_PREFIX = '/api/v1'
+
+// 完整的 API URL
+const FULL_API_URL = `${API_BASE_URL}${API_V1_PREFIX}`
 
 /**
  * 创建带有认证功能的API客户端
@@ -19,7 +23,7 @@ class ApiClient {
   constructor() {
     // 创建axios实例
     this.client = axios.create({
-      baseURL: API_BASE_URL,
+      baseURL: FULL_API_URL,
       timeout: 10000, // 10秒超时
       headers: {
         'Content-Type': 'application/json',
@@ -111,7 +115,7 @@ class ApiClient {
   async publicGet<T = any>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
     // 创建一个不带认证的临时客户端
     const publicClient = axios.create({
-      baseURL: API_BASE_URL,
+      baseURL: FULL_API_URL,
       timeout: 10000,
       headers: {
         'Content-Type': 'application/json',
@@ -132,7 +136,7 @@ export const apiClient = new ApiClient()
  */
 export const verifyToken = async () => {
   try {
-    const response = await apiClient.get('/api/auth/verify')
+    const response = await apiClient.get('/auth/verify')
     return response.data
   } catch (error) {
     console.error('Token verification failed:', error)
@@ -145,7 +149,7 @@ export const verifyToken = async () => {
  */
 export const getUserProfile = async () => {
   try {
-    const response = await apiClient.get('/api/auth/profile')
+    const response = await apiClient.get('/auth/profile')
     return response.data
   } catch (error) {
     console.error('Get user profile failed:', error)
@@ -158,7 +162,7 @@ export const getUserProfile = async () => {
  */
 export const logoutUser = async () => {
   try {
-    const response = await apiClient.post('/api/auth/logout')
+    const response = await apiClient.post('/auth/logout')
     return response.data
   } catch (error) {
     console.error('Logout failed:', error)
@@ -173,7 +177,7 @@ export const logoutUser = async () => {
  */
 export const getUserFavorites = async () => {
   try {
-    const response = await apiClient.get('/api/protected/user-favorites')
+    const response = await apiClient.get('/protected/user-favorites')
     return response.data
   } catch (error) {
     console.error('Get user favorites failed:', error)
@@ -186,7 +190,7 @@ export const getUserFavorites = async () => {
  */
 export const addToFavorites = async (artistId: number) => {
   try {
-    const response = await apiClient.post('/api/protected/add-favorite', { artist_id: artistId })
+    const response = await apiClient.post('/protected/add-favorite', { artist_id: artistId })
     return response.data
   } catch (error) {
     console.error('Add to favorites failed:', error)
@@ -199,7 +203,7 @@ export const addToFavorites = async (artistId: number) => {
  */
 export const getPublicContent = async () => {
   try {
-    const response = await apiClient.get('/api/protected/public-with-user-context')
+    const response = await apiClient.get('/protected/public-with-user-context')
     return response.data
   } catch (error) {
     console.error('Get public content failed:', error)
@@ -214,7 +218,7 @@ export const getPublicContent = async () => {
  */
 export const getArtists = async () => {
   try {
-    const response = await apiClient.publicGet('/api/database/artists')
+    const response = await apiClient.publicGet('/database/artists')
     return response.data
   } catch (error) {
     console.error('Get artists failed:', error)
@@ -227,7 +231,7 @@ export const getArtists = async () => {
  */
 export async function searchArtists(query: string) {
   try {
-    const response = await fetch(`/api/spotify/search?q=${encodeURIComponent(query)}`);
+    const response = await fetch(`${FULL_API_URL}/spotify/search?q=${encodeURIComponent(query)}`);
     if (!response.ok) throw new Error('搜索失败');
     return await response.json();
   } catch (error) {
@@ -241,7 +245,7 @@ export async function searchArtists(query: string) {
  */
 export async function getArtistDetails(id: string) {
   try {
-    const response = await fetch(`/api/spotify/artist/${id}`);
+    const response = await fetch(`${FULL_API_URL}/spotify/artist/${id}`);
     if (!response.ok) throw new Error('获取艺术家详情失败');
     return await response.json();
   } catch (error) {
@@ -255,7 +259,7 @@ export async function getArtistDetails(id: string) {
  */
 export async function getArtistWikipedia(name: string) {
   try {
-    const response = await fetch(`/api/wikipedia?name=${encodeURIComponent(name)}`);
+    const response = await fetch(`${FULL_API_URL}/wikipedia?name=${encodeURIComponent(name)}`);
     if (!response.ok) throw new Error('获取维基百科信息失败');
     return await response.json();
   } catch (error) {
@@ -269,7 +273,7 @@ export async function getArtistWikipedia(name: string) {
  */
 export async function getArtistDescription(name: string, genre?: string) {
   try {
-    let url = `/api/description?name=${encodeURIComponent(name)}`;
+    let url = `${FULL_API_URL}/description?name=${encodeURIComponent(name)}`;
     if (genre) url += `&genre=${encodeURIComponent(genre)}`;
     
     const response = await fetch(url);

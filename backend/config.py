@@ -2,8 +2,9 @@
 配置模块 - 管理环境变量和应用配置
 """
 import os
+import json
 import logging
-from typing import Optional
+from typing import Optional, List
 from dotenv import load_dotenv
 
 # 加载环境变量
@@ -58,11 +59,42 @@ class Settings:
     ITUNES_TIMEOUT: float = float(os.getenv("ITUNES_TIMEOUT", 5.0))        # iTunes专用超时：5秒
     AI_TIMEOUT: float = float(os.getenv("AI_TIMEOUT", 15.0))               # AI API专用超时：15秒
     
-    # CORS 配置
-    CORS_ORIGINS: list = ["*"]  # 生产环境中应该设置具体的域名
+    # CORS 配置 - 更安全的处理方式
+    @property
+    def CORS_ORIGINS(self) -> List[str]:
+        """动态获取 CORS 允许的源"""
+        cors_origins_str = os.getenv("CORS_ORIGINS")
+        
+        if cors_origins_str:
+            try:
+                # 尝试解析 JSON 格式的 CORS_ORIGINS
+                return json.loads(cors_origins_str)
+            except json.JSONDecodeError:
+                # 如果不是 JSON，尝试按逗号分割
+                return [origin.strip() for origin in cors_origins_str.split(",")]
+        
+        # 根据环境返回默认值
+        if self.is_production:
+            return [
+                "https://toxicfjr.xyz",
+                "https://www.toxicfjr.xyz"
+            ]
+        else:
+            return [
+                "http://localhost:3000", 
+                "http://127.0.0.1:3000",
+            ]
+    
     CORS_ALLOW_CREDENTIALS: bool = True
-    CORS_ALLOW_METHODS: list = ["*"]
-    CORS_ALLOW_HEADERS: list = ["*"]
+    CORS_ALLOW_METHODS: List[str] = ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+    CORS_ALLOW_HEADERS: List[str] = [
+        "Accept",
+        "Accept-Language", 
+        "Content-Language",
+        "Content-Type",
+        "Authorization",
+        "X-Requested-With"
+    ]
     
     # 日志配置
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")

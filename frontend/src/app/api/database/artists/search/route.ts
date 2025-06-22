@@ -13,10 +13,10 @@ export async function GET(request: NextRequest) {
 
     // 如果是按名称搜索 Fred again..
     if (name) {
-      // 调用后端 API - 修复路径
+      // 调用后端 API - 使用 v1 前缀
       const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
       const response = await fetch(
-        `${backendUrl}/api/database/artists?query=${encodeURIComponent(name)}&limit=1`,
+        `${backendUrl}/api/v1/database/artists?query=${encodeURIComponent(name)}&limit=1`,
         {
           method: 'GET',
           headers: {
@@ -48,10 +48,10 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    // 原有的查询逻辑 - 修复路径
+    // 原有的查询逻辑 - 使用 v1 前缀
     const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
     const response = await fetch(
-      `${backendUrl}/api/database/artists?query=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
+      `${backendUrl}/api/v1/database/artists?query=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
       {
         method: 'GET',
         headers: {

@@ -1,5 +1,9 @@
 // API 基础配置 - 直接连接后端服务器
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_V1_PREFIX = '/api/v1';
+
+// 完整的 API URL
+const FULL_API_URL = `${API_BASE_URL}${API_V1_PREFIX}`;
 
 // API 响应类型定义
 export interface WikipediaArtistResponse {
@@ -95,7 +99,7 @@ const apiRequest = async <T>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<T> => {
-  const url = `${API_BASE_URL}${endpoint}`;
+  const url = `${FULL_API_URL}${endpoint}`;
   
   const defaultOptions: RequestInit = {
     headers: {
@@ -131,7 +135,7 @@ export const getArtistWikipedia = async (
 
   const encodedArtistName = encodeURIComponent(artistName.trim());
   return apiRequest<WikipediaArtistResponse>(
-    `/api/wikipedia/artists/${encodedArtistName}?language=${language}`
+    `/wikipedia/artists/${encodedArtistName}?language=${language}`
   );
 };
 
@@ -145,7 +149,7 @@ export const getArtistSpotify = async (
 
   const encodedArtistName = encodeURIComponent(artistName.trim());
   return apiRequest<SpotifyArtistResponse>(
-    `/api/spotify/artist-by-name/${encodedArtistName}`
+    `/spotify/artist-by-name/${encodedArtistName}`
   );
 };
 
@@ -159,7 +163,7 @@ export const getArtistTopTracks = async (
 
   const encodedArtistName = encodeURIComponent(artistName.trim());
   return apiRequest<SpotifyTopTracksResponse>(
-    `/api/spotify/artist-by-name/${encodedArtistName}/top-tracks`
+    `/spotify/artist-by-name/${encodedArtistName}/top-tracks`
   );
 };
 
@@ -173,7 +177,7 @@ export const generateArtistDescription = async (
     throw new Error('Artist name is required');
   }
 
-  return apiRequest<AIDescriptionResponse>('/api/ai/generate-description', {
+  return apiRequest<AIDescriptionResponse>('/ai/generate-description', {
     method: 'POST',
     body: JSON.stringify({
       artist_name: artistName,
