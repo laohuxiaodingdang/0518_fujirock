@@ -15,6 +15,7 @@ export async function GET(request: NextRequest) {
     if (name) {
       // 调用后端 API - 使用 v1 前缀
       const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+      console.log(backendUrl);
       const response = await fetch(
         `${backendUrl}/api/v1/database/artists?query=${encodeURIComponent(name)}&limit=1`,
         {
