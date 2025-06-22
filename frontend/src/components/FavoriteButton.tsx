@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useFavorites } from '../hooks/useFavorites'
+import { useAuth } from '../hooks/useAuth'
 import SimpleAuth from './SimpleAuth'
 
 interface FavoriteButtonProps {
@@ -15,12 +16,21 @@ export default function FavoriteButton({
   artistName = '艺术家',
   className = '' 
 }: FavoriteButtonProps) {
-  const { isFavorite, toggleFavorite, isLoggedIn } = useFavorites()
+  const { user, isAuthenticated } = useAuth()
+  const { isFavorite, addFavorite, removeFavorite } = useFavorites(user)
   const [showAuth, setShowAuth] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  const toggleFavorite = async (artistId: string): Promise<boolean> => {
+    if (isFavorite(artistId)) {
+      return await removeFavorite(artistId)
+    } else {
+      return await addFavorite(artistId)
+    }
+  }
+
   const handleClick = async () => {
-    if (!isLoggedIn) {
+    if (!isAuthenticated) {
       setShowAuth(true)
       return
     }
@@ -58,7 +68,7 @@ export default function FavoriteButton({
           ${className}
         `}
         title={
-          !isLoggedIn 
+          !isAuthenticated 
             ? '登录后收藏' 
             : isCurrentlyFavorite 
               ? `取消收藏 ${artistName}` 
@@ -86,7 +96,7 @@ export default function FavoriteButton({
         )}
 
         {/* 未登录提示 */}
-        {!isLoggedIn && (
+        {!isAuthenticated && (
           <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full flex items-center justify-center">
             <span className="text-white text-xs">!</span>
           </div>

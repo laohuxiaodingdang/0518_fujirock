@@ -16,21 +16,21 @@ interface AuthFormProps {
   onModeChange?: (mode: AuthMode) => void
 }
 
-export default function AuthForm({ 
-  mode = 'login', 
-  onSuccess, 
-  onModeChange 
+export default function AuthForm({
+  mode = 'login',
+  onSuccess,
+  onModeChange
 }: AuthFormProps) {
   // 认证Hook
   const { signIn, signUp, loading } = useAuth()
-  
+
   // 表单状态
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     confirmPassword: ''
   })
-  
+
   // UI状态
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -45,7 +45,7 @@ export default function AuthForm({
       ...prev,
       [name]: value
     }))
-    
+
     // 清除错误信息
     if (error) setError(null)
   }
@@ -58,27 +58,27 @@ export default function AuthForm({
       setError('请输入邮箱地址')
       return false
     }
-    
+
     if (!formData.email.includes('@')) {
       setError('请输入有效的邮箱地址')
       return false
     }
-    
+
     if (!formData.password.trim()) {
       setError('请输入密码')
       return false
     }
-    
+
     if (formData.password.length < 6) {
       setError('密码至少需要6个字符')
       return false
     }
-    
+
     if (mode === 'register' && formData.password !== formData.confirmPassword) {
       setError('两次输入的密码不一致')
       return false
     }
-    
+
     return true
   }
 
@@ -87,37 +87,38 @@ export default function AuthForm({
    */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // 验证表单
     if (!validateForm()) return
-    
+
     setIsSubmitting(true)
     setError(null)
     setSuccess(null)
-    
+
     try {
-      let result
-      
       if (mode === 'login') {
         // 登录
-        result = await signIn(formData.email, formData.password)
-        
-        if (result.success) {
+        const result = await signIn({ email: formData.email, password: formData.password })
+
+        if (result.user && !result.error) {
           setSuccess('登录成功！')
           onSuccess?.()
         } else {
-          setError(result.error || '登录失败')
+          setError(result.error?.message || '登录失败')
         }
       } else {
-        // 注册
-        result = await signUp(formData.email, formData.password)
-        
-        if (result.success) {
+        // 注册 - 传递对象参数
+        const result = await signUp({ 
+          email: formData.email, 
+          password: formData.password 
+        })
+
+        if (result.user && !result.error) {
           setSuccess('注册成功！请检查邮箱并点击验证链接。')
           // 可以选择自动切换到登录模式
           // onModeChange?.('login')
         } else {
-          setError(result.error || '注册失败')
+          setError(result.error?.message || '注册失败')
         }
       }
     } catch (error) {
@@ -134,7 +135,7 @@ export default function AuthForm({
   const toggleMode = () => {
     const newMode = mode === 'login' ? 'register' : 'login'
     onModeChange?.(newMode)
-    
+
     // 清除表单状态
     setFormData({
       email: '',
@@ -151,21 +152,21 @@ export default function AuthForm({
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
         {mode === 'login' ? '用户登录' : '用户注册'}
       </h2>
-      
+
       {/* 成功消息 */}
       {success && (
         <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
           {success}
         </div>
       )}
-      
+
       {/* 错误消息 */}
       {error && (
         <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
           {error}
         </div>
       )}
-      
+
       {/* 表单 */}
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* 邮箱输入 */}
@@ -184,7 +185,7 @@ export default function AuthForm({
             required
           />
         </div>
-        
+
         {/* 密码输入 */}
         <div>
           <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
@@ -202,7 +203,7 @@ export default function AuthForm({
             minLength={6}
           />
         </div>
-        
+
         {/* 确认密码输入（仅注册时显示） */}
         {mode === 'register' && (
           <div>
@@ -221,7 +222,7 @@ export default function AuthForm({
             />
           </div>
         )}
-        
+
         {/* 提交按钮 */}
         <button
           type="submit"
@@ -241,7 +242,7 @@ export default function AuthForm({
           )}
         </button>
       </form>
-      
+
       {/* 模式切换 */}
       <div className="mt-6 text-center">
         <p className="text-sm text-gray-600">

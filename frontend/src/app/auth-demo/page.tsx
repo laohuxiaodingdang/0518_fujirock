@@ -14,10 +14,18 @@ import {
   getPublicContent, 
   getArtists 
 } from '@/lib/api'
+import { isSupabaseAvailable } from '@/lib/supabase'
 
 export default function AuthDemoPage() {
-  // 认证状态
-  const { isAuthenticated, loading } = useAuth()
+  const { 
+    user, 
+    loading, 
+    isAuthenticated, 
+    signUp, 
+    signIn, 
+    signOut,
+    isSupabaseAvailable: supabaseAvailable
+  } = useAuth()
   
   // UI状态
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login')
@@ -59,6 +67,51 @@ export default function AuthDemoPage() {
    */
   const clearResults = () => {
     setApiResults({})
+  }
+
+  // 如果 Supabase 不可用，显示提示信息
+  if (!isSupabaseAvailable) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h1 className="text-4xl font-bold text-white mb-4">
+                🔐 Supabase 认证功能演示
+              </h1>
+              <p className="text-gray-300 text-lg">
+                认证服务当前不可用
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <div className="text-center">
+                <div className="text-6xl mb-4">⚠️</div>
+                <h2 className="text-2xl font-bold text-white mb-4">认证服务不可用</h2>
+                <p className="text-gray-300 mb-6">
+                  Supabase 环境变量未配置，认证功能已禁用。
+                </p>
+                <div className="bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-4 mb-6">
+                  <p className="text-yellow-200 text-sm">
+                    <strong>开发者提示：</strong> 请在部署环境中配置以下环境变量：
+                  </p>
+                  <ul className="text-yellow-200 text-sm mt-2 text-left list-disc list-inside">
+                    <li>NEXT_PUBLIC_SUPABASE_URL</li>
+                    <li>NEXT_PUBLIC_SUPABASE_ANON_KEY</li>
+                  </ul>
+                </div>
+                <button
+                  onClick={() => window.history.back()}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
+                >
+                  返回上一页
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (

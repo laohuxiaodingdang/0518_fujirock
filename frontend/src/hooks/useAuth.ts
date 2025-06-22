@@ -2,15 +2,17 @@
  * 认证相关的React Hook
  * 提供登录、注册、登出等功能
  */
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
+import { toast } from 'react-hot-toast'
 import { User, AuthError } from '@supabase/supabase-js'
-import { supabase, getCurrentUserToken } from '@/lib/supabase'
+import { supabase, getCurrentUserToken, isSupabaseAvailable } from '@/lib/supabase'
 
 // 认证状态接口
 interface AuthState {
   user: User | null
   loading: boolean
-  token: string | null
+  isAuthenticated: boolean
 }
 
 // 认证操作结果接口
@@ -19,50 +21,83 @@ interface AuthResult {
   error?: string
 }
 
+interface SignUpData {
+  email: string
+  password: string
+  name?: string
+}
+
+interface SignInData {
+  email: string
+  password: string
+}
+
 /**
  * 认证Hook
  * 管理用户的登录状态和认证操作
  */
-export function useAuth() {
-  // 认证状态
+export const useAuth = () => {
+  const router = useRouter()
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     loading: true,
-    token: null
+    isAuthenticated: false
   })
 
-  /**
-   * 初始化认证状态
-   * 检查用户是否已经登录
-   */
-  useEffect(() => {
-    // 获取初始session
-    const getInitialSession = async () => {
-      try {
-        const { data: { session }, error } = await supabase.auth.getSession()
-        
-        if (error) {
-          console.error('Error getting initial session:', error)
-        }
-        
-        setAuthState({
-          user: session?.user || null,
-          loading: false,
-          token: session?.access_token || null
-        })
-      } catch (error) {
-        console.error('Error in getInitialSession:', error)
+  // 获取当前用户信息
+  const getCurrentUser = useCallback(async () => {
+    if (!isSupabaseAvailable || !supabase) {
+      setAuthState({
+        user: null,
+        loading: false,
+        isAuthenticated: false
+      })
+      return
+    }
+
+    try {
+      setAuthState(prev => ({ ...prev, loading: true }))
+      
+      const { data: { session }, error } = await supabase.auth.getSession()
+      
+      if (error) {
+        console.error('Error getting session:', error)
         setAuthState({
           user: null,
           loading: false,
-          token: null
+          isAuthenticated: false
         })
+        return
       }
+      
+      setAuthState({
+        user: session?.user || null,
+        loading: false,
+        isAuthenticated: !!session?.user
+      })
+    } catch (error) {
+      console.error('Error in getCurrentUser:', error)
+      setAuthState({
+        user: null,
+        loading: false,
+        isAuthenticated: false
+      })
+    }
+  }, [])
+
+  // 监听认证状态变化
+  useEffect(() => {
+    if (!isSupabaseAvailable || !supabase) {
+      setAuthState({
+        user: null,
+        loading: false,
+        isAuthenticated: false
+      })
+      return
     }
 
-    getInitialSession()
+    getCurrentUser()
 
-    // 监听认证状态变化
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         console.log('Auth state changed:', event, session?.user?.email)
@@ -70,150 +105,168 @@ export function useAuth() {
         setAuthState({
           user: session?.user || null,
           loading: false,
-          token: session?.access_token || null
+          isAuthenticated: !!session?.user
         })
+
+        if (event === 'SIGNED_IN') {
+          toast.success('登录成功！')
+        } else if (event === 'SIGNED_OUT') {
+          toast.success('已退出登录')
+          router.push('/')
+        }
       }
     )
 
-    // 清理订阅
-    return () => subscription.unsubscribe()
-  }, [])
+    return () => {
+      subscription.unsubscribe()
+    }
+  }, [getCurrentUser, router])
 
-  /**
-   * 用户注册
-   * 
-   * @param email 邮箱地址
-   * @param password 密码
-   * @returns Promise<AuthResult> 注册结果
-   */
-  const signUp = async (email: string, password: string): Promise<AuthResult> => {
+  // 注册用户
+  const signUp = useCallback(async ({ email, password, name }: SignUpData) => {
+    if (!isSupabaseAvailable || !supabase) {
+      toast.error('认证服务不可用')
+      return { user: null, error: new Error('Authentication service not available') as AuthError }
+    }
+
     try {
+      setAuthState(prev => ({ ...prev, loading: true }))
+      
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          data: {
+            name: name || email.split('@')[0]
+          }
+        }
       })
 
       if (error) {
-        return {
-          success: false,
-          error: error.message
-        }
+        toast.error(`注册失败: ${error.message}`)
+        return { user: null, error }
       }
 
-      // 注册成功
-      return {
-        success: true
+      if (data.user && !data.session) {
+        toast.success('注册成功！请检查邮箱验证链接。')
+      } else if (data.session) {
+        toast.success('注册并登录成功！')
       }
+
+      return { user: data.user, error: null }
     } catch (error) {
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error occurred'
-      }
+      const authError = error as AuthError
+      toast.error(`注册失败: ${authError.message}`)
+      return { user: null, error: authError }
+    } finally {
+      setAuthState(prev => ({ ...prev, loading: false }))
     }
-  }
+  }, [])
 
-  /**
-   * 用户登录
-   * 
-   * @param email 邮箱地址
-   * @param password 密码
-   * @returns Promise<AuthResult> 登录结果
-   */
-  const signIn = async (email: string, password: string): Promise<AuthResult> => {
+  // 登录用户
+  const signIn = useCallback(async ({ email, password }: SignInData) => {
+    if (!isSupabaseAvailable || !supabase) {
+      toast.error('认证服务不可用')
+      return { user: null, error: new Error('Authentication service not available') as AuthError }
+    }
+
     try {
+      setAuthState(prev => ({ ...prev, loading: true }))
+      
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
-        password,
+        password
       })
 
       if (error) {
-        return {
-          success: false,
-          error: error.message
-        }
+        toast.error(`登录失败: ${error.message}`)
+        return { user: null, error }
       }
 
-      // 登录成功，状态会通过onAuthStateChange自动更新
-      return {
-        success: true
-      }
+      // 成功登录的toast会在onAuthStateChange中处理
+      return { user: data.user, error: null }
     } catch (error) {
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error occurred'
-      }
+      const authError = error as AuthError
+      toast.error(`登录失败: ${authError.message}`)
+      return { user: null, error: authError }
+    } finally {
+      setAuthState(prev => ({ ...prev, loading: false }))
     }
-  }
+  }, [])
 
-  /**
-   * 用户登出
-   * 
-   * @returns Promise<AuthResult> 登出结果
-   */
-  const signOut = async (): Promise<AuthResult> => {
+  // 退出登录
+  const signOut = useCallback(async () => {
+    if (!isSupabaseAvailable || !supabase) {
+      // 即使 Supabase 不可用，也要清除本地状态
+      setAuthState({
+        user: null,
+        loading: false,
+        isAuthenticated: false
+      })
+      return { error: null }
+    }
+
     try {
+      setAuthState(prev => ({ ...prev, loading: true }))
+      
       const { error } = await supabase.auth.signOut()
-
+      
       if (error) {
-        return {
-          success: false,
-          error: error.message
-        }
+        toast.error(`退出失败: ${error.message}`)
+        return { error }
       }
 
-      // 登出成功，状态会通过onAuthStateChange自动更新
-      return {
-        success: true
-      }
+      // 成功退出的toast会在onAuthStateChange中处理
+      return { error: null }
     } catch (error) {
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error occurred'
-      }
+      const authError = error as AuthError
+      toast.error(`退出失败: ${authError.message}`)
+      return { error: authError }
+    } finally {
+      setAuthState(prev => ({ ...prev, loading: false }))
     }
-  }
+  }, [])
 
-  /**
-   * 刷新当前用户的Token
-   * 
-   * @returns Promise<string | null> 新的Token或null
-   */
-  const refreshToken = async (): Promise<string | null> => {
+  // 刷新会话
+  const refreshSession = useCallback(async () => {
+    if (!isSupabaseAvailable || !supabase) {
+      return { session: null, error: new Error('Authentication service not available') as AuthError }
+    }
+
     try {
       const { data, error } = await supabase.auth.refreshSession()
       
       if (error) {
-        console.error('Error refreshing token:', error)
-        return null
+        console.error('Error refreshing session:', error)
+        return { session: null, error }
       }
       
-      const newToken = data.session?.access_token || null
-      
-      // 更新状态
-      setAuthState(prev => ({
-        ...prev,
-        token: newToken,
-        user: data.session?.user || prev.user
-      }))
-      
-      return newToken
+      return { session: data.session, error: null }
     } catch (error) {
-      console.error('Error in refreshToken:', error)
-      return null
+      const authError = error as AuthError
+      console.error('Error in refreshSession:', authError)
+      return { session: null, error: authError }
     }
-  }
+  }, [])
+
+  // 获取当前用户的JWT Token
+  const getToken = useCallback(async () => {
+    return await getCurrentUserToken()
+  }, [])
 
   return {
     // 状态
     user: authState.user,
     loading: authState.loading,
-    token: authState.token,
-    isAuthenticated: !!authState.user,
+    isAuthenticated: authState.isAuthenticated,
+    isSupabaseAvailable,
     
-    // 操作
+    // 方法
     signUp,
     signIn,
     signOut,
-    refreshToken
+    refreshSession,
+    getToken,
+    getCurrentUser
   }
 } 

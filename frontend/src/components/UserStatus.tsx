@@ -6,7 +6,7 @@
 
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
-import { verifyToken, getUserProfile, logoutUser } from '@/lib/api'
+import { logoutUser } from '@/lib/api'
 
 interface UserStatusProps {
   className?: string
@@ -14,12 +14,11 @@ interface UserStatusProps {
 
 export default function UserStatus({ className = '' }: UserStatusProps) {
   // 认证Hook
-  const { user, loading, isAuthenticated, signOut, token } = useAuth()
+  const { user, loading, isAuthenticated, signOut } = useAuth()
   
   // UI状态
   const [isLoggingOut, setIsLoggingOut] = useState(false)
   const [showDropdown, setShowDropdown] = useState(false)
-  const [testResult, setTestResult] = useState<string | null>(null)
 
   /**
    * 处理登出
@@ -37,44 +36,12 @@ export default function UserStatus({ className = '' }: UserStatusProps) {
       }
       
       // 前端登出（清除本地session）
-      const result = await signOut()
-      
-      if (result.success) {
-        console.log('用户已登出')
-      } else {
-        console.error('登出失败:', result.error)
-      }
+      await signOut()
     } catch (error) {
       console.error('登出过程中出错:', error)
     } finally {
       setIsLoggingOut(false)
       setShowDropdown(false)
-    }
-  }
-
-  /**
-   * 测试Token验证
-   */
-  const testTokenVerification = async () => {
-    try {
-      setTestResult('验证中...')
-      const result = await verifyToken()
-      setTestResult(`✅ Token有效: ${result.user.email}`)
-    } catch (error) {
-      setTestResult(`❌ Token验证失败: ${error}`)
-    }
-  }
-
-  /**
-   * 测试获取用户资料
-   */
-  const testGetProfile = async () => {
-    try {
-      setTestResult('获取中...')
-      const result = await getUserProfile()
-      setTestResult(`✅ 用户资料: ${JSON.stringify(result.user, null, 2)}`)
-    } catch (error) {
-      setTestResult(`❌ 获取用户资料失败: ${error}`)
     }
   }
 
@@ -127,43 +94,12 @@ export default function UserStatus({ className = '' }: UserStatusProps) {
 
       {/* 下拉菜单 */}
       {showDropdown && (
-        <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg border border-gray-200 z-50">
+        <div className="absolute right-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 z-50">
           <div className="py-2">
             {/* 用户信息 */}
             <div className="px-4 py-2 border-b border-gray-100">
               <p className="text-sm font-medium text-gray-800">{user.email}</p>
               <p className="text-xs text-gray-500">用户ID: {user.id}</p>
-              {token && (
-                <p className="text-xs text-gray-500 mt-1">
-                  Token: {token.substring(0, 20)}...
-                </p>
-              )}
-            </div>
-            
-            {/* 测试功能 */}
-            <div className="px-4 py-2 border-b border-gray-100">
-              <p className="text-xs font-medium text-gray-600 mb-2">API测试功能：</p>
-              <div className="space-y-1">
-                <button
-                  onClick={testTokenVerification}
-                  className="block w-full text-left text-xs text-blue-600 hover:text-blue-800"
-                >
-                  🔍 测试Token验证
-                </button>
-                <button
-                  onClick={testGetProfile}
-                  className="block w-full text-left text-xs text-blue-600 hover:text-blue-800"
-                >
-                  👤 测试获取用户资料
-                </button>
-              </div>
-              
-              {/* 测试结果 */}
-              {testResult && (
-                <div className="mt-2 p-2 bg-gray-50 rounded text-xs">
-                  <pre className="whitespace-pre-wrap">{testResult}</pre>
-                </div>
-              )}
             </div>
             
             {/* 登出按钮 */}

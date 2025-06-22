@@ -6,30 +6,36 @@ import { createClient } from '@supabase/supabase-js'
 
 // Supabase项目配置
 // 注意：这些是公开的配置，可以在前端代码中使用
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables. Please check your .env.local file.')
-}
+// 检查 Supabase 是否可用
+export const isSupabaseAvailable = !!(supabaseUrl && supabaseAnonKey)
 
 // 创建Supabase客户端实例
-// 这个客户端用于所有的认证和数据库操作
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    // 认证相关配置
-    autoRefreshToken: true,        // 自动刷新token
-    persistSession: true,          // 持久化session到localStorage
-    detectSessionInUrl: true       // 从URL中检测session（用于邮箱验证等）
-  }
-})
+// 只有在环境变量存在时才创建客户端
+export const supabase = isSupabaseAvailable 
+  ? createClient(supabaseUrl!, supabaseAnonKey!, {
+      auth: {
+        // 认证相关配置
+        autoRefreshToken: true,        // 自动刷新token
+        persistSession: true,          // 持久化session到localStorage
+        detectSessionInUrl: true       // 从URL中检测session（用于邮箱验证等）
+      }
+    })
+  : null
 
 /**
  * 获取当前用户的JWT Token
  * 
- * @returns Promise<string | null> JWT Token字符串，如果用户未登录则返回null
+ * @returns Promise<string | null> JWT Token字符串，如果用户未登录或Supabase不可用则返回null
  */
 export const getCurrentUserToken = async (): Promise<string | null> => {
+  if (!isSupabaseAvailable || !supabase) {
+    console.warn('Supabase is not available - authentication disabled')
+    return null
+  }
+
   try {
     // 获取当前session
     const { data: { session }, error } = await supabase.auth.getSession()
@@ -50,9 +56,14 @@ export const getCurrentUserToken = async (): Promise<string | null> => {
 /**
  * 获取当前用户信息
  * 
- * @returns Promise<User | null> 用户信息对象，如果未登录则返回null
+ * @returns Promise<User | null> 用户信息对象，如果未登录或Supabase不可用则返回null
  */
 export const getCurrentUser = async () => {
+  if (!isSupabaseAvailable || !supabase) {
+    console.warn('Supabase is not available - authentication disabled')
+    return null
+  }
+
   try {
     const { data: { user }, error } = await supabase.auth.getUser()
     

@@ -1,114 +1,104 @@
-import { useState, useEffect } from 'react'
-import { supabase } from '../lib/supabase'
+import { useState, useEffect, useCallback } from 'react'
+import { supabase, isSupabaseAvailable } from '../lib/supabase'
 import { authService } from '../lib/auth'
 import type { User } from '@supabase/supabase-js'
 import type { UserFavorite } from '../lib/supabase'
 
-export function useFavorites() {
-  const [favorites, setFavorites] = useState<string[]>([])
-  const [user, setUser] = useState<User | null>(null)
-  const [loading, setLoading] = useState(true)
+interface UseFavoritesReturn {
+  favorites: UserFavorite[]
+  loading: boolean
+  error: string | null
+  addFavorite: (artistId: string, tags?: string[], notes?: string) => Promise<boolean>
+  removeFavorite: (artistId: string) => Promise<boolean>
+  isFavorite: (artistId: string) => boolean
+  refreshFavorites: () => Promise<void>
+}
 
-  useEffect(() => {
-    // 初始化：检查用户状态和加载收藏
-    const initializeAuth = async () => {
-      const currentUser = await authService.getCurrentUser()
-      setUser(currentUser)
-      
-      if (currentUser) {
-        await loadFavorites(currentUser.id)
-      }
-      
+export function useFavorites(user: User | null): UseFavoritesReturn {
+  const [favorites, setFavorites] = useState<UserFavorite[]>([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  // 获取用户收藏列表
+  const fetchFavorites = useCallback(async () => {
+    if (!user || !isSupabaseAvailable || !supabase) {
+      setFavorites([])
       setLoading(false)
+      return
     }
 
-    initializeAuth()
-
-    // 监听认证状态变化
-    const subscription = authService.onAuthStateChange(async (newUser) => {
-      setUser(newUser)
-      
-      if (newUser) {
-        await loadFavorites(newUser.id)
-      } else {
-        setFavorites([])
-      }
-    })
-
-    return () => subscription.unsubscribe()
-  }, [])
-
-  /**
-   * 加载用户收藏列表
-   */
-  const loadFavorites = async (userId: string) => {
     try {
+      setLoading(true)
+      setError(null)
+
       const { data, error } = await supabase
         .from('user_favorites')
-        .select('artist_id')
-        .eq('user_id', userId)
+        .select('*')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false })
 
       if (error) {
-        console.error('加载收藏失败:', error.message)
-        return
+        throw error
       }
 
-      if (data) {
-        const artistIds = data.map((item: { artist_id: string }) => item.artist_id)
-        setFavorites(artistIds)
-        console.log('加载收藏成功:', artistIds.length, '个艺术家')
-      }
+      setFavorites(data || [])
     } catch (err) {
-      console.error('加载收藏异常:', err)
+      console.error('Error fetching favorites:', err)
+      setError(err instanceof Error ? err.message : 'Failed to fetch favorites')
+    } finally {
+      setLoading(false)
     }
-  }
+  }, [user])
 
-  /**
-   * 添加收藏
-   */
-  const addFavorite = async (artistId: string): Promise<boolean> => {
-    if (!user) {
-      console.warn('用户未登录，无法添加收藏')
+  // 添加收藏
+  const addFavorite = useCallback(async (
+    artistId: string, 
+    tags: string[] = [], 
+    notes: string = ''
+  ): Promise<boolean> => {
+    if (!user || !isSupabaseAvailable || !supabase) {
+      console.warn('Cannot add favorite: user not authenticated or Supabase not available')
       return false
     }
 
-    if (favorites.includes(artistId)) {
-      console.warn('艺术家已在收藏列表中')
-      return true
-    }
-
     try {
+      setError(null)
+
+      const favoriteData = {
+        user_id: user.id,
+        artist_id: artistId,
+        tags,
+        notes
+      }
+
       const { error } = await supabase
         .from('user_favorites')
-        .insert({
-          user_id: user.id,
-          artist_id: artistId
-        })
+        .insert([favoriteData])
 
       if (error) {
-        console.error('添加收藏失败:', error.message)
-        return false
+        throw error
       }
 
-      setFavorites(prev => [...prev, artistId])
-      console.log('添加收藏成功:', artistId)
+      // 刷新收藏列表
+      await fetchFavorites()
       return true
     } catch (err) {
-      console.error('添加收藏异常:', err)
+      console.error('Error adding favorite:', err)
+      setError(err instanceof Error ? err.message : 'Failed to add favorite')
       return false
     }
-  }
+  }, [user, fetchFavorites])
 
-  /**
-   * 删除收藏
-   */
-  const removeFavorite = async (artistId: string): Promise<boolean> => {
-    if (!user) {
-      console.warn('用户未登录，无法删除收藏')
+  // 移除收藏
+  const removeFavorite = useCallback(async (artistId: string): Promise<boolean> => {
+    if (!user || !isSupabaseAvailable || !supabase) {
+      console.warn('Cannot remove favorite: user not authenticated or Supabase not available')
       return false
     }
 
     try {
+      setError(null)
+
       const { error } = await supabase
         .from('user_favorites')
         .delete()
@@ -116,72 +106,41 @@ export function useFavorites() {
         .eq('artist_id', artistId)
 
       if (error) {
-        console.error('删除收藏失败:', error.message)
-        return false
+        throw error
       }
 
-      setFavorites(prev => prev.filter(id => id !== artistId))
-      console.log('删除收藏成功:', artistId)
+      // 刷新收藏列表
+      await fetchFavorites()
       return true
     } catch (err) {
-      console.error('删除收藏异常:', err)
+      console.error('Error removing favorite:', err)
+      setError(err instanceof Error ? err.message : 'Failed to remove favorite')
       return false
     }
-  }
+  }, [user, fetchFavorites])
 
-  /**
-   * 切换收藏状态
-   */
-  const toggleFavorite = async (artistId: string): Promise<boolean> => {
-    if (isFavorite(artistId)) {
-      return await removeFavorite(artistId)
-    } else {
-      return await addFavorite(artistId)
-    }
-  }
+  // 检查是否已收藏
+  const isFavorite = useCallback((artistId: string): boolean => {
+    return favorites.some(fav => fav.artist_id === artistId)
+  }, [favorites])
 
-  /**
-   * 检查是否已收藏
-   */
-  const isFavorite = (artistId: string): boolean => {
-    return favorites.includes(artistId)
-  }
+  // 刷新收藏列表
+  const refreshFavorites = useCallback(async () => {
+    await fetchFavorites()
+  }, [fetchFavorites])
 
-  /**
-   * 获取收藏的艺术家详情
-   */
-  const getFavoriteArtists = async () => {
-    if (!user || favorites.length === 0) {
-      return []
-    }
-
-    try {
-      const { data, error } = await supabase
-        .from('artists')
-        .select('*')
-        .in('id', favorites)
-
-      if (error) {
-        console.error('获取收藏艺术家详情失败:', error.message)
-        return []
-      }
-
-      return data || []
-    } catch (err) {
-      console.error('获取收藏艺术家详情异常:', err)
-      return []
-    }
-  }
+  // 当用户状态改变时，重新获取收藏列表
+  useEffect(() => {
+    fetchFavorites()
+  }, [fetchFavorites])
 
   return {
     favorites,
-    user,
     loading,
+    error,
     addFavorite,
     removeFavorite,
-    toggleFavorite,
     isFavorite,
-    getFavoriteArtists,
-    isLoggedIn: !!user
+    refreshFavorites
   }
 } 

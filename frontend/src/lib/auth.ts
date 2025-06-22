@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { supabase, isSupabaseAvailable } from './supabase'
 import type { User, AuthError } from '@supabase/supabase-js'
 
 export interface AuthResult {
@@ -11,6 +11,10 @@ export const authService = {
    * 用户注册
    */
   async signUp(email: string, password: string): Promise<AuthResult> {
+    if (!isSupabaseAvailable || !supabase) {
+      return { error: new Error('Authentication service not available') as AuthError }
+    }
+
     try {
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -38,6 +42,10 @@ export const authService = {
    * 用户登录
    */
   async signIn(email: string, password: string): Promise<AuthResult> {
+    if (!isSupabaseAvailable || !supabase) {
+      return { error: new Error('Authentication service not available') as AuthError }
+    }
+
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
@@ -61,6 +69,10 @@ export const authService = {
    * 用户登出
    */
   async signOut(): Promise<{ error?: AuthError | null }> {
+    if (!isSupabaseAvailable || !supabase) {
+      return { error: new Error('Authentication service not available') as AuthError }
+    }
+
     try {
       const { error } = await supabase.auth.signOut()
       
@@ -81,6 +93,10 @@ export const authService = {
    * 获取当前用户
    */
   async getCurrentUser(): Promise<User | null> {
+    if (!isSupabaseAvailable || !supabase) {
+      return null
+    }
+
     try {
       const { data: { user }, error } = await supabase.auth.getUser()
       
@@ -100,6 +116,11 @@ export const authService = {
    * 监听认证状态变化
    */
   onAuthStateChange(callback: (user: User | null) => void) {
+    if (!isSupabaseAvailable || !supabase) {
+      // 如果 Supabase 不可用，返回一个空的订阅对象
+      return { unsubscribe: () => {} }
+    }
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
         console.log('认证状态变化:', event, session?.user?.email || 'no user')
