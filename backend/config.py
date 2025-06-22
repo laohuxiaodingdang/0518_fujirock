@@ -73,17 +73,20 @@ class Settings:
                 # 如果不是 JSON，尝试按逗号分割
                 return [origin.strip() for origin in cors_origins_str.split(",")]
         
-        # 根据环境返回默认值
-        if self.is_production:
+        # 检查是否设置了 FRONTEND_URL 环境变量
+        frontend_url = os.getenv("FRONTEND_URL")
+        if frontend_url:
+            # 如果设置了 FRONTEND_URL，同时支持主域名和 www 版本
             return [
                 "https://toxicfjr.xyz",
                 "https://www.toxicfjr.xyz"
             ]
-        else:
-            return [
-                "http://localhost:3000", 
-                "http://127.0.0.1:3000",
-            ]
+        
+        # 如果没有设置 FRONTEND_URL，使用默认的本地开发地址
+        return [
+            "http://localhost:3000", 
+            "http://127.0.0.1:3000",
+        ]
     
     CORS_ALLOW_CREDENTIALS: bool = True
     CORS_ALLOW_METHODS: List[str] = ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]

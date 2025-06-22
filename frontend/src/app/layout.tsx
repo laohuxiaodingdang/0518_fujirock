@@ -15,10 +15,7 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NODE_ENV === 'production' 
-    ? 'https://fuji-rock-2025.vercel.app' 
-    : 'http://localhost:3000'
-  ),
+  metadataBase: new URL(process.env.FRONTEND_URL || 'http://localhost:3000'),
   title: 'Fuji Rock 2025 音乐探索工具',
   description: '探索即将在 Fuji Rock 2025 演出的艺术家，发现新音乐',
   keywords: ['Fuji Rock', '2025', '音乐节', '艺术家', 'Fred again', '音乐探索'],
