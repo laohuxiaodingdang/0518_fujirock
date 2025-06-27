@@ -10,3 +10,70 @@
 # Environment variables
 .env
 Miniconda3-latest-MacOSX-arm64.sh
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+fjr25_env/
+venv/
+env/
+ENV/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+TTTTTTTMMMMMMMPPPPPPP
+
+# Large files and media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mov
+combined.html
+
+# Backup files
+*_backup
+*_0627.*
+*\ copy.*
+backup_*/
+
+# Test directories
+modal-test/
+auth-demo/
+music-test/
+search-debug/
+search-test/
+demo/
+artist-test/
+test/
+api-tester/
+
+# Logs
+*.log
+

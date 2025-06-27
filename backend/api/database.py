@@ -66,17 +66,14 @@ async def get_artist(artist_id: UUID = Path(..., description="艺术家UUID")):
         logger.error(f"Error in get_artist API: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
+
+    
 @router.get("/artists/by-name/{artist_name}")
 async def get_artist_by_name(artist_name: str = Path(..., description="艺术家名称")):
-    """
-    根据名称获取艺术家信息
-    
-    **功能说明：**
-    - 支持多语言名称搜索
-    - 精确匹配艺术家名称
-    """
+    """根据名称获取艺术家信息（支持模糊匹配）"""
     try:
-        result = await artist_db_service.get_artist_by_name(artist_name)
+        # 使用模糊匹配方法
+        result = await artist_db_service.get_artist_by_name_fuzzy(artist_name)
         if result["success"]:
             return result
         else:
@@ -86,7 +83,7 @@ async def get_artist_by_name(artist_name: str = Path(..., description="艺术家
     except Exception as e:
         logger.error(f"Error in get_artist_by_name API: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
-
+    
 @router.get("/artists/by-spotify/{spotify_id}")
 async def get_artist_by_spotify_id(spotify_id: str = Path(..., description="Spotify艺术家ID")):
     """

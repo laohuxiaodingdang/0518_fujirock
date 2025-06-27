@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import Navbar from '../components/Navbar';
+import { useState, useEffect, useRef } from 'react';
+import ArtistModal from '../components/ArtistModal';
 
+// 艺术家数据类型定义
 interface Artist {
   id: string;
   name: string;
@@ -19,360 +18,548 @@ interface Artist {
   updated_at: string;
 }
 
+// 舞台数据类型定义
+interface Stage {
+  id: string;
+  name: string;
+  color: string;
+  decorationColor: string;
+  artists: string[];
+  position: {
+    top?: string;
+    bottom?: string;
+    left?: string;
+    right?: string;
+    transform: string;
+  };
+}
+
+// 搜索结果类型定义
+interface SearchResult {
+  type: string;
+  name: string;
+}
+
 export default function Home() {
-  const [featuredArtists, setFeaturedArtists] = useState<Artist[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [fredAgainArtist, setFredAgainArtist] = useState<Artist | null>(null);
+  // 状态管理
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
+  const [showArtistModal, setShowArtistModal] = useState(false);
+  
+  // Canvas引用
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Spotify URL for the featured artist (Fred again..)
-  const spotifyUrl = "https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe"; // Fred again..
+  // 舞台数据
+  const stages: Stage[] = [
+    {
+      id: 'stage1',
+      name: 'GREEN STAGE',
+      color: '#209e45',
+      decorationColor: '#209e45',
+      position: { top: '15%', left: '40%', transform: 'rotate(2deg)' },
+      artists: [
+        'FRED AGAIN..', 'VULFPECK', 'VAMPIRE WEEKEND', 'Vaundy', '山下达郎',
+        'RADWIMPS', 'HYUKOH & SUNSET ROLLERCOASTER', 'JAMES BLAKE', 'LITTLE SIMZ',
+        'BRAHMAN', 'STUTS (Band Set)', 'Creepy Nuts', 'ROUTE 17 Rock\'n\'Roll ORCHESTRA',
+        '君島大空 合奏形態', '森山直太朗', 'US', 'CA7RIEL & PA CO AMOROSO', 'PIPERS (Red Hot Chilli Pipers)'
+      ]
+    },
+    {
+      id: 'stage2',
+      name: 'PLANET GROOVE',
+      color: '#4ecdc4',
+      decorationColor: '#4ecdc4',
+      position: { top: '5%', left: '10%', transform: 'rotate(-3deg)' },
+      artists: [
+        '坂本慎太郎', 'KIASMOS', 'Joy (Anonymous)', 'HIROKO YAMAMURA', 'CONFIDENCE MAN',
+        'NIGHT TEMPO', 'JANE REMOVE R', 'JYOTY', '勢喜遊 & Yohji Igarashi', 'Ovall',
+        'Nujabes Metaphorical Ensemble', 'ATSUO', 'THE PINEAPPLE', 'DONKEY', 'パソコン音楽クラブ'
+      ]
+    },
+    {
+      id: 'stage3',
+      name: 'WHITE STAGE',
+      color: '#000000',
+      decorationColor: '#9b5de5',
+      position: { bottom: '10%', left: '20%', transform: 'rotate(1deg)' },
+      artists: [
+        'Suchmos', 'FOUR TET', 'HAIM', 'OK GO', 'BARRY CAN\'T SWIM', '羊文学',
+        'MIYAVI', 'JJJ', 'ROYEL OTIS', 'MDOU MOCTAR', 'FAYE WEBSTER',
+        '佐野元春 & THE COYOTE BAND', 'ECCA VANDAL', 'BALMING TIGER', 'SILICA GEL',
+        'おとぼけ ビ～パ～', 'FERMIN MUGURUZA', 'MONO NO AWARE'
+      ]
+    },
+    {
+      id: 'stage4',
+      name: 'FIELD OF HEAVEN',
+      color: '#8ac926',
+      decorationColor: '#8ac926',
+      position: { bottom: '15%', right: '25%', transform: 'rotate(-2deg)' },
+      artists: [
+        'EZRA COLLECTIVE', 'EGO - WRAPPIN\'', 'GALACTIC（Featuring Jelly Joseph）', 'MAYA DELILAH',
+        'AFRICAN HEAD CHARGE', 'ROBERT RANDOLPH', 'PARLOR GREENS', 'THE SKA FLAMES',
+        'JAKE SHIMAB UKURO BAND', 'ANSWER TO REMEMBER', '踊ってばかりの国',
+        'GRACE BOWE RS & THE HOD GE PODGE', 'KIRINJI', 'THE PANTURA S',
+        '吾妻光良 & The Swinging Boppers', 'トリプル ファイヤー', 'mei ehara', 'She Her Her Hers'
+      ]
+    },
+    {
+      id: 'stage5',
+      name: 'RED MARQUEE',
+      color: '#ff7b00',
+      decorationColor: '#ff7b00',
+      position: { top: '10%', right: '10%', transform: 'rotate(-1deg)' },
+      artists: [
+        'TYCHO', 'サンボ マスター', 'THE HIVES', 'PERFUME GENIUS', 'GINGER ROOT',
+        'kanekoayano', '青葉市子', 'NEWDAD', 'ENGLISH TEACHER', 'MARCIN',
+        'YHWH NAILGUN', 'まらしぃ', 'TOMOO', '離婚伝説', 'MEI SEMONES',
+        'kurayamisaka (Selected by ROOKIE A GO - GO)', 'joOji', 'T字路s', 'downy', 'DYGL'
+      ]
+    }
+  ];
 
+  // 搜索数据
+  const searchData: SearchResult[] = [
+    ...stages.map(stage => ({ type: '舞台', name: stage.name })),
+    ...stages.flatMap(stage => 
+      stage.artists.map(artist => ({ type: '艺术家', name: artist }))
+    )
+  ];
+
+  // 创建艺术家对象的辅助函数
+  const createArtistObject = (artistName: string): Artist => {
+    return {
+      id: artistName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+      name: artistName,
+      description: `${artistName} 是一位在 Fuji Rock Festival 2025 上表演的艺术家。`,
+      spotify_id: '', // 将通过 API 获取
+      genres: [], // 将通过 API 获取
+      wiki_data: null,
+      wiki_extract: '', // 将通过 API 获取
+      is_fuji_rock_artist: true,
+      image_url: '', // 将通过 API 获取
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    };
+  };
+
+  // Canvas波浪动画
   useEffect(() => {
-    const fetchArtists = async () => {
-      try {
-        // 1. 首先获取 Fred again.. 的数据
-        const fredResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/artists/search?query=Fred again..&limit=1`);
-        let fredArtist = null;
-        
-        if (fredResponse.ok) {
-          const fredResult = await fredResponse.json();
-          if (fredResult.success && fredResult.data.length > 0) {
-            fredArtist = fredResult.data[0];
-            setFredAgainArtist(fredArtist);
-          }
-        }
-        
-        // 如果没有找到 Fred again..，使用模拟数据
-        if (!fredArtist) {
-          fredArtist = {
-            id: '1dfc9307-9078-4963-ad5a-33284e040c30',
-            name: 'Fred again..',
-            description: 'British electronic music producer and DJ',
-            spotify_id: '4oLeXFyACqeem2VImYeBFe',
-            genres: ['electronic', 'house', 'dance'],
-            wiki_data: {},
-            wiki_extract: 'Fred again.. is a British electronic music producer and DJ known for his innovative approach to electronic music.',
-            is_fuji_rock_artist: true,
-            image_url: 'https://cdn.fujirockfestival.com/smash/artist/7xIutJWkNtlLSlxcUUwIqbBY7NGyDzuV7SKboAnx.jpg',
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString()
-          };
-          setFredAgainArtist(fredArtist);
-        }
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-        // 2. 获取其他艺术家数据
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/database/artists/search?query=&limit=10`);
-        
-        if (response.ok) {
-          const result = await response.json();
-          if (result.success && result.data.length > 0) {
-            // 过滤掉 Fred again..，然后随机选择3个
-            const otherArtists = result.data.filter((artist: Artist) => 
-              artist.name.toLowerCase() !== 'fred again..'
-            );
-            
-            // 随机选择3个艺术家
-            const shuffled = otherArtists.sort(() => 0.5 - Math.random());
-            const selectedArtists = shuffled.slice(0, 3);
-            
-            // 将 Fred again.. 放在第一位，其他艺术家跟随
-            setFeaturedArtists([fredArtist, ...selectedArtists]);
-          } else {
-            // 如果数据库没有数据，使用模拟数据
-            setFeaturedArtists([
-              fredArtist,
-              {
-                id: '2',
-                name: 'VAMPIRE WEEKEND',
-                description: 'American rock band',
-                spotify_id: '5BvJzeQpmsdsFp4HGUYUEx',
-                genres: ['indie rock', 'alternative rock'],
-                wiki_data: {},
-                wiki_extract: 'Vampire Weekend is an American rock band from New York City.',
-                is_fuji_rock_artist: true,
-                image_url: 'https://cdn.fujirockfestival.com/smash/artist/zBfoeCGpXD1fT76b9YQXAif4AKAXkFfZmZszlTyF.jpg',
-                created_at: new Date().toISOString(),
-                updated_at: new Date().toISOString()
-              },
-              {
-                id: '3',
-                name: 'RADWIMPS',
-                description: 'Japanese rock band',
-                spotify_id: '1EowJ1WwkMzkCkRomFhui7',
-                genres: ['j-rock', 'alternative rock'],
-                wiki_data: {},
-                wiki_extract: 'Radwimps is a Japanese rock band.',
-                is_fuji_rock_artist: true,
-                image_url: 'https://cdn.fujirockfestival.com/smash/artist/QC0fzOzWqR1MiTBlP1Z8OCJCAR9w8BqdvNnDxcmg.jpg',
-                created_at: new Date().toISOString(),
-                updated_at: new Date().toISOString()
-              },
-              {
-                id: '4',
-                name: 'JAMES BLAKE',
-                description: 'British singer-songwriter',
-                spotify_id: '53KwLdlmrlCelAZMaLVZqU',
-                genres: ['electronic', 'soul'],
-                wiki_data: {},
-                wiki_extract: 'James Blake is a British singer, songwriter, and record producer.',
-                is_fuji_rock_artist: true,
-                image_url: 'https://cdn.fujirockfestival.com/smash/artist/MwZCrWPJELxJIGCR0bsI8hxrCYpoIRdWYQjU8KdQ.jpg',
-                created_at: new Date().toISOString(),
-                updated_at: new Date().toISOString()
-              }
-            ]);
-          }
-        } else {
-          // API 调用失败，使用模拟数据（带有真实头像）
-          setFeaturedArtists([
-            fredArtist,
-            {
-              id: '2',
-              name: 'VAMPIRE WEEKEND',
-              description: 'American rock band',
-              spotify_id: '5BvJzeQpmsdsFp4HGUYUEx',
-              genres: ['indie rock', 'alternative rock'],
-              wiki_data: {},
-              wiki_extract: 'Vampire Weekend is an American rock band from New York City.',
-              is_fuji_rock_artist: true,
-              image_url: 'https://cdn.fujirockfestival.com/smash/artist/zBfoeCGpXD1fT76b9YQXAif4AKAXkFfZmZszlTyF.jpg',
-              created_at: new Date().toISOString(),
-              updated_at: new Date().toISOString()
-            },
-            {
-              id: '3',
-              name: 'RADWIMPS',
-              description: 'Japanese rock band',
-              spotify_id: '1EowJ1WwkMzkCkRomFhui7',
-              genres: ['j-rock', 'alternative rock'],
-              wiki_data: {},
-              wiki_extract: 'Radwimps is a Japanese rock band.',
-              is_fuji_rock_artist: true,
-              image_url: 'https://cdn.fujirockfestival.com/smash/artist/QC0fzOzWqR1MiTBlP1Z8OCJCAR9w8BqdvNnDxcmg.jpg',
-              created_at: new Date().toISOString(),
-              updated_at: new Date().toISOString()
-            },
-            {
-              id: '4',
-              name: 'JAMES BLAKE',
-              description: 'British singer-songwriter',
-              spotify_id: '53KwLdlmrlCelAZMaLVZqU',
-              genres: ['electronic', 'soul'],
-              wiki_data: {},
-              wiki_extract: 'James Blake is a British singer, songwriter, and record producer.',
-              is_fuji_rock_artist: true,
-              image_url: 'https://cdn.fujirockfestival.com/smash/artist/MwZCrWPJELxJIGCR0bsI8hxrCYpoIRdWYQjU8KdQ.jpg',
-              created_at: new Date().toISOString(),
-              updated_at: new Date().toISOString()
-            }
-          ]);
-        }
-      } catch (error) {
-        console.error('Error fetching artists:', error);
-        // 错误情况下使用模拟数据（带有真实头像）
-        const fredArtist = {
-          id: '1dfc9307-9078-4963-ad5a-33284e040c30',
-          name: 'Fred again..',
-          description: 'British electronic music producer and DJ',
-          spotify_id: '4oLeXFyACqeem2VImYeBFe',
-          genres: ['electronic', 'house', 'dance'],
-          wiki_data: {},
-          wiki_extract: 'Fred again.. is a British electronic music producer and DJ known for his innovative approach to electronic music.',
-          is_fuji_rock_artist: true,
-          image_url: 'https://cdn.fujirockfestival.com/smash/artist/7xIutJWkNtlLSlxcUUwIqbBY7NGyDzuV7SKboAnx.jpg',
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString()
-        };
-        
-        setFredAgainArtist(fredArtist);
-        setFeaturedArtists([fredArtist]);
-      } finally {
-        setLoading(false);
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // 设置Canvas尺寸
+    const setCanvasSize = () => {
+      const container = canvas.parentElement;
+      if (container) {
+        canvas.width = container.clientWidth;
+        canvas.height = container.clientHeight;
       }
     };
 
-    fetchArtists();
+    setCanvasSize();
+    window.addEventListener('resize', setCanvasSize);
+
+    // 清除Canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'transparent';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // 波浪参数
+    const waves: Array<{
+      y: number;
+      length: number;
+      amplitude: number;
+      frequency: number;
+      phase: number;
+    }> = [];
+    
+    const waveCount = 5;
+    const baseAmplitude = canvas.height / 10;
+
+    // 创建波浪
+    for (let i = 0; i < waveCount; i++) {
+      waves.push({
+        y: canvas.height / 2,
+        length: Math.random() * 1000 + 500,
+        amplitude: baseAmplitude * (Math.random() * 0.5 + 0.5),
+        frequency: Math.random() * 0.02 + 0.01,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+
+    let time = 0;
+
+    // 动画函数
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      waves.forEach((wave, index) => {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(${155 + index * 20}, ${249 - index * 30}, ${255 - index * 10}, ${0.6 - index * 0.1})`;
+        ctx.lineWidth = 3 - index * 0.3;
+
+        for (let x = 0; x < canvas.width; x += 2) {
+          const y = wave.y + Math.sin((x * wave.frequency) + (time * 0.2) + wave.phase) * wave.amplitude;
+          if (x === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+
+        ctx.stroke();
+      });
+
+      time++;
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', setCanvasSize);
+    };
   }, []);
 
-  // 获取艺术家图片 - 优先使用数据库中的真实头像
-  const getArtistImage = (artist: Artist, index: number) => {
-    // 如果有数据库中的真实头像，优先使用
-    if (artist.image_url) {
-      return artist.image_url;
+  // 搜索功能
+  const performSearch = (query: string) => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      setShowResults(false);
+      return;
     }
-    
-    // 为每个艺术家提供不同的默认图片作为后备
-    const defaultImages = [
-      'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80'
-    ];
-    
-    return defaultImages[index] || defaultImages[0];
+
+    const results = searchData.filter(item => 
+      item.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setSearchResults(results);
+    setShowResults(true);
   };
 
-  // 获取艺术家主要风格
-  const getMainGenre = (genres: string[]) => {
-    if (!genres || genres.length === 0) return 'Music';
-    return genres[0].charAt(0).toUpperCase() + genres[0].slice(1);
+  const handleSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    performSearch(query);
   };
 
-  // Placeholder data for upcoming performances (使用真实艺术家数据)
-  const upcomingPerformances = featuredArtists.slice(0, 3).map((artist, index) => ({
-    date: `JUL ${26 + index}`,
-    artist: artist.name,
-    venue: index === 0 ? "Green Stage" : index === 1 ? "White Stage" : "Red Marquee",
-    time: index === 0 ? "8:00 PM" : index === 1 ? "7:30 PM" : "9:00 PM"
-  }));
+  const handleResultClick = (result: SearchResult) => {
+    if (result.type === '艺术家') {
+      handleArtistClick(result.name);
+    }
+    setShowResults(false);
+    setSearchQuery('');
+  };
+
+  // 处理艺术家点击 - 使用新的ArtistModal
+  const handleArtistClick = (artistName: string) => {
+    console.log('🎵 点击艺术家:', artistName);
+    const artistObject = createArtistObject(artistName);
+    setSelectedArtist(artistObject);
+    setShowArtistModal(true);
+  };
+
+  // 关闭艺术家模态框
+  const closeArtistModal = () => {
+    setShowArtistModal(false);
+    setSelectedArtist(null);
+  };
+
+  // 滚动到第二屏
+  const scrollToSecondScreen = () => {
+    const secondScreen = document.getElementById('second-screen');
+    if (secondScreen) {
+      const duration = 1200;
+      const startPosition = window.pageYOffset;
+      const targetPosition = secondScreen.offsetTop;
+      const startTime = performance.now();
+
+      const scrollAnimation = (currentTime: number) => {
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        
+        // 更新进度条
+        const progressBar = document.querySelector('.progress-bar') as HTMLElement;
+        if (progressBar) {
+          progressBar.style.transform = `scaleX(${progress})`;
+        }
+        
+        // 滚动
+        window.scrollTo(0, startPosition + (targetPosition - startPosition) * easeProgress);
+        if (progress < 1) requestAnimationFrame(scrollAnimation);
+      };
+
+      requestAnimationFrame(scrollAnimation);
+    }
+  };
+
+  // 点击外部关闭搜索结果
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const searchContainer = document.querySelector('.search-container');
+      if (searchContainer && !searchContainer.contains(event.target as Node)) {
+        setShowResults(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  // 滚动进度条
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = scrollTop / docHeight;
+      const progressBar = document.querySelector('.progress-bar') as HTMLElement;
+      if (progressBar) {
+        progressBar.style.transform = `scaleX(${scrollPercent})`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+    <div className="min-h-screen">
+      {/* 进度条 */}
+      <div className="progress-bar"></div>
       
-      <div className="flex">
-        <main className="flex-1 p-6 md:p-8">
-          {/* Welcome Message */}
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold mb-2 text-gray-800">Welcome back, music lover!</h1>
-            <p className="text-gray-600">Discover artists performing at Fuji Rock 2025</p>
+      {/* 顶部导航栏 */}
+      <header className="fixed top-0 w-full z-50 px-8 py-3 flex justify-between items-center backdrop-blur-md bg-white/10 border-b border-white/20 text-lg font-bold text-white">
+        {/* 左上 logo */}
+        <div className="flex gap-3">
+          <span>🎪</span>
+          <span>🎧</span>
+          <span>🌈</span>
+          <span>FujiRock</span>
+        </div>
+
+        {/* 右上功能 */}
+        <div className="flex gap-5 cursor-pointer">
+          <span title="收藏">⭐️</span>
+          <span title="登录">🔐</span>
+        </div>
+      </header>
+
+      {/* 第一屏 */}
+      <section id="first-screen">
+        <div className="trapezoid-bg"></div>
+        <div className="container">
+          <canvas ref={canvasRef} id="waveCanvas"></canvas>
+
+          {/* 花朵装饰 - 上半部分 */}
+          <div className="flower-decoration absolute top-0 left-0 w-full h-[60vh] pointer-events-none z-[4]">
+            {/* 第一排 */}
+            <div className="flower absolute" style={{ top: '1%', left: '5%' }}>
+              <img src="/flowers/flower1.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '3%', left: '20%' }}>
+              <img src="/flowers/flower2.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '2%', left: '35%' }}>
+              <img src="/flowers/flower3.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '3%', left: '50%' }}>
+              <img src="/flowers/flower4.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '2%', left: '65%' }}>
+              <img src="/flowers/flower5.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '3%', left: '80%' }}>
+              <img src="/flowers/flower6.png" alt="" />
+            </div>
+          
+            {/* 第二排 */}
+            <div className="flower absolute" style={{ top: '12%', left: '10%' }}>
+              <img src="/flowers/flower7.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '15%', left: '30%' }}>
+              <img src="/flowers/flower8.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '18%', left: '50%' }}>
+              <img src="/flowers/flower9.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '16%', left: '70%' }}>
+              <img src="/flowers/flower10.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '20%', left: '85%' }}>
+              <img src="/flowers/flower11.png" alt="" />
+            </div>
+          
+            {/* 第三排 */}
+            <div className="flower absolute" style={{ top: '22%', left: '15%' }}>
+              <img src="/flowers/flower12.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '24%', left: '40%' }}>
+              <img src="/flowers/flower3.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '26%', left: '60%' }}>
+              <img src="/flowers/flower2.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '23%', left: '78%' }}>
+              <img src="/flowers/flower1.png" alt="" />
+            </div>
+                   
+            {/* 第四排 */}
+            <div className="flower absolute" style={{ top: '45%', left: '85%' }}>
+              <img src="/flowers/flower12.png" alt="" />
+            </div>
             
-            {/* 快速搜索示例 */}
-            <div className="mt-6">
-              <p className="text-sm text-gray-500 mb-3">🔍 试试搜索这些艺术家：</p>
-              <div className="flex flex-wrap gap-2">
-                {['Nirvana', 'Radiohead', 'The Beatles', 'Coldplay', 'Green Day'].map((artist) => (
-                  <button
-                    key={artist}
-                    onClick={() => window.location.href = `/artists/${encodeURIComponent(artist)}`}
-                    className="bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm transition-colors"
-                  >
-                    {artist}
-                  </button>
-                ))}
-              </div>
+            <div className="flower absolute" style={{ top: '70%', left: '95%' }}>
+              <img src="/flowers/flower2.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '7%', left: '95%' }}>
+              <img src="/flowers/flower2.png" alt="" />
+            </div>
+                    
+          </div>
+
+          {/* 花朵装饰 - 下半部分 */}
+          <div className="flower-decoration absolute bottom-[80%] left-0 w-full h-screen pointer-events-none z-[4]">
+            <div className="flower absolute" style={{ top: '82%', left: '10%' }}>
+              <img src="/flowers/flower7.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '85%', left: '30%' }}>
+              <img src="/flowers/flower8.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '88%', left: '50%' }}>
+              <img src="/flowers/flower9.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '86%', left: '70%' }}>
+              <img src="/flowers/flower10.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '90%', left: '85%' }}>
+              <img src="/flowers/flower11.png" alt="" />
+            </div>
+            
+            <div className="flower absolute" style={{ top: '82%', left: '15%' }}>
+              <img src="/flowers/flower3.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '85%', left: '38%' }}>
+              <img src="/flowers/flower5.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '88%', left: '45%' }}>
+              <img src="/flowers/flower7.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '86%', left: '78%' }}>
+              <img src="/flowers/flower12.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '90%', left: '95%' }}>
+              <img src="/flowers/flower8.png" alt="" />
             </div>
           </div>
+
+          {/* 主内容 */}
+          <div className="content">
+            <p>get ready for</p>
+            <h2>😈fujirock 2025</h2>
+          </div>
           
-          {/* Featured Artist (Fred again..) */}
-          {fredAgainArtist && (
-            <div className="bg-indigo-500 rounded-2xl p-6 mb-10 flex flex-col md:flex-row items-center gap-6 relative">
-              <Image 
-                src={getArtistImage(fredAgainArtist, 0)}
-                alt={fredAgainArtist.name}
-                width={96} 
-                height={96} 
-                className="rounded-full object-cover border-4 border-white shadow-xl z-10"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80';
-                }}
+          {/* 搜索框 */}
+          <div className="search-container">
+            <div className="search-box">
+              <input 
+                type="text" 
+                id="searchInput"
+                value={searchQuery}
+                onChange={handleSearchInput}
+                placeholder="search artist"
               />
-              <div className="relative z-10 text-center md:text-left">
-                <h2 className="text-2xl font-bold mb-1 text-white">{fredAgainArtist.name}</h2>
-                <p className="text-white text-opacity-80 mb-4">Headlining the Green Stage - July 26, 2025</p>
-                <div className="flex items-center justify-center md:justify-start gap-3">
-                  <button 
-                    onClick={() => window.open(spotifyUrl, "_blank")}
-                    className="bg-white text-indigo-700 px-4 py-2 rounded-full flex items-center gap-2 font-medium hover:bg-opacity-90"
-                  >
-                    <svg className="h-5 w-5 text-green-500" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                    </svg>
-                    <span>Listen on Spotify</span>
-                  </button>
-                  <button className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+              <button 
+                id="searchButton"
+                onClick={() => performSearch(searchQuery)}
+              >
+                🔍
+              </button>
             </div>
-          )}
-          
-          {/* Artists You Might Like */}
-          <div className="mb-10">
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">Artists You Might Like</h2>
-            {loading ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="bg-white rounded-xl p-5 flex flex-col items-center shadow-sm animate-pulse">
-                    <div className="w-24 h-24 bg-gray-200 rounded-full mb-4"></div>
-                    <div className="h-4 bg-gray-200 rounded w-20 mb-2"></div>
-                    <div className="h-3 bg-gray-200 rounded w-16"></div>
+            
+            {/* 搜索结果 */}
+            {showResults && (
+              <div className="search-results active">
+                {searchResults.length === 0 ? (
+                  <div className="result-item">
+                    <p>未找到相关结果</p>
                   </div>
-                ))}
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {featuredArtists.map((artist, index) => (
-                  <div key={artist.id} className="bg-white rounded-xl p-5 flex flex-col items-center shadow-sm hover:shadow-md transition-shadow">
-                    <Image 
-                      src={getArtistImage(artist, index)}
-                      alt={artist.name}
-                      width={96} 
-                      height={96} 
-                      className="rounded-full object-cover mb-4 border-2 border-gray-100"
-                      onError={(e) => {
-                        const defaultImages = [
-                          'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80',
-                          'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80',
-                          'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
-                          'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80'
-                        ];
-                        e.currentTarget.src = defaultImages[index] || defaultImages[0];
-                      }}
-                    />
-                    <h3 className="font-medium text-gray-900 text-lg text-center">{artist.name}</h3>
-                    <span className="text-sm text-gray-500 flex items-center mt-1">
-                      <svg className="h-4 w-4 text-green-500 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                      </svg>
-                      {getMainGenre(artist.genres)}
-                    </span>
-                    <Link 
-                      href={artist.name === 'Fred again..' ? '/artists/fred-again' : `/artists/${encodeURIComponent(artist.name)}`}
-                      className="mt-4 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm transition-colors"
+                ) : (
+                  searchResults.map((result, index) => (
+                    <div 
+                      key={index}
+                      className="result-item"
+                      onClick={() => handleResultClick(result)}
                     >
-                      View Profile
-                    </Link>
-                  </div>
-                ))}
+                      <div className="result-title">{result.name}</div>
+                      <div className="result-type">{result.type}</div>
+                    </div>
+                  ))
+                )}
               </div>
             )}
           </div>
-          
-          {/* Upcoming Performances */}
-          <div className="mb-10">
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">Upcoming Performances</h2>
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="flex flex-col divide-y">
-                {upcomingPerformances.map((performance, index) => (
-                  <div key={index} className="py-4 flex items-center gap-4">
-                    <div className="text-center min-w-[60px]">
-                      <span className="text-gray-500 text-sm">{performance.date.split(' ')[0]}</span>
-                      <div className="text-2xl font-bold">{performance.date.split(' ')[1]}</div>
+        </div>
+        
+        {/* 滚动指示器 */}
+        <div className="scroll-down" onClick={scrollToSecondScreen}>
+          <div className="arrow"></div>
+        </div>
+      </section>
+      
+      {/* 第二屏 */}
+      <section id="second-screen">
+        <div className="second-content">
+          <header>
+            <h1>FUJI ROCK FESTIVAL '25</h1>
+          </header>
+        
+          <div className="stages-container">
+            {stages.map((stage) => (
+              <div 
+                key={stage.id}
+                className="stage-card"
+                id={stage.id}
+                style={{
+                  ...stage.position,
+                  borderColor: stage.color
+                }}
+              >
+                <div className="stage-header">
+                  <h2 style={{ color: stage.color }}>{stage.name}</h2>
+                  <div 
+                    className="stage-decoration"
+                    style={{ backgroundColor: stage.decorationColor }}
+                  ></div>
+                </div>
+                <div className="artists-container">
+                  {stage.artists.map((artist, index) => (
+                    <div 
+                      key={index}
+                      className="artist-item"
+                      onClick={() => handleArtistClick(artist)}
+                    >
+                      {artist}
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-medium">{performance.artist}</h3>
-                      <p className="text-gray-500 text-sm">{performance.venue}, {performance.time}</p>
-                    </div>
-                    <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">
-                      Add to Calendar
-                    </button>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-              
-              <div className="mt-6 text-center">
-                <button className="text-indigo-600 font-medium hover:text-indigo-700">
-                  View Full Schedule
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
-        </main>
-      </div>
+        </div>
+      </section>
+
+      {/* 使用新的 ArtistModal 组件 */}
+      <ArtistModal
+        artist={selectedArtist}
+        isOpen={showArtistModal}
+        onClose={closeArtistModal}
+      />
     </div>
   );
-} 
+}
