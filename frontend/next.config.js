@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // 添加这个配置确保静态文件被正确处理
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  trailingSlash: true,
   images: {
     domains: [
       'i.scdn.co', 
@@ -10,6 +13,8 @@ const nextConfig = {
       'via.placeholder.com',
       'cdn.fujirockfestival.com'
     ],
+    // 添加这个配置
+    unoptimized: true
   },
   async rewrites() {
     return [
@@ -25,4 +30,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
