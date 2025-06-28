@@ -769,3 +769,427 @@ html.dragging {
     height: 40px;
   }
 }
+
+/* ============================================
+   移动端响应式优化 - 完整版本
+   ============================================ */
+
+/* 移动端专用类 */
+
+/* ============================================
+   移动端响应式优化 - 修正版本
+   ============================================ */
+
+/* 基础响应式改进 - 只影响1024px以下设备 */
+@media (max-width: 1024px) {
+  .stages-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 1rem !important;
+    position: relative !important;
+    height: auto !important;
+  }
+  
+  .stage-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .flower {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+/* 平板端优化 (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content p {
+    font-size: 2.2rem !important;
+  }
+  
+  .content h2 {
+    font-size: 2.5rem !important;
+  }
+  
+  .second-content header h1 {
+    font-size: 2.2rem !important;
+  }
+  
+  .stage-header h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .artist-item {
+    font-size: 0.9rem !important;
+  }
+  
+  .stages-container {
+    gap: 2rem !important;
+  }
+}
+
+/* 手机端优化 (最大768px) */
+@media (max-width: 768px) {
+  /* 导航栏优化 */
+  header {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* 主标题响应式 */
+  .content p {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .content h2 {
+    font-size: 2.1rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* 搜索容器优化 */
+  .search-container {
+    width: 90% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+  }
+
+  .search-box {
+    height: 45px !important;
+  }
+
+  #searchInput {
+    font-size: 0.9rem !important;
+    padding: 0 1rem !important;
+  }
+
+  #searchButton {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.2rem !important;
+  }
+
+  /* 搜索结果优化 */
+  .search-results {
+    max-height: 250px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .result-item {
+    padding: 0.75rem !important;
+    min-height: 44px !important;
+  }
+
+  /* 第二屏优化 */
+  .second-content {
+    padding: 1rem !important;
+  }
+
+  .second-content header h1 {
+    font-size: 2rem !important;
+  }
+
+  /* 舞台卡片优化 */
+  .stage-card {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    border-radius: 12px !important;
+  }
+
+  .stage-header h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .artists-container {
+    gap: 0.5rem !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+  }
+
+  .artist-item {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 6px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* 花朵装饰减少 */
+  .flower {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  /* 滚动指示器 */
+  .scroll-down {
+    bottom: 2rem !important;
+  }
+
+  .arrow {
+    width: 30px !important;
+    height: 30px !important;
+    border-width: 0 3px 3px 0 !important;
+  }
+}
+
+/* 小屏手机端优化 (最大480px) */
+@media (max-width: 480px) {
+  /* 基础字体和间距 */
+  body {
+    font-size: 14px;
+  }
+
+  /* 导航栏手机端 */
+  header {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* 主内容手机端 */
+  .content {
+    padding: 0 1rem !important;
+  }
+
+  .content p {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.3rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .content h2 {
+    font-size: 1.6rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* 搜索框手机端 */
+  .search-container {
+    width: 95% !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .search-box {
+    height: 40px !important;
+  }
+
+  #searchInput {
+    font-size: 0.8rem !important;
+    padding: 0 0.75rem !important;
+  }
+
+  #searchButton {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1rem !important;
+  }
+
+  /* 第二屏手机端 */
+  .second-content {
+    padding: 0.75rem !important;
+  }
+
+  .second-content header h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* 舞台卡片手机端 */
+  .stages-container {
+    gap: 1rem !important;
+    padding: 0.5rem !important;
+  }
+
+  .stage-card {
+    padding: 0.75rem !important;
+    border-radius: 8px !important;
+  }
+
+  .stage-header h2 {
+    font-size: 1.1rem !important;
+  }
+
+  .stage-decoration {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .artists-container {
+    gap: 0.4rem !important;
+    max-height: 200px !important;
+  }
+
+  .artist-item {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+    border-radius: 4px !important;
+  }
+
+  /* 花朵装饰手机端 */
+  .flower {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* 滚动指示器手机端 */
+  .scroll-down {
+    bottom: 1.5rem !important;
+  }
+
+  .arrow {
+    width: 25px !important;
+    height: 25px !important;
+    border-width: 0 2px 2px 0 !important;
+  }
+}
+
+/* 超小屏幕优化 (最大360px) */
+@media (max-width: 360px) {
+  .content p {
+    font-size: 1.1rem !important;
+  }
+
+  .content h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .second-content header h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .stage-header h2 {
+    font-size: 1rem !important;
+  }
+
+  .artist-item {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.5rem !important;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  .artist-item:active {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    transform: scale(0.98);
+  }
+
+  .result-item:active {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+/* 横屏手机优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+  .content p {
+    font-size: 1.4rem !important;
+  }
+
+  .content h2 {
+    font-size: 1.7rem !important;
+  }
+
+  .search-container {
+    margin-top: 1rem !important;
+  }
+
+  .second-content header h1 {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* 模态框移动端优化 */
+@media (max-width: 768px) {
+  .artist-modal .modal-content {
+    width: 95% !important;
+    max-width: none !important;
+    margin: 1rem !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+  }
+  
+  .close-button {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  #artistName {
+    font-size: 1.5rem !important;
+  }
+  
+  #artistInfo {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* 确保桌面端正常显示 - 关键修复 */
+@media (min-width: 1025px) {
+  /* 恢复桌面端舞台容器的原始样式 */
+  .stages-container {
+    display: block !important;
+    position: relative !important;
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+  
+  /* 恢复桌面端舞台卡片的绝对定位 */
+  .stage-card {
+    position: absolute !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 350px !important;
+    min-width: 300px !important;
+    min-height: 400px !important;
+    padding: 1.5rem !important;
+    margin: 0 !important;
+  }
+  
+  /* 恢复桌面端字体大小 */
+  .content p {
+    font-size: 3rem !important;
+  }
+  
+  .content h2 {
+    font-size: 3rem !important;
+  }
+  
+  .second-content header h1 {
+    font-size: 3.5rem !important;
+  }
+  
+  .stage-header h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .artist-item {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.7rem !important;
+    min-height: 60px !important;
+  }
+  
+  .artists-container {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+  
+  .flower {
+    width: 160px !important;
+    height: 160px !important;
+  }
+}

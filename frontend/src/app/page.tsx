@@ -333,31 +333,31 @@ export default function Home() {
       {/* 进度条 */}
       <div className="progress-bar"></div>
       
-      {/* 顶部导航栏 */}
-      <header className="fixed top-0 w-full z-50 px-8 py-3 flex justify-between items-center backdrop-blur-md bg-white/10 border-b border-white/20 text-lg font-bold text-white">
-        {/* 左上 logo */}
-        <div className="flex gap-3">
-          <span>🎪</span>
-          <span>🎧</span>
-          <span>🌈</span>
-          <span>FujiRock</span>
+      {/* 顶部导航栏 - 移动端优化 */}
+      <header className="fixed top-0 w-full z-50 px-4 sm:px-8 py-2 sm:py-3 flex justify-between items-center backdrop-blur-md bg-white/10 border-b border-white/20 text-base sm:text-lg font-bold text-white">
+        {/* 左上 logo - 响应式字体 */}
+        <div className="flex gap-2 sm:gap-3 items-center">
+          <span className="text-lg sm:text-xl">🎪</span>
+          <span className="text-lg sm:text-xl">🎧</span>
+          <span className="text-lg sm:text-xl">🌈</span>
+          <span className="text-sm sm:text-base md:text-lg">FujiRock</span>
         </div>
 
-        {/* 右上功能 */}
-        <div className="flex gap-5 cursor-pointer">
-          <span title="收藏">⭐️</span>
-          <span title="登录">🔐</span>
+        {/* 右上功能 - 响应式间距 */}
+        <div className="flex gap-3 sm:gap-5 cursor-pointer">
+          <span title="收藏" className="text-lg sm:text-xl">⭐️</span>
+          <span title="登录" className="text-lg sm:text-xl">🔐</span>
         </div>
       </header>
 
-      {/* 第一屏 */}
-      <section id="first-screen">
+      {/* 第一屏 - 移动端优化 */}
+      <section id="first-screen" className="relative">
         <div className="trapezoid-bg"></div>
         <div className="container">
           <canvas ref={canvasRef} id="waveCanvas"></canvas>
 
-          {/* 花朵装饰 - 上半部分 */}
-          <div className="flower-decoration absolute top-0 left-0 w-full h-[60vh] pointer-events-none z-[4]">
+          {/* 花朵装饰 - 桌面端显示 */}
+          <div className="flower-decoration absolute top-0 left-0 w-full h-[60vh] pointer-events-none z-[4] hidden lg:block">
             {/* 第一排 */}
             <div className="flower absolute" style={{ top: '1%', left: '5%' }}>
               <img src="/flowers/flower1.png" alt="" />
@@ -420,11 +420,26 @@ export default function Home() {
             <div className="flower absolute" style={{ top: '7%', left: '95%' }}>
               <img src="/flowers/flower2.png" alt="" />
             </div>
-                    
           </div>
 
-          {/* 花朵装饰 - 下半部分 */}
-          <div className="flower-decoration absolute bottom-[80%] left-0 w-full h-screen pointer-events-none z-[4]">
+          {/* 移动端简化的花朵装饰 */}
+          <div className="flower-decoration absolute top-0 left-0 w-full h-[60vh] pointer-events-none z-[4] block lg:hidden">
+            <div className="flower absolute" style={{ top: '5%', left: '10%' }}>
+              <img src="/flowers/flower1.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '8%', left: '80%' }}>
+              <img src="/flowers/flower2.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '15%', left: '15%' }}>
+              <img src="/flowers/flower3.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '18%', left: '75%' }}>
+              <img src="/flowers/flower4.png" alt="" />
+            </div>
+          </div>
+
+          {/* 花朵装饰 - 下半部分，移动端隐藏 */}
+          <div className="flower-decoration absolute bottom-[80%] left-0 w-full h-screen pointer-events-none z-[4] hidden xl:block">
             <div className="flower absolute" style={{ top: '82%', left: '10%' }}>
               <img src="/flowers/flower7.png" alt="" />
             </div>
@@ -458,14 +473,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 主内容 */}
-          <div className="content">
-            <p>get ready for</p>
-            <h2>😈fujirock 2025</h2>
+          {/* 主内容 - 响应式字体 */}
+          <div className="content px-4 sm:px-0">
+            <p className="mobile-title-p">get ready for</p>
+            <h2 className="mobile-title-h2">😈fujirock 2025</h2>
           </div>
           
-          {/* 搜索框 */}
-          <div className="search-container">
+          {/* 搜索框 - 移动端优化 */}
+          <div className="search-container mobile-search-container">
             <div className="search-box">
               <input 
                 type="text" 
@@ -473,18 +488,20 @@ export default function Home() {
                 value={searchQuery}
                 onChange={handleSearchInput}
                 placeholder="search artist"
+                className="mobile-search-input"
               />
               <button 
                 id="searchButton"
                 onClick={() => performSearch(searchQuery)}
+                className="mobile-search-button"
               >
                 🔍
               </button>
             </div>
             
-            {/* 搜索结果 */}
+            {/* 搜索结果 - 移动端优化 */}
             {showResults && (
-              <div className="search-results active">
+              <div className="search-results active mobile-search-results">
                 {searchResults.length === 0 ? (
                   <div className="result-item">
                     <p>未找到相关结果</p>
@@ -493,7 +510,7 @@ export default function Home() {
                   searchResults.map((result, index) => (
                     <div 
                       key={index}
-                      className="result-item"
+                      className="result-item mobile-result-item"
                       onClick={() => handleResultClick(result)}
                     >
                       <div className="result-title">{result.name}</div>
@@ -506,42 +523,42 @@ export default function Home() {
           </div>
         </div>
         
-        {/* 滚动指示器 */}
-        <div className="scroll-down" onClick={scrollToSecondScreen}>
-          <div className="arrow"></div>
+        {/* 滚动指示器 - 移动端优化 */}
+        <div className="scroll-down mobile-scroll-down" onClick={scrollToSecondScreen}>
+          <div className="arrow mobile-arrow"></div>
         </div>
       </section>
       
-      {/* 第二屏 */}
+      {/* 第二屏 - 移动端优化 */}
       <section id="second-screen">
-        <div className="second-content">
-          <header>
-            <h1>FUJI ROCK FESTIVAL '25</h1>
+        <div className="second-content mobile-second-content">
+          <header className="text-center mb-6 sm:mb-8">
+            <h1 className="mobile-main-title">FUJI ROCK FESTIVAL '25</h1>
           </header>
         
-          <div className="stages-container">
+          {/* 舞台容器 - 移动端改为垂直布局 */}
+          <div className="stages-container mobile-stages-container">
             {stages.map((stage) => (
               <div 
                 key={stage.id}
-                className="stage-card"
+                className="stage-card mobile-stage-card"
                 id={stage.id}
                 style={{
-                  ...stage.position,
                   borderColor: stage.color
                 }}
               >
                 <div className="stage-header">
-                  <h2 style={{ color: stage.color }}>{stage.name}</h2>
+                  <h2 style={{ color: stage.color }} className="mobile-stage-title">{stage.name}</h2>
                   <div 
-                    className="stage-decoration"
+                    className="stage-decoration mobile-stage-decoration"
                     style={{ backgroundColor: stage.decorationColor }}
                   ></div>
                 </div>
-                <div className="artists-container">
+                <div className="artists-container mobile-artists-container">
                   {stage.artists.map((artist, index) => (
                     <div 
                       key={index}
-                      className="artist-item"
+                      className="artist-item mobile-artist-item"
                       onClick={() => handleArtistClick(artist)}
                     >
                       {artist}
