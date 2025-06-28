@@ -367,14 +367,18 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
 
   if (!isOpen || !artist) return null;
 
+ 
   // 获取显示用的数据
-  const displayData = {
-    name: artist.name,
-    genres: spotifyData?.genres || databaseArtist?.genres || [],
-    image: spotifyData?.images?.[0]?.url || databaseArtist?.image_url,
-    wikiContent: wikiData?.extract || databaseArtist?.wiki_extract,
-    spotifyId: spotifyData?.id || databaseArtist?.spotify_id
-  };
+const displayData = {
+  name: artist.name,
+  genres: spotifyData?.genres || databaseArtist?.genres || [],
+  image: spotifyData?.images?.[0]?.url || databaseArtist?.image_url,
+  wikiContent: wikiData?.extract || databaseArtist?.wiki_extract,
+  spotifyId: spotifyData?.id || databaseArtist?.spotify_id,
+  // 添加数据源判断
+  hasWikiData: !!(wikiData?.extract || databaseArtist?.wiki_extract),
+  dataSource: databaseArtist?.wiki_data?.source || 'wikipedia' // 新增：数据来源标识
+};
 
   const spotifyUrl = displayData.spotifyId 
     ? `https://open.spotify.com/artist/${displayData.spotifyId}`
@@ -436,42 +440,45 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
           </div>
         )}
 
-        {/* Wikipedia 信息部分 */}
-        <div className="mb-6">
-          <div className="flex items-center mb-3">
-            <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-              {isLoadingWiki ? (
-                <div className="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></div>
-              ) : (
-                <span className="text-gray-600 font-bold text-sm">W</span>
-              )}
-            </div>
-            <h3 className="text-xl font-semibold text-gray-800">
-              Wikipedia Info
-              {isLoadingWiki && <span className="ml-2 text-sm text-gray-500">加载中...</span>}
-            </h3>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-            {isLoadingWiki ? (
-              <div className="text-gray-500 text-center py-4">
-                <div className="w-6 h-6 border-2 border-gray-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-                正在获取 Wikipedia 信息...
-              </div>
-            ) : errors.wiki ? (
-              <p className="text-red-600 leading-relaxed">
-                ❌ {errors.wiki}
-              </p>
-            ) : displayData.wikiContent ? (
-              <p className="text-gray-700 leading-relaxed">
-                {displayData.wikiContent}
-              </p>
-            ) : (
-              <p className="text-gray-500 leading-relaxed">
-                暂无 Wikipedia 信息
-              </p>
-            )}
-          </div>
-        </div>
+
+{/* Wikipedia/Spotify 信息部分 */}
+<div className="mb-6">
+  <div className="flex items-center mb-3">
+    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
+      {isLoadingWiki ? (
+        <div className="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></div>
+      ) : (
+        <span className="text-gray-600 font-bold text-sm">
+          {displayData.dataSource === 'spotify' ? 'S' : 'W'}
+        </span>
+      )}
+    </div>
+    <h3 className="text-xl font-semibold text-gray-800">
+      {displayData.dataSource === 'spotify' ? 'Artist Info' : 'About This Artist'}
+      {isLoadingWiki && <span className="ml-2 text-sm text-gray-500">加载中...</span>}
+    </h3>
+  </div>
+  <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
+    {isLoadingWiki ? (
+      <div className="text-gray-500 text-center py-4">
+        <div className="w-6 h-6 border-2 border-gray-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+        正在获取{displayData.dataSource === 'spotify' ? 'Spotify' : 'Wikipedia'}信息...
+      </div>
+    ) : errors.wiki ? (
+      <p className="text-red-600 leading-relaxed">
+        ❌ {errors.wiki}
+      </p>
+    ) : displayData.wikiContent ? (
+      <p className="text-gray-700 leading-relaxed">
+        {displayData.wikiContent}
+      </p>
+    ) : (
+      <p className="text-gray-500 leading-relaxed">
+        暂无{displayData.dataSource === 'spotify' ? 'Spotify' : 'Wikipedia'}信息
+      </p>
+    )}
+  </div>
+</div>
 
         {/* Toxic AI 介绍部分 */}
         <div className="mb-6">
@@ -484,7 +491,7 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
               )}
             </div>
             <h3 className="text-xl font-semibold text-pink-700">
-              Toxic AI Intro
+            My Take on Them 😈
               {isGeneratingAI && (
                 <span className="ml-2 text-sm text-pink-500">正在生成中...</span>
               )}

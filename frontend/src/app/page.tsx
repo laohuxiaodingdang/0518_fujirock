@@ -60,10 +60,10 @@ export default function Home() {
       decorationColor: '#209e45',
       position: { top: '15%', left: '40%', transform: 'rotate(2deg)' },
       artists: [
-        'FRED AGAIN..', 'VULFPECK', 'VAMPIRE WEEKEND', 'Vaundy', '山下达郎',
+        'FRED AGAIN..', 'VULFPECK', 'VAMPIRE WEEKEND', 'Vaundy', '山下達郎',
         'RADWIMPS', 'HYUKOH & SUNSET ROLLERCOASTER', 'JAMES BLAKE', 'LITTLE SIMZ',
         'BRAHMAN', 'STUTS (Band Set)', 'Creepy Nuts', 'ROUTE 17 Rock\'n\'Roll ORCHESTRA',
-        '君島大空 合奏形態', '森山直太朗', 'US', 'CA7RIEL & PA CO AMOROSO', 'PIPERS (Red Hot Chilli Pipers)'
+        '君島大空 合奏形態', '森山直太朗', 'US', 'CA7RIEL & PACO AMOROSO', 'PIPERS (Red Hot Chilli Pipers)'
       ]
     },
     {
@@ -74,8 +74,8 @@ export default function Home() {
       position: { top: '5%', left: '10%', transform: 'rotate(-3deg)' },
       artists: [
         '坂本慎太郎', 'KIASMOS', 'Joy (Anonymous)', 'HIROKO YAMAMURA', 'CONFIDENCE MAN',
-        'NIGHT TEMPO', 'JANE REMOVE R', 'JYOTY', '勢喜遊 & Yohji Igarashi', 'Ovall',
-        'Nujabes Metaphorical Ensemble', 'ATSUO', 'THE PINEAPPLE', 'DONKEY', 'パソコン音楽クラブ'
+        'NIGHT TEMPO', 'JANE REMOVER', 'JYOTY', '勢喜遊 & Yohji Igarashi', 'Ovall',
+        'Nujabes Metaphorical Ensemble', 'ATSUO THE PINEAPPLE DONKEY', 'パソコン音楽クラブ'
       ]
     },
     {
@@ -88,7 +88,7 @@ export default function Home() {
         'Suchmos', 'FOUR TET', 'HAIM', 'OK GO', 'BARRY CAN\'T SWIM', '羊文学',
         'MIYAVI', 'JJJ', 'ROYEL OTIS', 'MDOU MOCTAR', 'FAYE WEBSTER',
         '佐野元春 & THE COYOTE BAND', 'ECCA VANDAL', 'BALMING TIGER', 'SILICA GEL',
-        'おとぼけ ビ～パ～', 'FERMIN MUGURUZA', 'MONO NO AWARE'
+        'おとぼけビ～パ～', 'FERMIN MUGURUZA', 'MONO NO AWARE'
       ]
     },
     {
@@ -98,11 +98,11 @@ export default function Home() {
       decorationColor: '#8ac926',
       position: { bottom: '15%', right: '25%', transform: 'rotate(-2deg)' },
       artists: [
-        'EZRA COLLECTIVE', 'EGO - WRAPPIN\'', 'GALACTIC（Featuring Jelly Joseph）', 'MAYA DELILAH',
+        'EZRA COLLECTIVE', 'EGO-WRAPPIN\'', 'GALACTIC Featuring Jelly Joseph', 'MAYA DELILAH',
         'AFRICAN HEAD CHARGE', 'ROBERT RANDOLPH', 'PARLOR GREENS', 'THE SKA FLAMES',
-        'JAKE SHIMAB UKURO BAND', 'ANSWER TO REMEMBER', '踊ってばかりの国',
-        'GRACE BOWE RS & THE HOD GE PODGE', 'KIRINJI', 'THE PANTURA S',
-        '吾妻光良 & The Swinging Boppers', 'トリプル ファイヤー', 'mei ehara', 'She Her Her Hers'
+        'JAKE SHIMABUKURO BAND', 'ANSWER TO REMEMBER', '踊ってばかりの国',
+        'GRACE BOWERS & THE HODGE PODGE', 'KIRINJI', 'THE PANTURAS',
+        '吾妻光良 & The Swinging Boppers', 'トリプルファイヤー', 'mei ehara', 'She Her Her Hers'
       ]
     },
     {
@@ -112,7 +112,7 @@ export default function Home() {
       decorationColor: '#ff7b00',
       position: { top: '10%', right: '10%', transform: 'rotate(-1deg)' },
       artists: [
-        'TYCHO', 'サンボ マスター', 'THE HIVES', 'PERFUME GENIUS', 'GINGER ROOT',
+        'TYCHO', 'サンボマスター', 'THE HIVES', 'PERFUME GENIUS', 'GINGER ROOT',
         'kanekoayano', '青葉市子', 'NEWDAD', 'ENGLISH TEACHER', 'MARCIN',
         'YHWH NAILGUN', 'まらしぃ', 'TOMOO', '離婚伝説', 'MEI SEMONES',
         'kurayamisaka (Selected by ROOKIE A GO - GO)', 'joOji', 'T字路s', 'downy', 'DYGL'
