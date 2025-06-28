@@ -68,18 +68,6 @@ export default function Home() {
     },
     {
       id: 'stage2',
-      name: 'PLANET GROOVE',
-      color: '#4ecdc4',
-      decorationColor: '#4ecdc4',
-      position: { top: '5%', left: '10%', transform: 'rotate(-3deg)' },
-      artists: [
-        '坂本慎太郎', 'KIASMOS', 'Joy (Anonymous)', 'HIROKO YAMAMURA', 'CONFIDENCE MAN',
-        'NIGHT TEMPO', 'JANE REMOVER', 'JYOTY', '勢喜遊 & Yohji Igarashi', 'Ovall',
-        'Nujabes Metaphorical Ensemble', 'ATSUO THE PINEAPPLE DONKEY', 'パソコン音楽クラブ'
-      ]
-    },
-    {
-      id: 'stage3',
       name: 'WHITE STAGE',
       color: '#000000',
       decorationColor: '#9b5de5',
@@ -89,6 +77,19 @@ export default function Home() {
         'MIYAVI', 'JJJ', 'ROYEL OTIS', 'MDOU MOCTAR', 'FAYE WEBSTER',
         '佐野元春 & THE COYOTE BAND', 'ECCA VANDAL', 'BALMING TIGER', 'SILICA GEL',
         'おとぼけビ～パ～', 'FERMIN MUGURUZA', 'MONO NO AWARE'
+      ]
+    },
+    {
+      id: 'stage3',
+      name: 'RED MARQUEE',
+      color: '#ff7b00',
+      decorationColor: '#ff7b00',
+      position: { top: '10%', right: '10%', transform: 'rotate(-1deg)' },
+      artists: [
+        'TYCHO', 'サンボマスター', 'THE HIVES', 'PERFUME GENIUS', 'GINGER ROOT',
+        'kanekoayano', '青葉市子', 'NEWDAD', 'ENGLISH TEACHER', 'MARCIN',
+        'YHWH NAILGUN', 'まらしぃ', 'TOMOO', '離婚伝説', 'MEI SEMONES',
+        'kurayamisaka (Selected by ROOKIE A GO - GO)', 'joOji', 'T字路s', 'downy', 'DYGL'
       ]
     },
     {
@@ -107,15 +108,14 @@ export default function Home() {
     },
     {
       id: 'stage5',
-      name: 'RED MARQUEE',
-      color: '#ff7b00',
-      decorationColor: '#ff7b00',
-      position: { top: '10%', right: '10%', transform: 'rotate(-1deg)' },
+      name: 'PLANET GROOVE',
+      color: '#4ecdc4',
+      decorationColor: '#4ecdc4',
+      position: { top: '5%', left: '10%', transform: 'rotate(-3deg)' },
       artists: [
-        'TYCHO', 'サンボマスター', 'THE HIVES', 'PERFUME GENIUS', 'GINGER ROOT',
-        'kanekoayano', '青葉市子', 'NEWDAD', 'ENGLISH TEACHER', 'MARCIN',
-        'YHWH NAILGUN', 'まらしぃ', 'TOMOO', '離婚伝説', 'MEI SEMONES',
-        'kurayamisaka (Selected by ROOKIE A GO - GO)', 'joOji', 'T字路s', 'downy', 'DYGL'
+        '坂本慎太郎', 'KIASMOS', 'Joy (Anonymous)', 'HIROKO YAMAMURA', 'CONFIDENCE MAN',
+        'NIGHT TEMPO', 'JANE REMOVER', 'JYOTY', '勢喜遊 & Yohji Igarashi', 'Ovall',
+        'Nujabes Metaphorical Ensemble', 'ATSUO THE PINEAPPLE DONKEY', 'パソコン音楽クラブ'
       ]
     }
   ];
@@ -423,24 +423,65 @@ export default function Home() {
           </div>
 
           {/* 移动端简化的花朵装饰 */}
+          {/* 移动端花朵装饰 - 显示更多花朵 */}
           <div className="flower-decoration absolute top-0 left-0 w-full h-[60vh] pointer-events-none z-[4] block lg:hidden">
-            <div className="flower absolute" style={{ top: '5%', left: '10%' }}>
+            {/* 第一排 */}
+            <div className="flower absolute" style={{ top: '1%', left: '5%' }}>
               <img src="/flowers/flower1.png" alt="" />
             </div>
-            <div className="flower absolute" style={{ top: '8%', left: '80%' }}>
+            <div className="flower absolute" style={{ top: '3%', left: '25%' }}>
               <img src="/flowers/flower2.png" alt="" />
             </div>
-            <div className="flower absolute" style={{ top: '15%', left: '15%' }}>
+            <div className="flower absolute" style={{ top: '2%', left: '45%' }}>
               <img src="/flowers/flower3.png" alt="" />
             </div>
-            <div className="flower absolute" style={{ top: '18%', left: '75%' }}>
+            <div className="flower absolute" style={{ top: '3%', left: '65%' }}>
               <img src="/flowers/flower4.png" alt="" />
             </div>
-          </div>
+            <div className="flower absolute" style={{ top: '2%', left: '85%' }}>
+              <img src="/flowers/flower5.png" alt="" />
+            </div>
+          
+            {/* 第二排 */}
+            <div className="flower absolute" style={{ top: '12%', left: '10%' }}>
+              <img src="/flowers/flower6.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '15%', left: '35%' }}>
+              <img src="/flowers/flower7.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '18%', left: '60%' }}>
+              <img src="/flowers/flower8.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '16%', left: '80%' }}>
+              <img src="/flowers/flower9.png" alt="" />
+            </div>
+          
+            {/* 第三排 */}
+            <div className="flower absolute" style={{ top: '25%', left: '15%' }}>
+              <img src="/flowers/flower10.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '28%', left: '40%' }}>
+              <img src="/flowers/flower11.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '30%', left: '70%' }}>
+              <img src="/flowers/flower12.png" alt="" />
+            </div>
+            
+            {/* 第四排 */}
+            <div className="flower absolute" style={{ top: '40%', left: '60%' }}>
+              <img src="/flowers/flower1.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '42%', left: '80%' }}>
+              <img src="/flowers/flower2.png" alt="" />
+            </div>
+            <div className="flower absolute" style={{ top: '45%', left: '90%' }}>
+              <img src="/flowers/flower3.png" alt="" />
+            </div>
+          </div> 
 
           {/* 花朵装饰 - 下半部分，移动端隐藏 */}
-          <div className="flower-decoration absolute bottom-[80%] left-0 w-full h-screen pointer-events-none z-[4] hidden xl:block">
-            <div className="flower absolute" style={{ top: '82%', left: '10%' }}>
+          <div className="flower-decoration absolute bottom-[80%] left-0 w-full h-screen pointer-events-none z-[4]">          
+            <div className="flower absolute" style={{ top: '82%', left: '5%' }}>
               <img src="/flowers/flower7.png" alt="" />
             </div>
             <div className="flower absolute" style={{ top: '85%', left: '30%' }}>
@@ -462,13 +503,11 @@ export default function Home() {
             <div className="flower absolute" style={{ top: '85%', left: '38%' }}>
               <img src="/flowers/flower5.png" alt="" />
             </div>
-            <div className="flower absolute" style={{ top: '88%', left: '45%' }}>
-              <img src="/flowers/flower7.png" alt="" />
-            </div>
+
             <div className="flower absolute" style={{ top: '86%', left: '78%' }}>
               <img src="/flowers/flower12.png" alt="" />
             </div>
-            <div className="flower absolute" style={{ top: '90%', left: '95%' }}>
+            <div className="flower absolute" style={{ top: '80%', left: '90%' }}>
               <img src="/flowers/flower8.png" alt="" />
             </div>
           </div>
