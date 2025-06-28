@@ -70,7 +70,7 @@ export default function Home() {
       id: 'stage2',
       name: 'WHITE STAGE',
       color: '#000000',
-      decorationColor: '#9b5de5',
+      decorationColor: '#000000',
       position: { bottom: '10%', left: '20%', transform: 'rotate(1deg)' },
       artists: [
         'Suchmos', 'FOUR TET', 'HAIM', 'OK GO', 'BARRY CAN\'T SWIM', '羊文学',
@@ -82,8 +82,8 @@ export default function Home() {
     {
       id: 'stage3',
       name: 'RED MARQUEE',
-      color: '#ff7b00',
-      decorationColor: '#ff7b00',
+      color: '#FF0000',
+      decorationColor: '#FF0000',
       position: { top: '10%', right: '10%', transform: 'rotate(-1deg)' },
       artists: [
         'TYCHO', 'サンボマスター', 'THE HIVES', 'PERFUME GENIUS', 'GINGER ROOT',

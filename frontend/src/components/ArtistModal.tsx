@@ -369,15 +369,15 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
 
  
   // 获取显示用的数据
+// 修改第 370 行左右的 displayData
 const displayData = {
   name: artist.name,
   genres: spotifyData?.genres || databaseArtist?.genres || [],
-  image: spotifyData?.images?.[0]?.url || databaseArtist?.image_url,
+  image: databaseArtist?.image_url || spotifyData?.images?.[0]?.url, // 🔧 优先使用数据库图片
   wikiContent: wikiData?.extract || databaseArtist?.wiki_extract,
   spotifyId: spotifyData?.id || databaseArtist?.spotify_id,
-  // 添加数据源判断
   hasWikiData: !!(wikiData?.extract || databaseArtist?.wiki_extract),
-  dataSource: databaseArtist?.wiki_data?.source || 'wikipedia' // 新增：数据来源标识
+  dataSource: databaseArtist?.wiki_data?.source || 'wikipedia'
 };
 
   const spotifyUrl = displayData.spotifyId 
