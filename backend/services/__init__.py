@@ -3,5 +3,5 @@
 """
 
 from .wikipedia_service import WikipediaService
-from .openai_service import DeepSeekAIService
+#from .openai_service import DeepSeekAIService
 from .spotify_service import SpotifyService 

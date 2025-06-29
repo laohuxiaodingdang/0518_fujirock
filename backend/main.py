@@ -13,7 +13,7 @@ from config import settings, validate_settings
 
 # 导入路由
 from api.wikipedia import router as wikipedia_router
-from api.openai import router as openai_router
+#from api.openai import router as openai_router
 from api.spotify import router as spotify_router
 from api.health import router as health_router
 from api.database import router as database_router
@@ -95,7 +95,7 @@ API_V1_PREFIX = ""
 app.include_router(health_router)  # 健康检查不需要版本前缀
 app.include_router(auth_router, prefix=API_V1_PREFIX)
 app.include_router(wikipedia_router, prefix=API_V1_PREFIX)  
-app.include_router(openai_router, prefix=API_V1_PREFIX)
+#app.include_router(openai_router, prefix=API_V1_PREFIX)
 app.include_router(spotify_router, prefix=API_V1_PREFIX)
 app.include_router(database_router, prefix=API_V1_PREFIX)
 app.include_router(integration_router, prefix=API_V1_PREFIX)

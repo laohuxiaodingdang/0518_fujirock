@@ -251,7 +251,8 @@ class ArtistDatabaseService:
                 insert_data["wiki_last_updated"] = artist_data["wiki_last_updated"]
             if "spotify_id" in artist_data:
                 insert_data["spotify_id"] = artist_data["spotify_id"]
-            
+            if "ai_description" in artist_data:
+                insert_data["ai_description"] = artist_data["ai_description"]            
             # 执行插入操作
             result = self.db.supabase.table("artists").insert(insert_data).execute()
             

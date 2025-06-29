@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { generateArtistDescriptionStream } from '../utils/api';
+//import { generateArtistDescriptionStream } from '../utils/api';
 
 // 数据库艺术家类型定义
 interface DatabaseArtist {
@@ -16,6 +16,7 @@ interface DatabaseArtist {
   is_fuji_rock_artist: boolean;
   created_at: string;
   updated_at: string;
+    ai_description?: string;
 }
 
 // 组件 props 类型定义 - 简化为只需要艺术家名称
@@ -95,6 +96,11 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
         setWikiData({ extract: dbArtist.wiki_extract });
       }
       
+      // 如果数据库有 ai_description，直接使用
+      if (dbArtist.ai_description) {
+        setToxicIntro(dbArtist.ai_description);
+        console.log("✅ 从数据库获取到毒舌介绍");
+      }      
       // 如果数据库有 spotify_id，我们可以获取更多 Spotify 数据
       if (dbArtist.spotify_id) {
         fetchSpotifyById(dbArtist.spotify_id);
@@ -299,13 +305,13 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
     }
   };
 
-  // 生成毒舌介绍
+
+  // 生成/刷新毒舌介绍
   const generateToxicIntro = async () => {
     if (!artist) return;
     
     setIsGeneratingAI(true);
-    setStreamContent('');
-    setToxicIntro('');
+    setStreamContent("");
     setErrors(prev => ({ ...prev, ai: undefined }));
 
     // 使用可用的内容作为 AI 输入
@@ -315,38 +321,22 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
                         `${artist.name} 是一位艺术家`;
 
     try {
-      await generateArtistDescriptionStream(
-        artist.name,
-        contentForAI,
-        7, // 毒舌程度
-        // onUpdate 回调
-        (content: string) => {
-          setStreamContent(content);
-        },
-        // onComplete 回调
-        (data: any) => {
-          setToxicIntro(data.content);
-          setStreamContent('');
-          setIsGeneratingAI(false);
-        },
-        // onError 回调
-        (error: string) => {
-          console.error('AI 生成失败:', error);
-          setErrors(prev => ({ ...prev, ai: 'AI 生成失败' }));
-          setToxicIntro('😈 准备好被音乐摧毁吧！这位艺术家的作品绝对会让你重新定义什么叫"与众不同"！🔥');
-          setStreamContent('');
-          setIsGeneratingAI(false);
-        }
-      );
+      // 这里可以添加实际的AI API调用
+      // 暂时使用模拟的毒舌介绍
+      setTimeout(() => {
+        const newIntro = "😈 准备好被音乐摧毁吧！这位艺术家的作品绝对会让你重新定义什么叫\"与众不同\"！🔥";
+        setToxicIntro(newIntro);
+        setIsGeneratingAI(false);
+        // TODO: 这里应该调用API将新生成的描述保存到数据库
+      }, 2000);
     } catch (error) {
-      console.error('AI 生成错误:', error);
-      setErrors(prev => ({ ...prev, ai: 'AI 生成错误' }));
-      setToxicIntro('😈 准备好被音乐摧毁吧！这位艺术家的作品绝对会让你重新定义什么叫"与众不同"！🔥');
+      console.error("AI 生成错误:", error);
+      setErrors(prev => ({ ...prev, ai: "AI 生成错误" }));
+      setToxicIntro("😈 准备好被音乐摧毁吧！这位艺术家的作品绝对会让你重新定义什么叫\"与众不同\"！🔥");
       setIsGeneratingAI(false);
     }
   };
 
-  // 处理 ESC 键关闭弹窗
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -367,18 +357,16 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
 
   if (!isOpen || !artist) return null;
 
- 
   // 获取显示用的数据
-// 修改第 370 行左右的 displayData
-const displayData = {
-  name: artist.name,
-  genres: spotifyData?.genres || databaseArtist?.genres || [],
-  image: databaseArtist?.image_url || spotifyData?.images?.[0]?.url, // 🔧 优先使用数据库图片
-  wikiContent: wikiData?.extract || databaseArtist?.wiki_extract,
-  spotifyId: spotifyData?.id || databaseArtist?.spotify_id,
-  hasWikiData: !!(wikiData?.extract || databaseArtist?.wiki_extract),
-  dataSource: databaseArtist?.wiki_data?.source || 'wikipedia'
-};
+  const displayData = {
+    name: artist.name,
+    genres: spotifyData?.genres || databaseArtist?.genres || [],
+    image: databaseArtist?.image_url || spotifyData?.images?.[0]?.url,
+    wikiContent: wikiData?.extract || databaseArtist?.wiki_extract,
+    spotifyId: spotifyData?.id || databaseArtist?.spotify_id,
+    hasWikiData: !!(wikiData?.extract || databaseArtist?.wiki_extract),
+    dataSource: databaseArtist?.wiki_data?.source || 'wikipedia'
+  };
 
   const spotifyUrl = displayData.spotifyId 
     ? `https://open.spotify.com/artist/${displayData.spotifyId}`
@@ -440,45 +428,44 @@ const displayData = {
           </div>
         )}
 
-
-{/* Wikipedia/Spotify 信息部分 */}
-<div className="mb-6">
-  <div className="flex items-center mb-3">
-    <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
-      {isLoadingWiki ? (
-        <div className="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></div>
-      ) : (
-        <span className="text-gray-600 font-bold text-sm">
-          {displayData.dataSource === 'spotify' ? 'S' : 'W'}
-        </span>
-      )}
-    </div>
-    <h3 className="text-xl font-semibold text-gray-800">
-      {displayData.dataSource === 'spotify' ? 'Artist Info' : 'About This Artist'}
-      {isLoadingWiki && <span className="ml-2 text-sm text-gray-500">加载中...</span>}
-    </h3>
-  </div>
-  <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-    {isLoadingWiki ? (
-      <div className="text-gray-500 text-center py-4">
-        <div className="w-6 h-6 border-2 border-gray-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-        正在获取{displayData.dataSource === 'spotify' ? 'Spotify' : 'Wikipedia'}信息...
-      </div>
-    ) : errors.wiki ? (
-      <p className="text-red-600 leading-relaxed">
-        ❌ {errors.wiki}
-      </p>
-    ) : displayData.wikiContent ? (
-      <p className="text-gray-700 leading-relaxed">
-        {displayData.wikiContent}
-      </p>
-    ) : (
-      <p className="text-gray-500 leading-relaxed">
-        暂无{displayData.dataSource === 'spotify' ? 'Spotify' : 'Wikipedia'}信息
-      </p>
-    )}
-  </div>
-</div>
+        {/* Wikipedia/Spotify 信息部分 */}
+        <div className="mb-6">
+          <div className="flex items-center mb-3">
+            <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center mr-3">
+              {isLoadingWiki ? (
+                <div className="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></div>
+              ) : (
+                <span className="text-gray-600 font-bold text-sm">
+                  {displayData.dataSource === 'spotify' ? 'S' : 'W'}
+                </span>
+              )}
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800">
+              {displayData.dataSource === 'spotify' ? 'Artist Info' : 'About This Artist'}
+              {isLoadingWiki && <span className="ml-2 text-sm text-gray-500">加载中...</span>}
+            </h3>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
+            {isLoadingWiki ? (
+              <div className="text-gray-500 text-center py-4">
+                <div className="w-6 h-6 border-2 border-gray-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                正在获取{displayData.dataSource === 'spotify' ? 'Spotify' : 'Wikipedia'}信息...
+              </div>
+            ) : errors.wiki ? (
+              <p className="text-red-600 leading-relaxed">
+                ❌ {errors.wiki}
+              </p>
+            ) : displayData.wikiContent ? (
+              <p className="text-gray-700 leading-relaxed">
+                {displayData.wikiContent}
+              </p>
+            ) : (
+              <p className="text-gray-500 leading-relaxed">
+                暂无{displayData.dataSource === 'spotify' ? 'Spotify' : 'Wikipedia'}信息
+              </p>
+            )}
+          </div>
+        </div>
 
         {/* Toxic AI 介绍部分 */}
         <div className="mb-6">
@@ -491,7 +478,7 @@ const displayData = {
               )}
             </div>
             <h3 className="text-xl font-semibold text-pink-700">
-            My Take on Them 😈
+              My Take on Them 
               {isGeneratingAI && (
                 <span className="ml-2 text-sm text-pink-500">正在生成中...</span>
               )}
@@ -505,20 +492,11 @@ const displayData = {
             ) : (
               <p className="text-pink-800 leading-relaxed">
                 {isGeneratingAI ? (
-                  streamContent || '正在生成毒舌介绍...'
+                  streamContent || "Loading..."
                 ) : (
-                  toxicIntro || '点击生成按钮获取毒舌介绍...'
+                  toxicIntro || "暂无毒舌介绍，点击刷新按钮生成"
                 )}
               </p>
-            )}
-            {!isGeneratingAI && !toxicIntro && !errors.ai && (
-              <button
-                onClick={generateToxicIntro}
-                className="mt-3 bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg text-sm transition-colors"
-                disabled={isLoadingWiki || isLoadingDatabase}
-              >
-                {(isLoadingWiki || isLoadingDatabase) ? '等待数据加载...' : '生成毒舌介绍'}
-              </button>
             )}
           </div>
         </div>

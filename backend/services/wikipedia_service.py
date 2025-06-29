@@ -103,7 +103,7 @@ class WikipediaService:
         
         # 获取特定艺术家的数据，如果没有则使用默认数据
         artist_data = mock_data.get(artist_name, {
-            "extract": f"{artist_name}是一位知名的音乐艺术家，以其独特的音乐风格和创作才华而闻名。该艺术家在音乐界有着重要的地位，作品深受听众喜爱。他们的音乐融合了多种风格元素，展现出了卓越的艺术表现力和创新精神。",
+            "extract": f"{artist_name}加载失败",
             "categories": ["音乐艺术家", "摇滚", "流行音乐"],
             "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=facearea&w=256&q=80"
         })

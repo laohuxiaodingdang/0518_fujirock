@@ -125,6 +125,50 @@ const apiRequest = async <T>(
   }
 };
 
+// 获取艺术家数据库信息（包含 ai_description）
+// 获取艺术家数据库信息（包含 ai_description）
+export const getArtistDatabase = async (
+  artistName: string
+): Promise<any> => {
+  console.log('🔍 getArtistDatabase called with:', artistName);
+  
+  if (!artistName.trim()) {
+    throw new Error('Artist name is required');
+  }
+
+  // 🔧 直接调用后端API，不通过前端路由
+  const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+  const encodedArtistName = encodeURIComponent(artistName.trim());
+  const url = `${backendUrl}/api/database/artists/by-name/${encodedArtistName}`;
+  
+  console.log('🌐 直接调用后端API:', url);
+  
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    console.log('📊 后端返回数据:', data.success ? '成功' : '失败');
+    
+    if (data.success && data.data?.ai_description) {
+      console.log('📝 包含AI描述:', !!data.data.ai_description);
+    }
+    
+    return data;
+  } catch (error) {
+    console.error('❌ 直接调用后端API失败:', error);
+    throw error;
+  }
+};
+
 // 获取艺术家Wikipedia信息
 export const getArtistWikipedia = async (
   artistName: string,
@@ -169,107 +213,9 @@ export const getArtistTopTracks = async (
 };
 
 // 生成AI毒舌描述
-export const generateArtistDescription = async (
-  artistName: string,
-  wikiContent: string,
-  intensity: number = 5
-): Promise<AIDescriptionResponse> => {
-  if (!artistName.trim()) {
-    throw new Error('Artist name is required');
-  }
 
-  return apiRequest<AIDescriptionResponse>('/ai/generate-description', {
-    method: 'POST',
-    body: JSON.stringify({
-      artist_name: artistName,
-      wiki_content: wikiContent,
-      style_intensity: intensity,
-      language: 'zh',
-      max_length: 500,
-      temperature: 0.7,
-    }),
-  });
-};
 
-// 生成AI毒舌描述 - 流式版本
-export const generateArtistDescriptionStream = async (
-  artistName: string,
-  wikiContent: string,
-  intensity: number = 5,
-  onUpdate: (content: string) => void,
-  onComplete: (data: any) => void,
-  onError: (error: string) => void
-): Promise<void> => {
-  if (!artistName.trim()) {
-    throw new Error('Artist name is required');
-  }
 
-  const requestData = {
-    artist_name: artistName,
-    wiki_content: wikiContent,
-    style_intensity: intensity,
-    language: 'zh',
-    max_length: 500,
-    temperature: 0.7,
-  };
-
-  try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/ai/generate-description-stream`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestData),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const reader = response.body?.getReader();
-    if (!reader) {
-      throw new Error('Response body is not readable');
-    }
-
-    const decoder = new TextDecoder();
-    let buffer = '';
-
-    while (true) {
-      const { done, value } = await reader.read();
-      
-      if (done) break;
-
-      buffer += decoder.decode(value, { stream: true });
-      
-      // 处理 SSE 数据
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || ''; // 保留不完整的行
-
-      for (const line of lines) {
-        if (line.startsWith('data: ')) {
-          try {
-            const data = JSON.parse(line.slice(6));
-            
-            if (data.type === 'content') {
-              onUpdate(data.content);
-            } else if (data.type === 'complete') {
-              onComplete(data);
-              return;
-            } else if (data.type === 'error') {
-              onError(data.error);
-              return;
-            }
-          } catch (e) {
-            console.error('Failed to parse SSE data:', e);
-          }
-        }
-      }
-    }
-  } catch (error) {
-    console.error('Stream request failed:', error);
-    onError(error instanceof Error ? error.message : 'Unknown error');
-  }
-};
 
 // 获取艺术家完整信息（组合多个API）
 export const getArtistFullProfile = async (artistName: string) => {

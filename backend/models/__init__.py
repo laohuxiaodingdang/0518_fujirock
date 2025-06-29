@@ -3,6 +3,6 @@
 """
 
 from .wikipedia import *
-from .openai import *
+#from .openai import *
 from .spotify import *
 from .common import * 

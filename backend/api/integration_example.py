@@ -10,7 +10,7 @@ from fastapi.responses import JSONResponse
 # 导入现有服务
 from services.wikipedia_service import wikipedia_service
 from services.spotify_service import spotify_service
-from services.openai_service import openai_service
+#from services.openai_service import openai_service
 
 # 导入数据库服务
 from services.artist_db_service import artist_db_service

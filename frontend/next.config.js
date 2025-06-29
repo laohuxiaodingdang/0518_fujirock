@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   // 添加这个配置确保静态文件被正确处理
   assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     domains: [
       'i.scdn.co', 

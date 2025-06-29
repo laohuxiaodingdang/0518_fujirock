@@ -58,7 +58,7 @@ export default function Home() {
       name: 'GREEN STAGE',
       color: '#209e45',
       decorationColor: '#209e45',
-      position: { top: '15%', left: '40%', transform: 'rotate(2deg)' },
+      position: { top: '15%', left: '50%', transform: 'rotate(2deg)' },
       artists: [
         'FRED AGAIN..', 'VULFPECK', 'VAMPIRE WEEKEND', 'Vaundy', '山下達郎',
         'RADWIMPS', 'HYUKOH & SUNSET ROLLERCOASTER', 'JAMES BLAKE', 'LITTLE SIMZ',
