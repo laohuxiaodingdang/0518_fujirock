@@ -240,11 +240,41 @@ export const getArtistFullProfile = async (artistName: string) => {
     let aiDescription = null;
     if (wikipedia?.success && wikipedia.data.extract) {
       try {
-        aiDescription = await generateArtistDescription(
-          artistName,
-          wikipedia.data.extract,
-          7 // 默认毒舌程度为7
-        );
+ // 获取艺术家完整信息（组合多个API）
+export const getArtistFullProfile = async (artistName: string) => {
+  try {
+    // 并行调用多个API
+    const [wikipediaData, spotifyData, topTracksData] = await Promise.allSettled([
+      getArtistWikipedia(artistName),
+      getArtistSpotify(artistName),
+      getArtistTopTracks(artistName),
+    ]);
+
+    // 处理Wikipedia数据
+    const wikipedia = wikipediaData.status === 'fulfilled' ? wikipediaData.value : null;
+    
+    // 处理Spotify数据
+    const spotify = spotifyData.status === 'fulfilled' ? spotifyData.value : null;
+    
+    // 处理热门歌曲数据
+    const topTracks = topTracksData.status === 'fulfilled' ? topTracksData.value : null;
+
+    return {
+      wikipedia,
+      spotify,
+      topTracks,
+      aiDescription: null, // 不再生成AI描述
+      errors: {
+        wikipedia: wikipediaData.status === 'rejected' ? wikipediaData.reason : null,
+        spotify: spotifyData.status === 'rejected' ? spotifyData.reason : null,
+        topTracks: topTracksData.status === 'rejected' ? topTracksData.reason : null,
+      }
+    };
+  } catch (error) {
+    console.error('Failed to get artist full profile:', error);
+    throw error;
+  }
+};
       } catch (error) {
         console.error('Failed to generate AI description:', error);
       }
