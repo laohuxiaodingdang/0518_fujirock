@@ -77,3 +77,13 @@ api-tester/
 # Logs
 *.log
 
+
+# Additional backup and temporary files
+*.bak
+*.backup
+*_backup.*
+*.new
+fix.py
+fix_artist_modal.py
+**/fix_artist_modal.py
+tsconfig.tsbuildinfo
