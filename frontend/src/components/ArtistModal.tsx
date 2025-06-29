@@ -494,7 +494,7 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
                 {isGeneratingAI ? (
                   streamContent || "Loading..."
                 ) : (
-                  toxicIntro || "暂无毒舌介绍，点击刷新按钮生成"
+                  toxicIntro || "Loading..."
                 )}
               </p>
             )}
