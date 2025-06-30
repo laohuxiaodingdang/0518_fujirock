@@ -3,14 +3,13 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { ArrowLeft, ExternalLink, Play, Pause, Volume2, Music, Sparkles } from 'lucide-react';
-//import { 
-//  getArtistDatabase, 
-//  getArtistSpotify, 
-//  getArtistTopTracks,
-//  generateArtistDescriptionStream,
-//  getCachedAIDescription
-//} from '@/utils/api';
-
+import { 
+  getArtistDatabase, 
+  getArtistSpotify, 
+  getArtistTopTracks,
+  generateArtistDescriptionStream,
+  getCachedAIDescription
+} from '@/utils/api';
 interface ArtistData {
   database: any;
   spotify: any;
