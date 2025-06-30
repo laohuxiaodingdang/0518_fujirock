@@ -126,7 +126,6 @@ const apiRequest = async <T>(
 };
 
 // 获取艺术家数据库信息（包含 ai_description）
-// 获取艺术家数据库信息（包含 ai_description）
 export const getArtistDatabase = async (
   artistName: string
 ): Promise<any> => {
@@ -212,35 +211,7 @@ export const getArtistTopTracks = async (
   );
 };
 
-// 生成AI毒舌描述
-
-
-
-
 // 获取艺术家完整信息（组合多个API）
-export const getArtistFullProfile = async (artistName: string) => {
-  try {
-    // 并行调用多个API
-    const [wikipediaData, spotifyData, topTracksData] = await Promise.allSettled([
-      getArtistWikipedia(artistName),
-      getArtistSpotify(artistName),
-      getArtistTopTracks(artistName),
-    ]);
-
-    // 处理Wikipedia数据
-    const wikipedia = wikipediaData.status === 'fulfilled' ? wikipediaData.value : null;
-    
-    // 处理Spotify数据
-    const spotify = spotifyData.status === 'fulfilled' ? spotifyData.value : null;
-    
-    // 处理热门歌曲数据
-    const topTracks = topTracksData.status === 'fulfilled' ? topTracksData.value : null;
-
-    // 如果有Wikipedia内容，生成AI描述
-    let aiDescription = null;
-    if (wikipedia?.success && wikipedia.data.extract) {
-      try {
- // 获取艺术家完整信息（组合多个API）
 export const getArtistFullProfile = async (artistName: string) => {
   try {
     // 并行调用多个API
@@ -275,24 +246,3 @@ export const getArtistFullProfile = async (artistName: string) => {
     throw error;
   }
 };
-      } catch (error) {
-        console.error('Failed to generate AI description:', error);
-      }
-    }
-
-    return {
-      wikipedia,
-      spotify,
-      topTracks,
-      aiDescription,
-      errors: {
-        wikipedia: wikipediaData.status === 'rejected' ? wikipediaData.reason : null,
-        spotify: spotifyData.status === 'rejected' ? spotifyData.reason : null,
-        topTracks: topTracksData.status === 'rejected' ? topTracksData.reason : null,
-      }
-    };
-  } catch (error) {
-    console.error('Failed to get artist full profile:', error);
-    throw error;
-  }
-}; 
