@@ -742,7 +742,7 @@ html.dragging {
 
 @media (max-width: 768px) {
   .search-container {
-    bottom: 15%;
+    bottom: 30%;
     width: 90%;
   }
   
@@ -919,8 +919,8 @@ html.dragging {
 
   /* 搜索容器优化 */
   .search-container {
-    width: 90% !important;
-    max-width: 400px !important;
+    width: 70% !important;
+    max-width: 300px !important;
     margin: 0 auto !important;
     padding: 0 1rem !important;
   }
@@ -997,8 +997,8 @@ html.dragging {
 
   /* 花朵装饰减少 */
   .flower {
-    width: 70px !important;
-    height: 70px !important;
+    width: 90px !important;
+    height: 90px !important;
   }
 
   /* 滚动指示器 */

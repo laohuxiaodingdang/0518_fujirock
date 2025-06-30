@@ -461,7 +461,7 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
               </p>
             ) : (
               <p className="text-gray-500 leading-relaxed">
-                暂无{displayData.dataSource === 'spotify' ? 'Spotify' : 'Wikipedia'}信息
+                Loading...
               </p>
             )}
           </div>
@@ -517,7 +517,7 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
         {/* 数据来源指示器 */}
         <div className="mt-4 text-xs text-gray-500 text-center">
           数据来源: 
-          {databaseArtist && <span className="ml-1 text-green-600">✅ 数据库</span>}
+          {databaseArtist && <span className="ml-1 text-green-600">✅ fujirock网站</span>}
           {wikiData && <span className="ml-1 text-blue-600">✅ Wikipedia</span>}
           {spotifyData && <span className="ml-1 text-green-600">✅ Spotify</span>}
         </div>
