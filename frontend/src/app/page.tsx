@@ -346,7 +346,7 @@ export default function Home() {
         {/* 右上功能 - 响应式间距 */}
         <div className="flex gap-3 sm:gap-5 cursor-pointer">
           <span title="收藏" className="text-lg sm:text-xl">⭐️</span>
-          <span title="登录" className="text-lg sm:text-xl">🔐</span>
+          {/*<span title="登录" className="text-lg sm:text-xl">🔐</span>*/}
         </div>
       </header>
 
