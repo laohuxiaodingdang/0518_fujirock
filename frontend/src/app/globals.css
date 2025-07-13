@@ -1155,6 +1155,11 @@ html.dragging {
     font-size: 0.7rem !important;
     padding: 0.3rem 0.5rem !important;
   }
+
+  .flower {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 
 /* 触摸设备优化 */

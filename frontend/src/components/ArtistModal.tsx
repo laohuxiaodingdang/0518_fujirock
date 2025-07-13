@@ -1,4 +1,6 @@
 'use client';
+import "../styles/platform-buttons.css";
+
 
 import { useEffect, useState } from 'react';
 //import { generateArtistDescriptionStream } from '../utils/api';
@@ -501,26 +503,52 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
           </div>
         </div>
 
-        {/* Spotify 链接部分 */}
-        <div className="flex justify-center">
-          <a
-            href={spotifyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-colors font-medium shadow-lg hover:shadow-xl"
-          >
-            <span className="text-lg">🎧</span>
-            <span>在 Spotify 上{displayData.spotifyId ? '收听' : '搜索'}</span>
-          </a>
-        </div>
 
-        {/* 数据来源指示器 */}
-        <div className="mt-4 text-xs text-gray-500 text-center">
+{/* 音乐平台链接部分 */}
+<div className="flex justify-center gap-4">
+  <a
+    href={spotifyUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="platform-btn"
+    title="在 Spotify 上收听"
+  >
+    <img src="/icons/spotify.svg" alt="Spotify" className="w-25 h-25" />
+  </a>
+
+  <a
+    href={`https://y.qq.com/n/ryqq/search?w=${encodeURIComponent(displayData.name)}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="platform-btn"
+    title="在QQ音乐中搜索"
+  >
+    <img src="/icons/qqmusic.svg" alt="QQ音乐" className="w-25 h-25" />
+  </a>
+
+  <a
+    href={`https://music.163.com/#/search/m/?s=${encodeURIComponent(displayData.name)}&type=100`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="platform-btn"
+    title="在网易云音乐中搜索"
+  >
+    <img src="/icons/netease.svg" alt="网易云音乐" className="w-25 h-25" />
+  </a> 
+</div>
+
+
+
+
+
+
+
+        {/* <div className="mt-4 text-xs text-gray-500 text-center">
           数据来源: 
           {databaseArtist && <span className="ml-1 text-green-600">✅ fujirock网站</span>}
           {wikiData && <span className="ml-1 text-blue-600">✅ Wikipedia</span>}
           {spotifyData && <span className="ml-1 text-green-600">✅ Spotify</span>}
-        </div>
+        </div> */}
 
         {/* 调试信息（仅开发环境显示） */}
         {process.env.NODE_ENV === 'development' && (
