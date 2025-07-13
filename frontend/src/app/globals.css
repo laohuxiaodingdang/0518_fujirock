@@ -1117,8 +1117,8 @@ html.dragging {
   }
   /* 花朵装饰手机端 */
   .flower {
-    width: 50px !important;
-    height: 50px !important;
+    width: 100px !important;
+    height: 100px !important;
   }
 
   /* 滚动指示器手机端 */
@@ -1157,8 +1157,8 @@ html.dragging {
   }
 
   .flower {
-    width: 50px !important;
-    height: 50px !important;
+    width: 100px !important;
+    height: 100px !important;
   }
 }
 

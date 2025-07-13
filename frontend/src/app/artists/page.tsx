@@ -152,7 +152,7 @@ export default function ArtistsPage() {
         {/* 艺术家卡片 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {artists.map((artist, index) => (
-            <Link key={artist.id} href={`/artists/${encodeURIComponent(artist.name)}`} className="group">
+            <div key={artist.id} className="group">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all transform hover:scale-105 cursor-pointer">
                 <div className="text-center">
                   {artist.image_url ? (
@@ -192,7 +192,7 @@ export default function ArtistsPage() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
