@@ -543,12 +543,7 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
 
 
 
-        {/* <div className="mt-4 text-xs text-gray-500 text-center">
-          数据来源: 
-          {databaseArtist && <span className="ml-1 text-green-600">✅ fujirock网站</span>}
-          {wikiData && <span className="ml-1 text-blue-600">✅ Wikipedia</span>}
-          {spotifyData && <span className="ml-1 text-green-600">✅ Spotify</span>}
-        </div> */}
+
 
         {/* 调试信息（仅开发环境显示） */}
         {process.env.NODE_ENV === 'development' && (
