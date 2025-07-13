@@ -411,6 +411,9 @@ section {
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 1rem; /* 适当调整 */
+  line-height: 1;    /* 让 emoji 或 SVG 居中 */
+  padding: 0;  
 }
 
 #searchButton:hover {

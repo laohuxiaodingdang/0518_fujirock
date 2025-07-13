@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import ArtistModal from '../components/ArtistModal';
+import ContactModal from '../components/ContactModal';
 
 // 艺术家数据类型定义
 interface Artist {
@@ -47,6 +48,7 @@ export default function Home() {
   const [showResults, setShowResults] = useState(false);
   const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
   const [showArtistModal, setShowArtistModal] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
   
   // Canvas引用
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -337,9 +339,9 @@ export default function Home() {
       <header className="fixed top-0 w-full z-50 px-4 sm:px-8 py-2 sm:py-3 flex justify-between items-center backdrop-blur-md bg-white/10 border-b border-white/20 text-base sm:text-lg font-bold text-white">
         {/* 左上 logo - 响应式字体 */}
         <div className="flex gap-2 sm:gap-3 items-center">
-          <span className="text-lg sm:text-xl">🎪</span>
-          <span className="text-lg sm:text-xl">🎧</span>
-          <span className="text-lg sm:text-xl">🌈</span>
+          <span className="text-lg sm:text-xl">😼</span>
+          {/*<span className="text-lg sm:text-xl">🎧</span>*/}
+          {/*<span className="text-lg sm:text-xl">🌈</span>*/}
           <span className="text-sm sm:text-base md:text-lg">FujiRock</span>
         </div>
 
@@ -397,7 +399,13 @@ export default function Home() {
           
             {/* 第三排 */}
             <div className="flower absolute" style={{ top: '22%', left: '15%' }}>
-              <img src="/flowers/flower12.png" alt="" />
+              <img
+                src="/flowers/contactme.png"
+                alt="Contact Me"
+                className="cursor-pointer hover:scale-110 transition-transform duration-200"
+                onClick={() => setShowContactModal(true)}
+                style={{ pointerEvents: "auto" }}
+              />
             </div>
             <div className="flower absolute" style={{ top: '24%', left: '40%' }}>
               <img src="/flowers/flower3.png" alt="" />
@@ -464,7 +472,13 @@ export default function Home() {
               <img src="/flowers/flower11.png" alt="" />
             </div>
             <div className="flower absolute" style={{ top: '30%', left: '70%' }}>
-              <img src="/flowers/flower12.png" alt="" />
+              <img
+                src="/flowers/contactme.png"
+                alt="Contact Me"
+                className="cursor-pointer hover:scale-110 transition-transform duration-200"
+                onClick={() => setShowContactModal(true)}
+                style={{ pointerEvents: "auto" }}
+              />
             </div>
             
             {/* 第四排 */}
@@ -505,7 +519,7 @@ export default function Home() {
             </div>
 
             <div className="flower absolute" style={{ top: '86%', left: '78%' }}>
-              <img src="/flowers/flower12.png" alt="" />
+            <img src="/flowers/flower12.png" alt="" />
             </div>
             <div className="flower absolute" style={{ top: '80%', left: '90%' }}>
               <img src="/flowers/flower8.png" alt="" />
@@ -615,6 +629,12 @@ export default function Home() {
         artist={selectedArtist}
         isOpen={showArtistModal}
         onClose={closeArtistModal}
+      />
+
+      {/* 联系模态框 */}
+      <ContactModal
+        isOpen={showContactModal}
+        onClose={() => setShowContactModal(false)}
       />
     </div>
   );
