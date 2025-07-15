@@ -57,7 +57,7 @@ export default function FavoritesPage() {
           <Link href="/" className="text-white font-bold text-xl hover:text-gray-200 transition-colors">
             ← 返回首页
           </Link>
-          <h1 className="text-white font-bold text-xl">我的收藏</h1>
+          <h1 className="text-white font-bold text-xl"></h1>
           <div className="text-white">
             共 {favorites.length} 个收藏
           </div>
@@ -82,9 +82,9 @@ export default function FavoritesPage() {
           <div>
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-2">
-                我的收藏 ({favorites.length})
+                 ({favorites.length})
               </h2>
-              <p className="text-white/80 mb-4">您收藏的艺术家们</p>
+              <p className="text-white/80 mb-4"></p>
               <button
                 onClick={clearAllFavorites}
                 className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors text-sm"

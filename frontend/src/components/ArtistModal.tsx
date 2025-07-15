@@ -3,6 +3,7 @@ import "../styles/platform-buttons.css";
 
 
 import { useEffect, useState } from 'react';
+import SimpleFavoriteButton from './SimpleFavoriteButton';
 //import { generateArtistDescriptionStream } from '../utils/api';
 
 // 数据库艺术家类型定义
@@ -394,8 +395,15 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
 
         {/* 艺术家头部信息 */}
         <div className="mb-6 pr-10">
-          <h2 className="text-3xl font-bold mb-3 text-gray-800">{displayData.name}</h2>
-          
+        <div className="flex items-center gap-3 mb-3">
+            <h2 className="text-3xl font-bold text-gray-800">{displayData.name}</h2>
+            <SimpleFavoriteButton 
+  artistId={databaseArtist?.id || spotifyData?.id || artist?.name}
+  artistName={displayData.name}
+  imageUrl={displayData.image}
+  genres={displayData.genres}
+/>           
+          </div>          
           {/* 流派标签 */}
           {displayData.genres.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-4">

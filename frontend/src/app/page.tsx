@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ArtistModal from '../components/ArtistModal';
 import ContactModal from '../components/ContactModal';
+import FavoritesListModal from '../components/FavoritesListModal';
 
 // 艺术家数据类型定义
 interface Artist {
@@ -49,6 +50,7 @@ export default function Home() {
   const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
   const [showArtistModal, setShowArtistModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
+  const [showFavoritesModal, setShowFavoritesModal] = useState(false);
   
   // Canvas引用
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -347,7 +349,7 @@ export default function Home() {
 
         {/* 右上功能 - 响应式间距 */}
         <div className="flex gap-3 sm:gap-5 cursor-pointer">
-          <span title="收藏" className="text-lg sm:text-xl">⭐️</span>
+          <span title="收藏" className="text-lg sm:text-xl cursor-pointer hover:scale-110 transition-transform" onClick={() => setShowFavoritesModal(true)}>⭐️</span>
           {/*<span title="登录" className="text-lg sm:text-xl">🔐</span>*/}
         </div>
       </header>
@@ -632,9 +634,15 @@ export default function Home() {
       />
 
       {/* 联系模态框 */}
+      {/* 联系模态框 */}
       <ContactModal
         isOpen={showContactModal}
         onClose={() => setShowContactModal(false)}
+      />
+      {/* 收藏列表模态框 */}
+      <FavoritesListModal
+        isOpen={showFavoritesModal}
+        onClose={() => setShowFavoritesModal(false)}
       />
     </div>
   );
