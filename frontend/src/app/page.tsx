@@ -51,6 +51,7 @@ export default function Home() {
   const [showArtistModal, setShowArtistModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
   const [showFavoritesModal, setShowFavoritesModal] = useState(false);
+  const [fromFavorites, setFromFavorites] = useState(false);
   
   // Canvas引用
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -272,6 +273,18 @@ export default function Home() {
   const closeArtistModal = () => {
     setShowArtistModal(false);
     setSelectedArtist(null);
+    // 如果来自收藏页面，重新打开收藏列表
+    if (fromFavorites) {
+      setShowFavoritesModal(true);
+      setFromFavorites(false); // 重置标识
+    }
+  };
+  const handleFavoriteArtistClick = (artistName: string) => {
+    const artistObject = createArtistObject(artistName);
+    setSelectedArtist(artistObject);
+    setFromFavorites(true); // 设置标识
+    setShowArtistModal(true);
+    // 不关闭收藏列表，让两个模态框堆叠
   };
 
   // 滚动到第二屏
@@ -641,9 +654,10 @@ export default function Home() {
       />
       {/* 收藏列表模态框 */}
       <FavoritesListModal
-        isOpen={showFavoritesModal}
-        onClose={() => setShowFavoritesModal(false)}
-      />
+  isOpen={showFavoritesModal}
+  onClose={() => setShowFavoritesModal(false)}
+  onArtistClick={handleFavoriteArtistClick}
+/>
     </div>
   );
 }

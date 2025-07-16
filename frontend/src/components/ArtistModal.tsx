@@ -488,7 +488,7 @@ export default function ArtistModal({ artist, isOpen, onClose }: ArtistModalProp
               )}
             </div>
             <h3 className="text-xl font-semibold text-pink-700">
-              My Take on Them 
+            Let DeepSeek Talk
               {isGeneratingAI && (
                 <span className="ml-2 text-sm text-pink-500">正在生成中...</span>
               )}
