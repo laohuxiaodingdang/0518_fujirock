@@ -1,6 +1,6 @@
 .platform-btn {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -8,12 +8,37 @@
   transition: transform 0.2s;
   color: white;
   border: none;
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .platform-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.platform-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .platform-btn i {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+/* 移动端隐藏QQ音乐和网易云音乐按钮 */
+@media (max-width: 768px) {
+  .platform-btn[title="在QQ音乐中搜索"],
+  .platform-btn[title="在网易云音乐中搜索"] {
+    display: none !important;
+  }
+}
+
+/* 备用选择器 - 通过alt属性隐藏 */
+@media (max-width: 768px) {
+  .platform-btn img[alt="QQ音乐"],
+  .platform-btn img[alt="网易云音乐"] {
+    display: none !important;
+  }
 }
